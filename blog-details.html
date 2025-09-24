@@ -1,0 +1,401 @@
+<!DOCTYPE html >
+<html lang="fa" dir="rtl" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>پروازه
+      | وبلاگ - جزییات
+    </title>
+    <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  </head>
+  <body>
+    <!-- ---------------------------- Offcanvas Menu ---------------------------- -//-->
+    <!-- -------------------------- end Offcanvas Menu -------------------------- -//-->
+    <!-- --------------------------- Modal blog search -------------------------- -//-->
+    <div class="offcanvas offcanvas-top" id="searchBlogOffcanvas" tabindex="-1" aria-labelledby="searchBlogOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="searchBlogOffcanvasLabel"></h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="wrapper-md">
+          <form action="" aria-label="جستجو در سایت"> 
+            <div class="input-group border-bottom border-2">
+              <label class="visually-hidden" for="search-input">جستجو کنید</label>
+              <input class="form-control form-control-lg border-0" type="text" name="" placeholder="جستجو کنید ..." aria-label="عبارت جستجو"/>
+              <button class="btn btn-link link-dark" type="submit" aria-label="ارسال جستجو"> <i class="ti ti-search fs-4" aria-hidden="true"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------- end Modal blog search ------------------------ -//-->
+    <!-- ---------------------------- end Modal Sign ---------------------------- -//-->
+    <!-- ------------------------------ Modal share ----------------------------- -//-->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="shareModalLabel">اشتراک گذاری</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+              </nav>
+              <div class="input-group">
+                <input class="form-control form-control" type="text" id="shareLink" value="https://netthemes.ir/html/parnet" dir="ltr" readonly="readonly"/>
+                <button class="btn btn-primary" type="button" id="copyLinkBtn">کپی لینک</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- end Modal share --------------------------- -//-->
+    <!-- -------------------------------- Header -------------------------------- -//-->
+    <header class="bg-white border-bottom header">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <!-- logo & menu (mobile)-->
+          <div class="col-auto">
+            <div class="nt-flex-start-center">
+              <!-- menu (mobile)-->
+              <div class="d-md-none">
+                <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
+              </div>
+              <!-- logo--><a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">وبلاگ</h1></a>
+            </div>
+          </div>
+          <!-- nav-->
+          <div class="col">
+            <!-- nav (desktop)-->
+            <nav class="header-nav d-none d-md-flex">
+              <!-- nav link--><a class="btn btn-link link" href="">خانه</a>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ایران گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">جزیره کیش</a></li>
+                  <li><a class="dropdown-item" href="">جزیره قشم</a></li>
+                  <li><a class="dropdown-item" href="">مشهد</a></li>
+                  <li><a class="dropdown-item" href="">شیراز</a></li>
+                  <li><a class="dropdown-item" href="">تهران</a></li>
+                </ul>
+              </div>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">جهان گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">استانبول</a></li>
+                  <li><a class="dropdown-item" href="">آنتالیا</a></li>
+                  <li><a class="dropdown-item" href="">دبی</a></li>
+                  <li><a class="dropdown-item" href="">لندن</a></li>
+                  <li><a class="dropdown-item" href="">پاریس</a></li>
+                </ul>
+              </div>
+              <!-- nav link--><a class="btn btn-link link" href="">کتاب سفر</a>
+              <!-- nav link--><a class="btn btn-link link" href="">پادکست سفر</a>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">بیشتر</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">دانستنی ها</a></li>
+                  <li><a class="dropdown-item" href="">کتابک سفر</a></li>
+                  <li><a class="dropdown-item" href="">اخبار سفر</a></li>
+                  <li><a class="dropdown-item" href="">سفر نامه</a></li>
+                  <li><a class="dropdown-item" href="">داستان های سفر</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- theme switcher-->
+          <div class="col-auto d-none d-md-flex">
+            <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+          </div>
+          <!-- search-->
+          <div class="col-auto">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchBlogOffcanvas" aria-controls="searchBlogOffcanvas"> <i class="ti ti-search fs-3 text-muted" aria-hidden="true"></i>
+              <div class="fs-6">جستجو کنید ...</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ------------------------------ end Header ------------------------------ -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!--                                   Main                                   -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <main class="main blog">
+      <div class="container py-4">
+        <div class="row g-4">
+          <!-- content-->
+          <div class="col-12 col-md-8">
+            <!-- row-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <!-- post image-->
+              <div class="mb-4"><img class="lozad rounded" src="./img/pages/blog/main/car-lg.jpg" alt=""/></div>
+              <!-- post date&author-->
+              <div class="nt-flex-between-center text-muted mb-4">
+                <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+              </div>
+              <!-- post tags-->
+              <div class="nt-flex-start-center gap-3 mb-4"><a class="btn btn-sm btn-outline-dark rounded-pill" href="">
+                   خودرو<i class="ti ti-tag" aria-hidden="true"></i></a><a class="btn btn-sm btn-outline-dark rounded-pill" href="">
+                   راهنما<i class="ti ti-tag" aria-hidden="true"></i></a><a class="btn btn-sm btn-outline-dark rounded-pill" href="">
+                   سفر<i class="ti ti-tag" aria-hidden="true"></i></a></div>
+              <!-- post title-->
+              <div class="fs-3 fw-bold mb-3">راهنمای اجاره خودرو</div>
+              <!-- post text-->
+              <p>اجاره خودرو یکی از راه‌های محبوب برای سفر، جابه‌جایی در شهر جدید یا استفاده از خودرویی با امکانات بیشتر است. اما قبل از اینکه کلید ماشین را تحویل بگیرید، باید نکات مهمی را بدانید تا یک تجربه اجاره خودرو بی‌دردسر داشته باشید.</p>
+              <div class="fs-5 fw-bold">مقدمه</div>
+              <p>اجاره خودرو در سفرهای خارجی، آزادی عمل و انعطاف‌پذیری بیشتری را برای مسافران فراهم می‌کند. با این حال، این کار نیازمند دانستن برخی نکات مهم است. در این مقاله، قصد داریم شما را با فرآیند اجاره خودرو در خارج از کشور و به طور خاص با خدمات شرکت پروازه آشنا کنیم.</p>
+              <div class="fs-5 fw-bold">چرا اجاره خودرو؟</div>
+              <ul>
+                <li>آزادی عمل: با اجاره خودرو، شما می‌توانید به راحتی و در هر زمان به هر مکانی که می‌خواهید بروید.</li>
+                <li>انعطاف‌پذیری: برنامه‌های سفر خود را به راحتی تغییر دهید و از جاذبه‌های گردشگری دور از دسترس وسایل حمل و نقل عمومی دیدن کنید.</li>
+                <li>راحتی: حمل بار و وسایل سفر با خودرو شخصی بسیار راحت‌تر است.</li>
+              </ul>
+              <div class="fs-5 fw-bold">شرکت پروازه؛ همراه شما در سفرهای خارجی</div>
+              <p>شرکت پروازه یکی از معتبرترین شرکت‌های اجاره خودرو در ایران است که خدمات خود را به کشورهای مختلف گسترش داده است. با استفاده از خدمات پروازه، شما می‌توانید به راحتی و با خیال راحت، خودروی مورد نظر خود را در مقصد رزرو کنید.</p>
+              <div class="fs-5 fw-bold">مراحل اجاره خودرو با پروازه</div>
+              <ol>
+                <li>انتخاب مقصد و تاریخ سفر: ابتدا مقصد سفر خود و تاریخ رفت و برگشت را مشخص کنید.</li>
+                <li>جستجوی خودرو: با استفاده از سایت یا اپلیکیشن پروازه، خودرو مورد نظر خود را بر اساس نوع خودرو، مدل، ظرفیت و سایر امکانات انتخاب کنید.</li>
+                <li>رزرو آنلاین: پس از انتخاب خودرو، به راحتی می‌توانید رزرو خود را به صورت آنلاین انجام دهید.</li>
+                <li>پرداخت هزینه: هزینه اجاره خودرو معمولاً به صورت آنلاین پرداخت می‌شود.</li>
+                <li>تحویل خودرو: پس از رسیدن به مقصد، می‌توانید خودرو خود را از شعبه پروازه در فرودگاه یا محل تعیین شده تحویل بگیرید.</li>
+              </ol>
+              <div class="fs-5 fw-bold">مدارک مورد نیاز برای اجاره خودرو</div>
+              <ul>
+                <li>پاسپورت معتبر</li>
+                <li>گواهینامه بین‌المللی</li>
+                <li>کارت اعتباری به نام فرد اجاره‌کننده</li>
+              </ul>
+              <div class="fs-5 fw-bold">نکات مهم در اجاره خودرو</div>
+              <ul>
+                <li>تنوع خودرو: پروازه طیف وسیعی از خودروها را برای اجاره ارائه می‌دهد.</li>
+                <li>رزرو آسان: فرآیند رزرو خودرو به صورت آنلاین بسیار ساده و سریع است.</li>
+                <li>تیم پشتیبانی قوی: پروازه دارای تیم پشتیبانی قوی است که در صورت بروز هرگونه مشکل در طول سفر، آماده کمک‌رسانی به شما خواهد بود.</li>
+                <li>قیمت‌های رقابتی: پروازه قیمت‌های رقابتی و مناسبی را برای اجاره خودرو ارائه می‌دهد.</li>
+              </ul>
+              <div class="fs-5 fw-bold">نتیجه‌گیری</div>
+              <p>اجاره خودرو در خارج از کشور می‌تواند سفر شما را لذت‌بخش‌تر کند. با استفاده از خدمات شرکت پروازه، شما می‌توانید به راحتی و با خیال راحت، خودروی مورد نظر خود را در مقصد رزرو کنید.</p>
+              <p>توجه: برای کسب اطلاعات بیشتر و رزرو خودرو، به وب‌سایت رسمی شرکت پروازه مراجعه کنید.</p>
+              <p>کلمات کلیدی: اجاره خودرو، خارج از کشور، پروازه، سفر، راهنما، رزرو آنلاین، خودرو، گواهینامه، پاسپورت، بیمه، قوانین رانندگی</p>
+              <p class="fw-bold">لطفا توجه داشته باشید که این مقاله تنها یک راهنمای کلی است و برای اطلاعات دقیق‌تر، توصیه می‌شود با شرکت پروازه تماس بگیرید.</p>
+            </div>
+            <!-- row-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <div class="nt-flex-start-center gap-3"><img src="./img/logo.png" alt="" width="40"/>
+                <div class="nt-flex-start-center">
+                  <div class="fs-3 fw-bold">پروازه</div><i class="ti ti-rosette-discount-check-filled fs-5 text-info" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <!-- row-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <!-- header-->
+              <div class="nt-flex-between-center pb-2 mb-3">
+                <div class="fs-5 fw-bold">مطالب مشابه</div><a class="btn btn-sm btn-light" href="">
+                   مشاهده بیشتر<i class="ti ti-arrow-left fs-5" aria-hidden="true"></i></a>
+              </div>
+              <!-- content-->
+              <div class="container">
+                <div class="row g-3">
+                  <!-- item-->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="blog-card-item">
+                      <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/kyoto.jpg')"><a class="nt-badge bg-dark text-primary" href="">ژاپن<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                        <div class="p-4">آرامش در میان معابد باستانی و باغ‌های ژاپنی.</div></a>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="blog-card-item">
+                      <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/egypt.jpg')"><a class="nt-badge bg-dark text-primary" href="">مصر<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                        <div class="p-4"> اسرار تاریخ را در دل کویر پنهان کرده‌اند.</div></a>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="blog-card-item">
+                      <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/eiffel.jpg')"><a class="nt-badge bg-dark text-primary" href="">پاریس <i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                        <div class="p-4">نماد عشق و رویا، بر فراز پاریس می‌درخشد.</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- row comment-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <!-- header-->
+              <div class="nt-flex-between-center pb-2 mb-3">
+                <div class="fs-5 fw-bold">مطالب مشابه</div><a class="btn btn-sm btn-light" href="">
+                   مشاهده بیشتر<i class="ti ti-arrow-left fs-5" aria-hidden="true"></i></a>
+              </div>
+              <!-- form-->
+              <div class="border-bottom pb-2 mb-4">
+                <form action=""> 
+                  <div class="mb-3">
+                    <input class="form-control" type="text" name="" placeholder="نام شما *"/>
+                  </div>
+                  <div class="mb-3">
+                    <input class="form-control" type="text" name="" placeholder="ایمیل شما *"/>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" rows="6" placeholder="متن دیدگاه"></textarea>
+                  </div>
+                  <div class="text-muted small mb-3">فیلدهایی که با * علامت‌گذاری شده‌اند، الزامی هستند.</div>
+                  <div class="mb-3">
+                    <button class="btn btn-primary" type="submit">
+                       ارسال <i class="ti ti-arrow-left fs-5" aria-hidden="true"></i></button>
+                  </div>
+                </form>
+              </div>
+              <!-- comment-->
+              <ul class="list-unstyled nt-flex-column gap-4 py-4">
+                <div class="fs-5 fw-bold">دیدگاه ها</div>
+                <!-- comment-->
+                <li class="w-100 border rounded p-4">
+                  <!-- header | avatar, name & rating-->
+                  <div class="nt-flex-start-center gap-3 mb-3"><img class="lozad rounded-pill" src="img/layouts/avatar/m2.png" alt="avatar" width="45"/>
+                    <div class="nt-flex-column">
+                      <div class="fw-bold">آریا نوروزی</div>
+                    </div>
+                  </div>
+                  <!-- text-->
+                  <p class="lh-lg">کاش در مورد بهترین سایت‌های خرید بلیط هم توضیح داده بودید. خیلی به دنبال سایتی هستم که قیمت‌های مناسبی داشته باشه.</p>
+                </li>
+                <!-- comment-->
+                <li class="w-100 border rounded p-4">
+                  <!-- header | avatar, name & rating-->
+                  <div class="nt-flex-start-center gap-3 mb-3"><img class="lozad rounded-pill" src="img/layouts/avatar/f1.png" alt="avatar" width="45"/>
+                    <div class="nt-flex-column">
+                      <div class="fw-bold">فاطمه احمدی</div>
+                    </div>
+                  </div>
+                  <!-- text-->
+                  <p class="lh-lg">مقاله مقایسه ایرلاین‌ها خیلی به من کمک کرد. همیشه بین فلان ایرلاین و بهمان ایرلاین شک داشتم. با خوندن این مقاله تصمیمم قطعی شد.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- sidebar-->
+          <div class="col-12 col-md-4">
+            <div class="sticky-top bg-white border rounded p-4">
+              <div class="fs-5 fw-bold mb-3">پربازدید ترین ها</div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/passport.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-2">بهترین پاسپورت های جهان</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate mb-1">پاسپورت، گذرنامه‌ای است به سوی جهان. قدرت یک پاسپورت به این معناست که دارنده‌ی آن می‌تواند بدون نیاز به ویزا یا با اخذ ویزای آسان به تعداد بیشتری از کشورها سفر کند. هر ساله، شاخص‌هایی برای سنجش قدرت پاسپورت‌ها منتشر می‌شود که به مسافران کمک می‌کند تا بهترین مقاصد سفر را انتخاب کنند.</p>
+                  <div class="nt-flex-start-center gap-1 text-danger">۹۳،۹۳۸<i class="ti ti-flame" aria-hidden="true"></i></div>
+                </div>
+              </div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/olympic.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-2">المپیک پاریس ۲۰۲۴</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate mb-1">با عرض سلام و احترام خدمت همکاران محترم. امروز می‌خواهم شما را به سفری هیجان‌انگیز به پاریس، میزبان بازی‌های المپیک 2024 ببرم. در این ارائه، به بررسی تاریخچه المپیک در پاریس، لوگو و نمادهای بازی‌ها، ورزشکاران برجسته و همچنین تأثیرات اقتصادی و اجتماعی این رویداد عظیم خواهیم پرداخت.</p>
+                  <div class="nt-flex-start-center gap-1 text-danger">۹۳،۹۳۸<i class="ti ti-flame" aria-hidden="true"></i></div>
+                </div>
+              </div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/milad.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-2">بازدید رایگان از برج میلاد</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate mb-1">خبر خوب برای علاقه‌مندان به بازدید از برج میلاد! به طور دوره‌ای و در مناسبت‌های مختلف، امکان بازدید رایگان از این برج بلند و دیدنی فراهم می‌شود.</p>
+                  <div class="nt-flex-start-center gap-1 text-danger">۹۳،۹۳۸<i class="ti ti-flame" aria-hidden="true"></i></div>
+                </div>
+              </div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/passport.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-2">بهترین پاسپورت های جهان</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate mb-1">پاسپورت، گذرنامه‌ای است به سوی جهان. قدرت یک پاسپورت به این معناست که دارنده‌ی آن می‌تواند بدون نیاز به ویزا یا با اخذ ویزای آسان به تعداد بیشتری از کشورها سفر کند. هر ساله، شاخص‌هایی برای سنجش قدرت پاسپورت‌ها منتشر می‌شود که به مسافران کمک می‌کند تا بهترین مقاصد سفر را انتخاب کنند.</p>
+                  <div class="nt-flex-start-center gap-1 text-danger">۹۳،۹۳۸<i class="ti ti-flame" aria-hidden="true"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!--                                 end Main                                 -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!-- -------------------------------- Footer -------------------------------- -//-->
+    <footer class="bg-light">
+      <div class="text-center py-4">
+        <nav class="nt-flex-center-center gap-4 mb-3"><a class="link-dark small" href="">اطلاعات فرودگاهی</a><a class="link-dark small" href="">راهنمای خرید</a><a class="link-dark small" href="">پرسش و پاسخ</a><a class="link-dark small" href="">پشتیبانی آنلاین</a></nav>
+        <p class="text-muted lh-lg small">
+          هرگونه استفاده از این موارد بدون مجوز کتبی و صریح از شرکت
+پروازه
+          ، نقض حقوق مالکیت معنوی محسوب شده و پیگرد قانونی خواهد داشت.
+        </p>
+      </div>
+    </footer>
+    <!-- ------------------------------ end Footer ------------------------------ -//-->
+    <!-- -------------------------------- scripts ------------------------------- -//-->
+    <!-- lozad-->
+    <script src="./vendor/lib/lozad/lozad.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper-->
+    <link rel="stylesheet" href="./vendor/lib/swiper/swiper-bundle.min.css"/>
+    <script src="./vendor/lib/swiper/swiper-bundle.min.js"></script>
+    <!-- script-->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

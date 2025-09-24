@@ -1,0 +1,518 @@
+<!DOCTYPE html >
+<html lang="fa" dir="rtl" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>پروازه
+      | وبلاگ
+    </title>
+    <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  </head>
+  <body>
+    <!-- ---------------------------- Offcanvas Menu ---------------------------- -//-->
+    <!-- -------------------------- end Offcanvas Menu -------------------------- -//-->
+    <!-- --------------------------- Modal blog search -------------------------- -//-->
+    <div class="offcanvas offcanvas-top" id="searchBlogOffcanvas" tabindex="-1" aria-labelledby="searchBlogOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="searchBlogOffcanvasLabel"></h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="wrapper-md">
+          <form action="" aria-label="جستجو در سایت"> 
+            <div class="input-group border-bottom border-2">
+              <label class="visually-hidden" for="search-input">جستجو کنید</label>
+              <input class="form-control form-control-lg border-0" type="text" name="" placeholder="جستجو کنید ..." aria-label="عبارت جستجو"/>
+              <button class="btn btn-link link-dark" type="submit" aria-label="ارسال جستجو"> <i class="ti ti-search fs-4" aria-hidden="true"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------- end Modal blog search ------------------------ -//-->
+    <!-- ---------------------------- end Modal Sign ---------------------------- -//-->
+    <!-- ------------------------------ Modal share ----------------------------- -//-->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="shareModalLabel">اشتراک گذاری</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+              </nav>
+              <div class="input-group">
+                <input class="form-control form-control" type="text" id="shareLink" value="https://netthemes.ir/html/parnet" dir="ltr" readonly="readonly"/>
+                <button class="btn btn-primary" type="button" id="copyLinkBtn">کپی لینک</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- end Modal share --------------------------- -//-->
+    <!-- -------------------------------- Header -------------------------------- -//-->
+    <header class="bg-white border-bottom header">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <!-- logo & menu (mobile)-->
+          <div class="col-auto">
+            <div class="nt-flex-start-center">
+              <!-- menu (mobile)-->
+              <div class="d-md-none">
+                <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
+              </div>
+              <!-- logo--><a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">وبلاگ</h1></a>
+            </div>
+          </div>
+          <!-- nav-->
+          <div class="col">
+            <!-- nav (desktop)-->
+            <nav class="header-nav d-none d-md-flex">
+              <!-- nav link--><a class="btn btn-link link" href="">خانه</a>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ایران گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">جزیره کیش</a></li>
+                  <li><a class="dropdown-item" href="">جزیره قشم</a></li>
+                  <li><a class="dropdown-item" href="">مشهد</a></li>
+                  <li><a class="dropdown-item" href="">شیراز</a></li>
+                  <li><a class="dropdown-item" href="">تهران</a></li>
+                </ul>
+              </div>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">جهان گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">استانبول</a></li>
+                  <li><a class="dropdown-item" href="">آنتالیا</a></li>
+                  <li><a class="dropdown-item" href="">دبی</a></li>
+                  <li><a class="dropdown-item" href="">لندن</a></li>
+                  <li><a class="dropdown-item" href="">پاریس</a></li>
+                </ul>
+              </div>
+              <!-- nav link--><a class="btn btn-link link" href="">کتاب سفر</a>
+              <!-- nav link--><a class="btn btn-link link" href="">پادکست سفر</a>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">بیشتر</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">دانستنی ها</a></li>
+                  <li><a class="dropdown-item" href="">کتابک سفر</a></li>
+                  <li><a class="dropdown-item" href="">اخبار سفر</a></li>
+                  <li><a class="dropdown-item" href="">سفر نامه</a></li>
+                  <li><a class="dropdown-item" href="">داستان های سفر</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- theme switcher-->
+          <div class="col-auto d-none d-md-flex">
+            <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+          </div>
+          <!-- search-->
+          <div class="col-auto">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchBlogOffcanvas" aria-controls="searchBlogOffcanvas"> <i class="ti ti-search fs-3 text-muted" aria-hidden="true"></i>
+              <div class="fs-6">جستجو کنید ...</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ------------------------------ end Header ------------------------------ -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!--                                   Main                                   -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <main class="main blog">
+      <!-- swiper-->
+      <div class="container py-4 mb-4">
+        <div class="swiper blog-mainSwiper" data-swiper-options="{ &quot;loop&quot;:true, &quot;autoplay&quot;:{&quot;delay&quot;: 3000}, &quot;speed&quot;:1000, &quot;slidesPerView&quot;:1, &quot;spaceBetween&quot;:15, &quot;breakpoints&quot;:{ &quot;480&quot;:{&quot;slidesPerView&quot;:2},&quot;640&quot;:{&quot;slidesPerView&quot;:3} } }">
+          <div class="swiper-wrapper">
+            <!-- slide-->
+            <div class="swiper-slide">
+              <div class="blog-card-item">
+                <div class="blog-card-image" style="background-image: url('./img/pages/blog/pic/eiffel.jpg')"><a class="nt-badge bg-dark text-primary" href="">پاریس <i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                  <div class="fs-5 p-4">نماد عشق و رویا، بر فراز پاریس می‌درخشد.</div></a>
+              </div>
+            </div>
+            <!-- slide-->
+            <div class="swiper-slide">
+              <div class="blog-card-item">
+                <div class="blog-card-image" style="background-image: url('./img/pages/blog/pic/egypt.jpg')"><a class="nt-badge bg-dark text-primary" href="">مصر<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                  <div class="fs-5 p-4">اهرام ثلاثه، اسرار تاریخ را در دل کویر پنهان کرده‌اند.</div></a>
+              </div>
+            </div>
+            <!-- slide-->
+            <div class="swiper-slide">
+              <div class="blog-card-item">
+                <div class="blog-card-image" style="background-image: url('./img/pages/blog/pic/kyoto.jpg')"><a class="nt-badge bg-dark text-primary" href="">ژاپن<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                  <div class="fs-5 p-4">آرامش در میان معابد باستانی و باغ‌های ژاپنی.</div></a>
+              </div>
+            </div>
+            <!-- slide-->
+            <div class="swiper-slide">
+              <div class="blog-card-item">
+                <div class="blog-card-image" style="background-image: url('./img/pages/blog/pic/taipei.jpg')"><a class="nt-badge bg-dark text-primary" href="">تایوان<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                  <div class="fs-5 p-4">شهری که سنت و مدرنیته را در آغوش می‌کشد.</div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div class="container mb-4">
+        <div class="row g-3">
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/taipei.jpg')"><a class="nt-badge bg-dark text-primary" href="">تایوان<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                <div class="p-4">شهری که سنت و مدرنیته را در آغوش می‌کشد.</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/kyoto.jpg')"><a class="nt-badge bg-dark text-primary" href="">ژاپن<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                <div class="p-4">آرامش در میان معابد باستانی و باغ‌های ژاپنی.</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/egypt.jpg')"><a class="nt-badge bg-dark text-primary" href="">مصر<i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                <div class="p-4"> اسرار تاریخ را در دل کویر پنهان کرده‌اند.</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/eiffel.jpg')"><a class="nt-badge bg-dark text-primary" href="">پاریس <i class="ti ti-tag" aria-hidden="true"></i></a></div><a class="link-dark" href="">
+                <div class="p-4">نماد عشق و رویا، بر فراز پاریس می‌درخشد.</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container mb-5">
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="nt-flex-between-center border-top pt-3 mb-3">
+              <div class="nt-flex-start-center fs-5 fw-bold"><i class="ti ti-news fs-3" aria-hidden="true"></i>جدید‌ترین مطالب</div><a class="btn btn-light" href="">
+                 مشاهده همه<i class="ti ti-arrow-left fs-5" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/Isfahan.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">اصفهان: نصف جهان، هنر در آینه کوچه‌ها</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/Kashan.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">کاشان: کوچه‌های گل و آب، خانه‌های تاریخی</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/Kerman.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">کرمان: کویر دلنشین، شهر یاقوت‌های سرخ</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/Mashhad.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">مشهد: حرم رضوی، قبله دل‌های عاشق</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/masuleh.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">ماسوله: روستای پلکانی، نگین سبز شمال</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/mazandaran.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">مازندران: سرزمین جنگل و دریا، طبیعت بکر</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/Shiraz.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">شیراز: شهر شعر و شراب، حافظ و سعدی</div></a>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="blog-card-item">
+              <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/Tabriz.jpg')"></div><a class="link-dark" href="">
+                <div class="p-4">تبریز: شهر اولین‌ها، بافت تاریخی ارزشمند</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="bg-primary bg-gradient py-4">
+        <div class="container mb-4">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="nt-flex-between-center pt-3 mb-3">
+                <div class="nt-flex-start-center fs-5 fw-bold text-dark"><i class="ti ti-flame fs-3" aria-hidden="true"></i>مطالب برتر</div><a class="btn btn-light" href="">
+                   مشاهده همه<i class="ti ti-arrow-left fs-5" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <!-- item-->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card"><img class="lozad card-img-top" src="./img/pages/blog/cols/1.jpg" alt=""/>
+                <div class="card-body">
+                  <div class="card-title">راهنمای غذای سفر</div>
+                  <p class="card-text text-muted">مطالب مفید برای هر مسافر</p><a class="btn btn-dark" href="">
+                     اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+            <!-- item-->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card"><img class="lozad card-img-top" src="./img/pages/blog/cols/2.jpg" alt=""/>
+                <div class="card-body">
+                  <div class="card-title">راهنمای آموزشی سفر</div>
+                  <p class="card-text text-muted">مطالب مفید برای هر مسافر</p><a class="btn btn-dark" href="">
+                     اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+            <!-- item-->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card"><img class="lozad card-img-top" src="./img/pages/blog/cols/3.jpg" alt=""/>
+                <div class="card-body">
+                  <div class="card-title">راهنمای بهداشتی سفر</div>
+                  <p class="card-text text-muted">مطالب مفید برای هر مسافر</p><a class="btn btn-dark" href="">
+                     اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+            <!-- item-->
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="card"><img class="lozad card-img-top" src="./img/pages/blog/cols/4.jpg" alt=""/>
+                <div class="card-body">
+                  <div class="card-title">راهنمای مسیریابی</div>
+                  <p class="card-text text-muted">مطالب مفید برای هر مسافر</p><a class="btn btn-dark" href="">
+                     اطلاعات بیشتر</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -->
+      <div class="container py-5">
+        <div class="row g-4">
+          <!-- content-->
+          <div class="col-12 col-md-8">
+            <div class="h-100 bg-white border rounded p-4">
+              <div class="row">
+                <!-- title-->
+                <div class="col-12">
+                  <div class="nt-flex-start-center fs-4 fw-bold mb-3"><i class="ti ti-circle-dotted fs-5" aria-hidden="true"></i><a class="link-dark" href="">
+                       مطالب</a></div>
+                </div>
+                <!-- post main-->
+                <div class="col-12 col-md-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/car.jpg" alt=""/></div>
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="fs-5 fw-bold mb-3">راهنمای اجاره خودرو</div></a>
+                  <!-- post text-->
+                  <p>اجاره خودرو یکی از راه‌های محبوب برای سفر، جابه‌جایی در شهر جدید یا استفاده از خودرویی با امکانات بیشتر است. اما قبل از اینکه کلید ماشین را تحویل بگیرید، باید نکات مهمی را بدانید تا یک تجربه اجاره خودرو بی‌دردسر داشته باشید.</p>
+                  <!-- post tags-->
+                  <div class="nt-flex-start-center gap-3"><a class="btn btn-sm btn-outline-dark rounded-pill" href="">
+                       خودرو<i class="ti ti-tag" aria-hidden="true"></i></a><a class="btn btn-sm btn-outline-dark rounded-pill" href="">
+                       راهنما<i class="ti ti-tag" aria-hidden="true"></i></a><a class="btn btn-sm btn-outline-dark rounded-pill" href="">
+                       سفر<i class="ti ti-tag" aria-hidden="true"></i></a></div>
+                </div>
+                <!-- lists-->
+                <div class="col-12 col-md-6">
+                  <!-- post-->
+                  <div class="row">
+                    <div class="col-6">
+                      <!-- post image-->
+                      <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/kish.jpg" alt=""/></div>
+                    </div>
+                    <div class="col-6">
+                      <!-- post date&author-->
+                      <div class="nt-flex-between-center text-muted small mb-2">
+                        <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                      </div>
+                      <!-- post title--><a class="link-dark" href=""> 
+                        <div class="text-truncate fs-5 fw-bold mb-3">افزایش پرواز ها به جزیره کیش</div></a>
+                      <!-- post text-->
+                      <p class="text-truncate">خبر خوش برای علاقه‌مندان به سفر به جزیره زیبای کیش! با افزایش چشمگیر پروازها به این جزیره، دسترسی به این مقصد گردشگری محبوب بسیار آسان‌تر شده است. این خبر نشان‌دهنده‌ی توجه ویژه به توسعه صنعت گردشگری در کیش و تلاش برای جذب هرچه بیشتر گردشگر است.</p>
+                    </div>
+                  </div>
+                  <!-- post-->
+                  <div class="row">
+                    <div class="col-6">
+                      <!-- post image-->
+                      <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/gilan.jpg" alt=""/></div>
+                    </div>
+                    <div class="col-6">
+                      <!-- post date&author-->
+                      <div class="nt-flex-between-center text-muted small mb-2">
+                        <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                      </div>
+                      <!-- post title--><a class="link-dark" href=""> 
+                        <div class="text-truncate fs-5 fw-bold mb-3">بهترین روستا های گیلان</div></a>
+                      <!-- post text-->
+                      <p class="text-truncate">گیلان، سرزمین سرسبز و بارانی شمال ایران، مملو از روستاهای زیبا و دیدنی است. هر یک از این روستاها با طبیعت بکر، فرهنگ غنی و جاذبه‌های گردشگری منحصر به فرد خود، تجربه‌ای فراموش‌نشدنی را برای گردشگران رقم می‌زند. در این مطلب، برخی از بهترین روستاهای گیلان را به شما معرفی خواهیم کرد.</p>
+                    </div>
+                  </div>
+                  <!-- post-->
+                  <div class="row">
+                    <div class="col-6">
+                      <!-- post image-->
+                      <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/japan.jpg" alt=""/></div>
+                    </div>
+                    <div class="col-6">
+                      <!-- post date&author-->
+                      <div class="nt-flex-between-center text-muted small mb-2">
+                        <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                      </div>
+                      <!-- post title--><a class="link-dark" href=""> 
+                        <div class="text-truncate fs-5 fw-bold mb-3">ژاپن گردشگری آزمایشی را آغاز می‌کند</div></a>
+                      <!-- post text-->
+                      <p class="text-truncate">خبر بازگشایی تدریجی ژاپن برای گردشگری بین‌المللی، نویدبخش رونق مجدد صنعت گردشگری در این کشور است. پس از مدت‌ها محدودیت‌های ناشی از همه‌گیری کووید-19، ژاپن با اجرای برنامه‌های آزمایشی، گام‌های اولیه را برای استقبال از گردشگران برداشته است.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sidebar-->
+          <div class="col-12 col-md-4">
+            <div class="h-100 bg-white border rounded p-4">
+              <div class="fs-5 fw-bold mb-3">پربازدید ترین ها</div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/passport.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">بهترین پاسپورت های جهان</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate">پاسپورت، گذرنامه‌ای است به سوی جهان. قدرت یک پاسپورت به این معناست که دارنده‌ی آن می‌تواند بدون نیاز به ویزا یا با اخذ ویزای آسان به تعداد بیشتری از کشورها سفر کند. هر ساله، شاخص‌هایی برای سنجش قدرت پاسپورت‌ها منتشر می‌شود که به مسافران کمک می‌کند تا بهترین مقاصد سفر را انتخاب کنند.</p>
+                </div>
+              </div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/olympic.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">المپیک پاریس ۲۰۲۴</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate">با عرض سلام و احترام خدمت همکاران محترم. امروز می‌خواهم شما را به سفری هیجان‌انگیز به پاریس، میزبان بازی‌های المپیک 2024 ببرم. در این ارائه، به بررسی تاریخچه المپیک در پاریس، لوگو و نمادهای بازی‌ها، ورزشکاران برجسته و همچنین تأثیرات اقتصادی و اجتماعی این رویداد عظیم خواهیم پرداخت.</p>
+                </div>
+              </div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/milad.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">بازدید رایگان از برج میلاد</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate">خبر خوب برای علاقه‌مندان به بازدید از برج میلاد! به طور دوره‌ای و در مناسبت‌های مختلف، امکان بازدید رایگان از این برج بلند و دیدنی فراهم می‌شود.</p>
+                </div>
+              </div>
+              <!-- post-->
+              <div class="row">
+                <div class="col-6">
+                  <!-- post image-->
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/passport.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <!-- post date&author-->
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <!-- post title--><a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">بهترین پاسپورت های جهان</div></a>
+                  <!-- post text-->
+                  <p class="text-truncate">پاسپورت، گذرنامه‌ای است به سوی جهان. قدرت یک پاسپورت به این معناست که دارنده‌ی آن می‌تواند بدون نیاز به ویزا یا با اخذ ویزای آسان به تعداد بیشتری از کشورها سفر کند. هر ساله، شاخص‌هایی برای سنجش قدرت پاسپورت‌ها منتشر می‌شود که به مسافران کمک می‌کند تا بهترین مقاصد سفر را انتخاب کنند.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!--                                 end Main                                 -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!-- -------------------------------- Footer -------------------------------- -//-->
+    <footer class="bg-light">
+      <div class="text-center py-4">
+        <nav class="nt-flex-center-center gap-4 mb-3"><a class="link-dark small" href="">اطلاعات فرودگاهی</a><a class="link-dark small" href="">راهنمای خرید</a><a class="link-dark small" href="">پرسش و پاسخ</a><a class="link-dark small" href="">پشتیبانی آنلاین</a></nav>
+        <p class="text-muted lh-lg small">
+          هرگونه استفاده از این موارد بدون مجوز کتبی و صریح از شرکت
+پروازه
+          ، نقض حقوق مالکیت معنوی محسوب شده و پیگرد قانونی خواهد داشت.
+        </p>
+      </div>
+    </footer>
+    <!-- ------------------------------ end Footer ------------------------------ -//-->
+    <!-- -------------------------------- scripts ------------------------------- -//-->
+    <!-- lozad-->
+    <script src="./vendor/lib/lozad/lozad.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper-->
+    <link rel="stylesheet" href="./vendor/lib/swiper/swiper-bundle.min.css"/>
+    <script src="./vendor/lib/swiper/swiper-bundle.min.js"></script>
+    <!-- script-->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

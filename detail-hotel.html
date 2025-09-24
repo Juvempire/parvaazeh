@@ -1,0 +1,884 @@
+<!DOCTYPE html >
+<html lang="fa" dir="rtl" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>پروازه
+      | جزپیات هتل
+    </title>
+    <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  </head>
+  <body>
+    <!-- ---------------------------- Offcanvas Menu ---------------------------- -//-->
+    <div class="offcanvas offcanvas-start" id="offcanvasMenu" tabindex="-1" aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="offcanvasMenuLabel">منو کاربری</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="h-100 nt-flex-column">
+          <div class="w-100 flex-grow-1">
+            <!-- logo & dark theme-->
+            <div class="nt-flex-between-center gap-2 mb-4">
+              <!-- logo-->
+              <div class="nt-flex-start-center"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+              </div>
+              <!-- dark theme-->
+              <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+            </div>
+            <div class="accordion accordion-flush" id="accordionOffcanvasMenu">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu1" aria-expanded="false" aria-controls="accordionOffcanvasMenu1">بلیط</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu1" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href=""><i class="ti ti-plane-inflight fs-4" aria-hidden="true"></i>پرواز داخلی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href=""><i class="ti ti-plane-departure fs-4" aria-hidden="true"></i>پرواز خارجی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href=""><i class="ti ti-train fs-4" aria-hidden="true"></i>قطار</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href=""><i class="ti ti-bus fs-4" aria-hidden="true"></i>اتوبوس</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu2" aria-expanded="false" aria-controls="accordionOffcanvasMenu2">اقامت</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu2" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href=""><i class="ti ti-building-skyscraper fs-4" aria-hidden="true"></i>هتل</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href=""><i class="ti ti-home-2 fs-4" aria-hidden="true"></i>ویلا و اقامتگاه</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="nt-flex-column">
+              <!-- nav link--><a class="btn btn-link link-dark fs-5" href="">تور</a>
+              <!-- nav link--><a class="btn btn-link link-dark fs-5" href="">ویزا</a>
+            </nav>
+          </div>
+          <div class="w-100 border-top py-3">
+            <div class="nt-flex-column-center-center">
+              <div class="text-muted">پروازه; همراه همیشگی سفرهای شما. </div>
+              <div class="nt-flex-start-center text-muted" role="contentinfo" aria-label="اطلاعات حق نشر"><span class="visually-hidden">حق نشر ©</span><i class="ti ti-copyright fs-5" aria-hidden="true"></i>۱۴۰۳
+پروازه.
+                تمامی حقوق محفوظ است.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------- end Offcanvas Menu -------------------------- -//-->
+    <!-- --------------------------- Offcanvas Profile -------------------------- -//-->
+    <div class="offcanvas offcanvas-start" id="offcanvasProfile" tabindex="-1" aria-labelledby="offcanvasProfileLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasProfileLabel">پروفایل کاربری</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="p-2">
+          <div class="nt-flex-column-center-center mb-4">
+            <div class="border border-primary rounded-circle position-relative">
+              <!-- badge--><span class="position-absolute top-0 start-0 translate-middle badge rounded bg-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="تایید شده"><i class="ti ti-checks fs-5" aria-hidden="true"></i><span class="visually-hidden">تایید شده</span></span>
+              <!-- avatar--><img src="./img/layouts/avatar/m1.png" alt=""/>
+            </div>
+            <!-- name & phone-->
+            <div class="nt-flex-column">
+              <!-- name-->
+              <div class="profile-title">علی محمدی</div>
+              <!-- phone-->
+              <div class="text-muted">09121234567</div>
+            </div>
+          </div>
+          <!-- wallet wrapper-->
+          <div class="bg-secondary text-white rounded p-3 mb-4">
+            <div class="nt-flex-between-start gap-2">
+              <!-- wallet-->
+              <div class="nt-flex-column gap-3">
+                <div class="nt-flex text-light"><i class="ti ti-wallet fs-3" aria-hidden="true"></i>موجودی حساب </div><a class="btn btn-sm btn-secondary" href="./profile-transactions.html"> <i class="ti ti-plus fs-5" aria-hidden="true"></i><span class="small">افزایش موجودی</span></a>
+              </div>
+              <!-- money-->
+              <div class="nt-flex">
+                <div class="badge text-bg-light">۰</div>
+                <div class="small text-light">تومان</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid mb-4"><a class="btn btn-lg justify-content-start btn-outline-primary" href="./profile-plus.html"> <i class="ti ti-sparkles fs-5" aria-hidden="true"></i>
+              <div class="text-muted fw-bold small">
+                حساب ویژه
+پروازه
+              </div></a></div>
+          <div class="text-muted fw-bold small mb-3">منو کاربری</div>
+          <nav class="profile-menu"><a class="btn btn-outline-light" href="./profile.html"> <i class="ti ti-user fs-4" aria-hidden="true"></i>حساب کاربری</a><a class="btn btn-outline-light" href="./profile-orders.html"> <i class="ti ti-luggage fs-4" aria-hidden="true"></i>سفر های من</a><a class="btn btn-outline-light" href="./profile-passengers.html"> <i class="ti ti-users-group fs-4" aria-hidden="true"></i>لیست های مسافران</a><a class="btn btn-outline-light" href="./profile-wishlist.html"> <i class="ti ti-heart fs-4" aria-hidden="true"></i>علاقه مندی ها</a><a class="btn btn-outline-light" href="./profile-ticketing.html"> <i class="ti ti-headset fs-4" aria-hidden="true"></i>درخواست پشتیبانی</a><a class="btn btn-outline-light" href="./profile-transactions.html"> <i class="ti ti-businessplan fs-4" aria-hidden="true"></i>موجودی و اعتبار من</a></nav>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------- end Offcanvas Profile ------------------------ -//-->
+    <!-- ------------------------------ Modal Sign ------------------------------ -//-->
+    <div class="modal fade" id="signModal" tabindex="-1" aria-labelledby="signModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <div class="fs-5 fw-bold mb-2">ورود یا ثبت‌نام </div>
+              <p class="lead">برای ادامه شماره موبایل خود را وارد کنید. </p>
+              <form action=""> 
+                <div class="form-floating mb-2">
+                  <input class="form-control form-control-lg" type="tel" name="" placeholder="شماره موبایل" id="floatingInput"/>
+                  <label for="floatingInput">شماره موبایل</label>
+                </div>
+                <div class="nt-flex-center-center gap-1 small mb-4"><i class="ti ti-info-circle fs-5 text-muted" aria-hidden="true"></i>استفاده از پروازه به معنی پذیرش<a class="link" href="">
+                     قوانین و مقررات</a>این سرویس است.</div>
+                <div class="d-grid gap-3">
+                  <button class="btn btn-primary btn-lg" type="submit">
+                     تایید و دریافت</button>
+                  <button class="btn btn-link" type="button">
+                     ورود با کلمه عبور</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- end Modal Sign ---------------------------- -//-->
+    <!-- ------------------------------ Modal share ----------------------------- -//-->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="shareModalLabel">اشتراک گذاری</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+              </nav>
+              <div class="input-group">
+                <input class="form-control form-control" type="text" id="shareLink" value="https://netthemes.ir/html/parnet" dir="ltr" readonly="readonly"/>
+                <button class="btn btn-primary" type="button" id="copyLinkBtn">کپی لینک</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- end Modal share --------------------------- -//-->
+    <!-- -------------------------------- Header -------------------------------- -//-->
+    <header class="header">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <!-- logo & menu (mobile)-->
+          <div class="col-auto">
+            <div class="nt-flex-start-center">
+              <!-- menu (mobile)-->
+              <div class="d-md-none">
+                <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
+              </div>
+              <!-- logo--><a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">پروازه</h1></a>
+            </div>
+          </div>
+          <!-- nav-->
+          <div class="col">
+            <!-- nav (desktop)-->
+            <nav class="header-nav d-none d-md-flex">
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">بلیط</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href=""><i class="ti ti-plane-inflight fs-4" aria-hidden="true"></i>پرواز داخلی</a></li>
+                  <li><a class="dropdown-item" href=""><i class="ti ti-plane-departure fs-4" aria-hidden="true"></i>پرواز خارجی</a></li>
+                  <li><a class="dropdown-item" href=""><i class="ti ti-train fs-4" aria-hidden="true"></i>قطار</a></li>
+                  <li><a class="dropdown-item" href=""><i class="ti ti-bus fs-4" aria-hidden="true"></i>اتوبوس</a></li>
+                </ul>
+              </div>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">اقامت</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href=""><i class="ti ti-building-skyscraper fs-4" aria-hidden="true"></i>هتل</a></li>
+                  <li><a class="dropdown-item" href=""><i class="ti ti-home-2 fs-4" aria-hidden="true"></i>ویلا و اقامتگاه</a></li>
+                </ul>
+              </div>
+              <!-- nav link--><a class="btn btn-link link" href="">تور</a>
+              <!-- nav link--><a class="btn btn-link link" href="">ویزا</a>
+            </nav>
+          </div>
+          <!-- theme switcher-->
+          <div class="col-auto d-none d-md-flex">
+            <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+          </div>
+          <!-- user-->
+          <div class="col-auto"><a class="btn btn-light header-user" type="button" data-bs-toggle="modal" data-bs-target="#signModal"> <i class="ti ti-user fs-3 text-muted" aria-hidden="true"></i>
+              <div class="fs-6">ورود یا ثبت نام</div></a></div>
+        </div>
+      </div>
+    </header>
+    <!-- ------------------------------ end Header ------------------------------ -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!--                                   Main                                   -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!-- modals -------------------------------- -//-->
+    <!-- comment-->
+    <!-- modal-->
+    <div class="modal fade" tabindex="-1" aria-labelledby="newCommentLabel" aria-hidden="true" id="newComment">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="newCommentLabel">دیدگاه جدید</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="nt-modal-wrapper">
+              <form action=""> 
+                <div class="nt-stars mb-4">
+                  <label>
+                    <input type="radio" name="star-rating" value="1"/><i class="ti ti-star fs-4" aria-hidden="true"></i>
+                  </label>
+                  <label>
+                    <input type="radio" name="star-rating" value="2"/><i class="ti ti-star fs-4" aria-hidden="true"></i>
+                  </label>
+                  <label>
+                    <input type="radio" name="star-rating" value="3"/><i class="ti ti-star fs-4" aria-hidden="true"></i>
+                  </label>
+                  <label>
+                    <input type="radio" name="star-rating" value="4"/><i class="ti ti-star fs-4" aria-hidden="true"></i>
+                  </label>
+                  <label>
+                    <input type="radio" name="star-rating" value="5"/><i class="ti ti-star fs-4" aria-hidden="true"></i>
+                  </label>
+                </div>
+                <div class="mb-3">
+                  <input class="form-control" type="text" name="" placeholder="نام شما *"/>
+                </div>
+                <div class="mb-3">
+                  <input class="form-control" type="text" name="" placeholder="ایمیل شما *"/>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="6" placeholder="متن دیدگاه"></textarea>
+                </div>
+                <div class="text-muted small mb-3">فیلدهایی که با * علامت‌گذاری شده‌اند، الزامی هستند.</div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-light" type="button" data-bs-dismiss="modal">بستن</button>
+            <button class="btn btn-primary" type="button">ثبت</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main-->
+    <main class="main detail">
+      <div class="container mb-5">
+        <div class="row">
+          <!-- content-->
+          <section class="col-12 col-md-9">
+            <!-- image-->
+            <div class="container mb-4">
+              <!-- swiper-->
+              <div class="swiper pb-5 mb-5" style="--max-height-image: 400px" data-swiper-options="{ &quot;freeMode&quot;:true, &quot;slidesPerView&quot;:&quot;auto&quot;, &quot;spaceBetween&quot;:20 }">
+                <div class="swiper-wrapper">
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/1.jpg" alt=""/></div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/2.jpg" alt=""/></div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/3.jpg" alt=""/></div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/4.jpg" alt=""/></div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/5.jpg" alt=""/></div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/6.jpg" alt=""/></div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/7.jpg" alt=""/></div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto"><img class="lozad rounded" src="img/pages/detail-hotel/slider/8.jpg" alt=""/></div>
+                </div>
+                <!-- next & prev-->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+            <!-- breadcrumb-->
+            <div class="container mb-4">
+              <nav style="--bs-breadcrumb-divider: '&gt;';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a class="link-dark" href=""><i class="ti ti-home-2 fs-5 text-muted" aria-hidden="true"></i></a></li>
+                  <li class="breadcrumb-item"><a class="link-dark" href="">یزد</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">هتل داد یزد</li>
+                </ol>
+              </nav>
+            </div>
+            <!-- header-->
+            <div class="container mb-5">
+              <div class="nt-flex-start-center gap-3 mb-4">
+                <div class="nt-flex-start-center fs-3 fw-bold me-4"><i class="ti ti-building-skyscraper fs-2" aria-hidden="true"></i>هتل داد یزد</div>
+                <button class="btn btn-outline-dark" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="علاقه مندی"> <i class="ti ti-bookmark fs-5" aria-hidden="true"></i></button><span data-bs-toggle="modal" data-bs-target="#shareModal">
+                  <button class="btn btn-outline-dark" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="اشتراک گذاری"> <i class="ti ti-share-3 fs-5" aria-hidden="true"></i></button></span>
+              </div>
+              <div class="nt-flex-start-center">
+                <!-- rating-->
+                <div class="nt-flex-start-center gap-1">
+                  <div class="nt-flex-start-center pe-2" aria-label="۴ از ۵ ستاره"><i class="ti ti-star text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i></div>
+                  <div class="text-info">۴/۵</div>
+                  <div class="text-muted">
+                    امتیاز کاربران
+                    (۱۱۹ نظر)
+                  </div>
+                </div>
+                <!-- spacer--><i class="ti ti-point-filled text-muted" aria-hidden="true"></i>
+                <!-- location-->
+                <div class="fs-6">یزد، میدان شهید بهشتی، خیابان دهم فروردین، پلاک ۲۱۴</div>
+              </div>
+            </div>
+            <!-- options-->
+            <div class="container mb-5">
+              <div class="fs-5 fw-bold mb-3">امکانات و ویژگی‌ها</div>
+              <!-- options-->
+              <div class="bg-white border rounded p-4">
+                <div class="row g-4">
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-chef-hat fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">رستوران</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-paper-bag fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">درخواست امکانات در داخل اتاق</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-tools-kitchen-2 fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">سرو صبحانه در اتاق</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-smoking-no fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">اتاق سیگار ممنوع</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-wheelchair fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">امکانات ویزه برای معمولان</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-car-suv fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">ارايه خدمات تور های شهری</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-air-conditioning-disabled fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">سیستم گرمایشی</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-luggage fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">انبار نگهداری چمدان</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-air-conditioning fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">تهویه مطبوع</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-users-group fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">امکانات برگزاری جلسات</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-checkbox fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">بالکن (تراس)</div>
+                    </div>
+                  </div>
+                  <!-- item-->
+                  <div class="col-6 col-md-3">
+                    <div class="nt-flex-start-center flex-nowrap text-truncate"><i class="ti ti-pray fs-3" aria-hidden="true"></i>
+                      <div class="fw-bold">نمازخانه</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- rooms-->
+            <div class="container mb-5">
+              <div class="fs-5 fw-bold mb-3">اتاق‌های هتل داد یزد</div>
+              <!-- off-->
+              <div class="bg-white border rounded p-4 mb-4">
+                <div class="nt-flex-start-center gap-4"><i class="ti ti-rosette-discount fs-1 text-success" aria-hidden="true"></i>
+                  <div class="nt-flex-column">
+                    <div class="fw-bold">تخفیف ویژه تابستانی در مرحله پرداخت</div>
+                    <div class="text-muted">فرصت‌ محدود استفاده از تخفیف‌های تابستانی! با رسیدن به مرحله پرداخت، این تخفیف‌ها برای شما اعمال می‌شود.</div>
+                  </div>
+                </div>
+              </div>
+              <!-- verify-->
+              <div class="bg-white border rounded p-4 mb-4">
+                <div class="nt-flex-start-center gap-4"><i class="ti ti-rosette-discount-check fs-1 text-info" aria-hidden="true"></i>
+                  <div class="nt-flex-column">
+                    <div class="fw-bold">تایید شده توسط پروازه</div>
+                    <div class="text-muted">کیفیت سرویس دهی این مجموعه توسط پروازه تایید شده است.</div>
+                  </div>
+                </div>
+              </div>
+              <!-- warn-->
+              <div class="bg-warning-subtle border border-warning rounded p-4 mb-4">
+                <div class="nt-flex-start-center flex-nowrap gap-2"><i class="ti ti-info-circle fs-4" aria-hidden="true"></i>نرخ مهمان خارجی در هتل داد یزد متفاوت است. لطفا قبل از رزرو استعلام بفرمایید</div>
+              </div>
+              <!-- danger-->
+              <div class="bg-danger-subtle border border-danger rounded p-4 mb-4">
+                <div class="nt-flex-start-center flex-nowrap gap-2"><i class="ti ti-receipt-off fs-4" aria-hidden="true"></i>غیر قابل استرداد</div>
+              </div>
+              <!-- lists-->
+              <ul class="list-unstyled bg-white border rounded mb-4">
+                <!-- item-->
+                <li class="row">
+                  <div class="col-12 col-md-9">
+                    <div class="p-4">
+                      <div class="fs-5 fw-bold mb-3">یک تخته</div>
+                      <div class="nt-badge bg-info text-info mb-4"><i class="ti ti-tools-kitchen-2 fs-4" aria-hidden="true"></i>
+                        <div class="fw-bold">صبحانه</div>
+                      </div>
+                      <div class="nt-flex-start-center gap-4">
+                        <div class="nt-flex-start-center gap-1"><i class="ti ti-user fs-5" aria-hidden="true"></i>۱ نفر</div>قیمت هر شب: ۱،۹۵۰،۰۰۰ تومان
+                        <div class="text-danger">غیر قابل استرداد</div>
+                      </div>
+                    </div>
+                    <div class="nt-flex-start-center"></div>
+                  </div>
+                  <div class="col-12 col-md-3">
+                    <div class="bg-light-subtle nt-flex-column-center-center gap-3 py-4 px-3">
+                      <!-- off-->
+                      <div class="nt-flex-center-center flex-nowrap text-success small">
+                        <div class="fw-bold">۲۰۰ هزار تومان</div>تخفیف هنگام پرداخت
+                      </div>
+                      <!-- price-->
+                      <div class="nt-flex-center-center gap-1 fs-5">شروع از
+                        <div class="fw-bold text-info">۱،۹۵۰،۰۰۰</div>تومان
+                      </div>
+                      <!-- button-->
+                      <button class="btn btn-primary" type="button">
+                         رزرو اتاق</button>
+                      <div class="small">اقامت برای ۱ شب</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- comments-->
+            <div class="container mb-5">
+              <div class="fs-5 fw-bold">دیدگاه ها</div>
+              <!-- comments-->
+              <ul class="list-unstyled nt-flex-column gap-4 py-4">
+                <!-- comment-->
+                <li class="w-100 bg-white border rounded p-4">
+                  <!-- header | avatar, name & rating-->
+                  <div class="nt-flex-start-center gap-3 mb-3"><img class="lozad rounded-pill" src="img/layouts/avatar/m2.png" alt="avatar" width="45"/>
+                    <div class="nt-flex-column">
+                      <div class="fw-bold">آریا نوروزی</div>
+                      <div class="nt-flex-start-center" aria-label="۵ از ۵ ستاره"><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                  <!-- text-->
+                  <p class="lh-lg">کاش در مورد بهترین سایت‌های خرید بلیط هم توضیح داده بودید. خیلی به دنبال سایتی هستم که قیمت‌های مناسبی داشته باشه.</p>
+                  <div class="nt-flex-end-center gap-3">
+                    <div class="text-info fw-bold">۴</div>
+                    <button class="btn btn-outline-info" type="button"> <i class="ti ti-thumb-up fs-5" aria-hidden="true"></i></button>
+                  </div>
+                </li>
+                <!-- comment-->
+                <li class="w-100 bg-white border rounded p-4">
+                  <!-- header | avatar, name & rating-->
+                  <div class="nt-flex-start-center gap-3 mb-3"><img class="lozad rounded-pill" src="img/layouts/avatar/f1.png" alt="avatar" width="45"/>
+                    <div class="nt-flex-column">
+                      <div class="fw-bold">فاطمه احمدی</div>
+                      <div class="nt-flex-start-center" aria-label="۵ از ۵ ستاره"><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i><i class="ti ti-star-filled text-warning" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                  <!-- text-->
+                  <p class="lh-lg">مقاله مقایسه ایرلاین‌ها خیلی به من کمک کرد. همیشه بین فلان ایرلاین و بهمان ایرلاین شک داشتم. با خوندن این مقاله تصمیمم قطعی شد.</p>
+                  <div class="nt-flex-end-center gap-3">
+                    <div class="text-info fw-bold">۸</div>
+                    <button class="btn btn-outline-info" type="button"> <i class="ti ti-thumb-up fs-5" aria-hidden="true"></i></button>
+                  </div>
+                </li>
+                <!-- -->
+                <li class="w-100 nt-flex-between-center">
+                  <button class="btn btn-light" type="button"> <i class="ti ti-chevron-down fs-5" aria-hidden="true"></i>مشاهده نظرات بیشتر</button>
+                  <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#newComment"> <i class="ti ti-message fs-5" aria-hidden="true"></i>دیدگاه جدید</button>
+                </li>
+              </ul>
+            </div>
+            <!-- rules-->
+            <div class="container mb-5">
+              <div class="fs-5 fw-bold mb-3">قوانین و مقررات</div>
+              <div class="bg-white border rounded p-3">
+                <!-- cols-->
+                <div class="nt-flex-start-center gap-4">
+                  <!-- item-->
+                  <div class="nt-flex-colum-center-center border rounded py-3 px-4">
+                    <div class="nt-flex-start-center text-muted mb-2"><i class="ti ti-arrow-bar-left fs-5" aria-hidden="true"></i>ساعد ورود</div>
+                    <div class="fs-5 text-center fw-bold">۱۴:۰۰</div>
+                  </div>
+                  <!-- item-->
+                  <div class="nt-flex-colum-center-center border rounded py-3 px-4">
+                    <div class="nt-flex-start-center text-muted mb-2"><i class="ti ti-arrow-bar-right fs-5" aria-hidden="true"></i>ساعت خروج</div>
+                    <div class="fs-5 text-center fw-bold">۱۲:۰۰</div>
+                  </div>
+                </div>
+                <!-- text-->
+                <div class="py-4">
+                  <div class="fw-bold text-muted">نکات ضروری</div>
+                  <ul>
+                    <li>نرخ مهمان خارجی با ایرانی، متفاوت است. لطفا قبل از رزرو استعلام بگیرید.</li>
+                    <li>ساعت ورود از 14 تا 16 متغیر است.</li>
+                  </ul>
+                  <div class="fw-bold text-muted">هزینه های جانبی</div>
+                  <ul>
+                    <li>هزینه اقامت کودک کوچک‌تر از شش سال، رایگان است.</li>
+                    <li>هزینه اقامت کودک بزرگ‌تر از شش سال به صورت یک فرد کامل محاسبه می‌شود.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- commonQuestions-->
+            <div class="container mb-5">
+              <div class="commonQuestions bg-transparent">
+                <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                        <div class="commonQuestions-icon bg-secondary bg-opacity-10 me-3"><i class="ti ti-question-mark fs-4 text-secondary" aria-hidden="true"></i></div>
+                        <div class="fs-5">هتل داد یزد چند ستاره است؟</div>
+                      </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="panelsStayOpen-collapseOne">
+                      <div class="accordion-body">
+                        <p class="lead lh-lg">چهار ستاره ...</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- similar-->
+            <div class="container mb-5">
+              <div class="fs-5 fw-bold mb-3">هتل های مشابه</div>
+              <!-- swiper-->
+              <div class="swiper pb-5 mb-5" style="--max-height-image: 200px" data-swiper-options="{ &quot;freeMode&quot;:true, &quot;slidesPerView&quot;:&quot;auto&quot;, &quot;spaceBetween&quot;:20 }">
+                <div class="swiper-wrapper">
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto">
+                    <div class="card"><img class="lozad card-img-top" src="img/pages/detail-hotel/slider/2.jpg" alt=""/>
+                      <div class="card-body">
+                        <div class="card-title fw-bold">هتل داد یزد</div>
+                        <p class="card-text text-muted">
+                          <div class="nt-flex-start-center"><i class="ti ti-star-filled text-warning" aria-hidden="true"></i>۵ ستاره</div>
+                        </p>
+                        <div class="w-100 nt-flex-between-center gap-4">
+                          <div class="text-muted">۱ بزرگسال، ۱ اتاق</div>
+                          <div class="nt-flex-start-center gap-2 fs-5">
+                            <div class="text-info">۱،۲۵۰،۰۰۰</div>
+                            <div class="text-muted">تومان</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto">
+                    <div class="card"><img class="lozad card-img-top" src="img/pages/detail-hotel/slider/3.jpg" alt=""/>
+                      <div class="card-body">
+                        <div class="card-title fw-bold">هتل داد یزد</div>
+                        <p class="card-text text-muted">
+                          <div class="nt-flex-start-center"><i class="ti ti-star-filled text-warning" aria-hidden="true"></i>۵ ستاره</div>
+                        </p>
+                        <div class="w-100 nt-flex-between-center gap-4">
+                          <div class="text-muted">۱ بزرگسال، ۱ اتاق</div>
+                          <div class="nt-flex-start-center gap-2 fs-5">
+                            <div class="text-info">۱،۲۵۰،۰۰۰</div>
+                            <div class="text-muted">تومان</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto">
+                    <div class="card"><img class="lozad card-img-top" src="img/pages/detail-hotel/slider/4.jpg" alt=""/>
+                      <div class="card-body">
+                        <div class="card-title fw-bold">هتل داد یزد</div>
+                        <p class="card-text text-muted">
+                          <div class="nt-flex-start-center"><i class="ti ti-star-filled text-warning" aria-hidden="true"></i>۵ ستاره</div>
+                        </p>
+                        <div class="w-100 nt-flex-between-center gap-4">
+                          <div class="text-muted">۱ بزرگسال، ۱ اتاق</div>
+                          <div class="nt-flex-start-center gap-2 fs-5">
+                            <div class="text-info">۱،۲۵۰،۰۰۰</div>
+                            <div class="text-muted">تومان</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide-->
+                  <div class="swiper-slide w-auto h-auto">
+                    <div class="card"><img class="lozad card-img-top" src="img/pages/detail-hotel/slider/5.jpg" alt=""/>
+                      <div class="card-body">
+                        <div class="card-title fw-bold">هتل داد یزد</div>
+                        <p class="card-text text-muted">
+                          <div class="nt-flex-start-center"><i class="ti ti-star-filled text-warning" aria-hidden="true"></i>۵ ستاره</div>
+                        </p>
+                        <div class="w-100 nt-flex-between-center gap-4">
+                          <div class="text-muted">۱ بزرگسال، ۱ اتاق</div>
+                          <div class="nt-flex-start-center gap-2 fs-5">
+                            <div class="text-info">۱،۲۵۰،۰۰۰</div>
+                            <div class="text-muted">تومان</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- next & prev-->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </section>
+          <!-- sidebar-->
+          <aside class="col-12 col-md-3">
+            <div class="detail-sidebar bg-white border rounded p-4">
+              <!---->
+              <div class="input-group mb-3">
+                <input class="form-control form-control-lg" id="bookingFrom" type="text" name="" placeholder="تاریخ رفت" data-jdp=""/>
+                <input class="form-control form-control-lg" id="bookingTo" type="text" name="" placeholder="تاریخ برگشت" data-jdp=""/>
+              </div>
+              <!-- off-->
+              <div class="nt-flex-center-center text-success small mb-3">
+                <div class="fw-bold">۲۰۰ هزار تومان</div>تخفیف هنگام پرداخت
+              </div>
+              <!-- price-->
+              <div class="nt-flex-center-center gap-1 fs-5 mb-3">شروع از
+                <div class="fw-bold text-info">۱،۹۵۰،۰۰۰</div>تومان
+              </div>
+              <!-- button-->
+              <div class="d-grid">
+                <button class="btn btn-lg btn-primary" type="button">
+                   مشاهده اتاق های موجود</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!--                                 end Main                                 -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!-- -------------------------------- Footer -------------------------------- -//-->
+    <footer class="footer">
+      <!-- top-->
+      <div class="container border-bottom mb-5">
+        <div class="row py-5">
+          <div class="col-12 col-md-4">
+            <div class="fs-5 fw-bold mb-3">بهترین پیشنهادها، مستقیم در ایمیل شما</div>
+            <p class="lh-lg">با ثبت‌نام در خبرنامه، از جدیدترین پیشنهادهای پروازی، تخفیفات ویژه و رویدادهای جذاب مطلع شوید.</p>
+          </div>
+          <div class="col-12 col-md-4 offset-md-4">
+            <form action=""> 
+              <div class="input-group">
+                <div class="form-floating">
+                  <input class="form-control" id="floatingInputGroup1" type="email" placeholder="ایمیل شما"/>
+                  <label for="floatingInputGroup1">ایمیل شما</label>
+                </div>
+                <button class="btn btn-white border px-4" type="submit">
+                   ثبت</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- content-->
+      <div class="footer-content">
+        <div class="container">
+          <div class="row g-4">
+            <!-- logo & badges-->
+            <div class="col-12 col-md-6">
+              <div class="nt-flex-column-start-center align-items-md-start gap-2">
+                <div class="nt-flex-start-center gap-2 mb-3"><img src="./img/logo.png" alt="" width="40"/>
+                  <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+                </div>
+                <div class="nt-flex gap-1">تلفن‌ :‌
+                  <div dir="ltr">۰۲۱-91006032</div>
+                </div>
+                <p>
+                   آدرس :
+                  شریعتی، کوچه کامیار، پلاک ۶، واحد ۳
+                </p>
+                <div class="mb-4"></div>
+                <nav class="nt-flex"><a class="link footer-badge" href=""> <img class="lozad" src="./img/layouts/footer/badges/enamad.jpg" alt=""/></a><a class="link footer-badge" href=""> <img class="lozad" src="./img/layouts/footer/badges/kasbokar.jpg" alt=""/></a><a class="link footer-badge" href=""> <img class="lozad" src="./img/layouts/footer/badges/rezi.jpg" alt=""/></a></nav>
+              </div>
+            </div>
+            <!-- nav (mobile)-->
+            <div class="col-12 col-md-6 d-md-none">
+              <div class="accordion accordion-flush" id="footerAccordionNav">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav1" aria-expanded="false" aria-controls="footerAccordionNav1">پروازه</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav1" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="">
+                           درباره ما</a><a class="link" href="">
+                           تماس با ما</a><a class="link" href="">
+                           چرا پروازه</a><a class="link" href=""> پروازه پلاس</a><a class="link" href="">
+                           بیمه مسافرتی</a><a class="link" href="">
+                           محله پروازه</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav2" aria-expanded="false" aria-controls="footerAccordionNav2">خدمات مشتریان</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav2" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="">
+                           مرکز پشتیبانی آنلاین</a><a class="link" href="">
+                           راهنمای خرید </a><a class="link" href="">
+                           راهنمای استرداد</a><a class="link" href="">
+                           قوانین و مقررات</a><a class="link" href="">
+                           پرسش و پاسخ</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav3" aria-expanded="false" aria-controls="footerAccordionNav3">اطلاعات تکمیلی</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav3" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="">
+                           فروش سازمانی</a><a class="link" href="">
+                           همکاری با آژانس ها</a><a class="link" href="">
+                           فرصت های شغلی</a><a class="link" href="">
+                           سنجش رضایتمندی</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- nav (desktop)-->
+            <div class="col-12 col-md-6 d-none d-md-block">
+              <div class="row g-3">
+                <div class="col-6 col-md-4">
+                  <h5 class="fs-5 fw-bold mb-4">پروازه</h5>
+                  <div class="d-grid gap-3"><a class="link" href="">
+                       درباره ما</a><a class="link" href="">
+                       تماس با ما</a><a class="link" href="">
+                       چرا پروازه</a><a class="link" href=""> پروازه پلاس</a><a class="link" href="">
+                       بیمه مسافرتی</a><a class="link" href="">
+                       محله پروازه</a></div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <h5 class="fs-5 fw-bold mb-4">خدمات مشتریان</h5>
+                  <div class="d-grid gap-3"><a class="link" href="">
+                       مرکز پشتیبانی آنلاین</a><a class="link" href="">
+                       راهنمای خرید </a><a class="link" href="">
+                       راهنمای استرداد</a><a class="link" href="">
+                       قوانین و مقررات</a><a class="link" href="">
+                       پرسش و پاسخ</a></div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <h5 class="fs-5 fw-bold mb-4">اطلاعات تکمیلی</h5>
+                  <div class="d-grid gap-3"><a class="link" href="">
+                       فروش سازمانی</a><a class="link" href="">
+                       همکاری با آژانس ها</a><a class="link" href="">
+                       فرصت های شغلی</a><a class="link" href="">
+                       سنجش رضایتمندی</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- copyright-->
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-12 col-md">
+              <p class="text-muted lh-lg small" role="contentinfo" aria-label="اطلاعات حق نشر">
+                هرگونه استفاده از این موارد بدون مجوز کتبی و صریح از شرکت
+پروازه
+                ، نقض حقوق مالکیت معنوی محسوب شده و پیگرد قانونی خواهد داشت.
+              </p>
+            </div>
+            <div class="col-12 col-md-auto">
+              <nav class="nt-flex-center-center gap-4 justify-content-md-start" aria-label="پیوند های شبکه های اجتماعی"><a class="link" href="" aria-label="در تلگرام به ما بپیوندید"><i class="ti ti-brand-telegram fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"><i class="ti ti-brand-x fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه یوتیوب ما دیدن کنید"><i class="ti ti-brand-youtube fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه اینستاگرام ما دیدن کنید"><i class="ti ti-brand-instagram fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه لینکدین ما دیدن کنید"><i class="ti ti-brand-linkedin fs-2" aria-hidden="true"></i></a></nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none">
+        <path class="path-first" d="M0 328L75 357.8C150 387.7 300 447.3 450 438.3C600 429.3 750 351.7 825 312.8L900 274L900 601L825 601C750 601 600 601 450 601C300 601 150 601 75 601L0 601Z" fill="#f7f8f9"></path>
+        <path class="path-second" d="M0 510L75 507.3C150 504.7 300 499.3 450 496.8C600 494.3 750 494.7 825 494.8L900 495L900 601L825 601C750 601 600 601 450 601C300 601 150 601 75 601L0 601Z" fill="#e0e3e8"></path>
+      </svg>
+    </footer>
+    <!-- ------------------------------ end Footer ------------------------------ -//-->
+    <!-- -------------------------------- scripts ------------------------------- -//-->
+    <!-- filterizr-->
+    <script src="./vendor/lib/filterizr/vanilla.filterizr.min.js"> </script>
+    <!-- lozad-->
+    <script src="./vendor/lib/lozad/lozad.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper-->
+    <link rel="stylesheet" href="./vendor/lib/swiper/swiper-bundle.min.css"/>
+    <script src="./vendor/lib/swiper/swiper-bundle.min.js"></script>
+    <!-- jalaliDatePicker-->
+    <link rel="stylesheet" href="./vendor/lib/jalaliDatePicker/jalalidatepicker.min.css"/>
+    <script src="./vendor/lib/jalaliDatePicker/jalalidatepicker.min.js"></script>
+    <!-- tom select-->
+    <link rel="stylesheet" href="./vendor/lib/tom-select/tom-select.min.css"/>
+    <script src="./vendor/lib/tom-select/tom-select.complete.min.js"></script>
+    <!-- nouislider-->
+    <link rel="stylesheet" href="./vendor/lib/nouislider/nouislider.min.css"/>
+    <script src="./vendor/lib/nouislider/nouislider.min.js"></script>
+    <!-- script-->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
