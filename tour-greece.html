@@ -1,0 +1,602 @@
+<!DOCTYPE html >
+<html lang="fa" dir="rtl" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>پروازه
+      | ارزان ترین تورهای یونان
+    </title>
+    <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <style>
+    /* ------------------------------------------------ */
+    /* استایل‌های قبلی Hero را دستکاری نکنید */
+    /* ------------------------------------------------ */
+    .hero-tour {
+      /* === تغییر آدرس تصویر Hero به یونان === */
+      background-image: url('./img/pages/tours/greece-hero.webp'); 
+      background-size: cover;
+      background-position: center;
+      min-height: 400px; /* دسکتاپ: ارتفاع پیش‌فرض */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--bs-border-radius);
+      overflow: hidden;
+    }
+    .hero-tour::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4); 
+    }
+    .hero-tour-content {
+      z-index: 1;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    .object-fit-cover {
+        object-fit: cover;
+    }
+    
+    /* === ۱. شروع استایل جدید برای تصاویر کارت‌های تور === */
+    .tour-img-wrapper {
+        width: 100%; /* موبایل: تمام عرض */
+        height: 180px; /* موبایل: ارتفاع ثابت برای ظاهر بهتر (اختیاری) */
+        max-width: 100%;
+    }
+    
+    @media (min-width: 768px) {
+        .tour-img-wrapper {
+            max-width: 250px; /* دسکتاپ: محدود کردن عرض */
+            height: auto; /* دسکتاپ: حذف ارتفاع ثابت (بدون ارتفاع تعیین شده) */
+        }
+    }
+    /* === پایان استایل جدید برای تصاویر کارت‌های تور === */
+    
+    /* === ۲. شروع استایل‌های واکنش‌گرا (Mobile First) === */
+    @media (max-width: 767px) {
+      .main {
+          padding-bottom: 7rem !important; 
+      }
+      /* === تغییر ارتفاع هیرو در موبایل به 280px === */
+      .hero-tour {
+          min-height: 280px !important; 
+      }
+    }
+    /* === پایان استایل‌های واکنش‌گرا === */
+</style>
+  </head>
+  <body>
+    <div class="offcanvas offcanvas-start" id="offcanvasMenu" tabindex="-1" aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="offcanvasMenuLabel">منو کاربری</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="h-100 nt-flex-column">
+          <div class="w-100 flex-grow-1">
+            <div class="nt-flex-between-center gap-2 mb-4">
+              <div class="nt-flex-start-center"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+              </div>
+              <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+            </div>
+            <div class="accordion accordion-flush" id="accordionOffcanvasMenu">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu1" aria-expanded="false" aria-controls="accordionOffcanvasMenu1">بلیط</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu1" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="index.html"><i class="ti ti-plane-inflight fs-4" aria-hidden="true"></i>پرواز داخلی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4" aria-hidden="true"></i>پرواز خارجی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-trains.html"><i class="ti ti-train fs-4" aria-hidden="true"></i>قطار</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-buses.html"><i class="ti ti-bus fs-4" aria-hidden="true"></i>اتوبوس</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu2" aria-expanded="false" aria-controls="accordionOffcanvasMenu2">اقامت</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu2" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4" aria-hidden="true"></i>هتل</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-villas.html"><i class="ti ti-home-2 fs-4" aria-hidden="true"></i>ویلا و اقامتگاه</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="nt-flex-column">
+              <a class="btn btn-link link-dark fs-5" href="booking-tours.html">تور</a>
+              <a class="btn btn-link link-dark fs-5" href="">ویزا</a>
+            </nav>
+          </div>
+          <div class="w-100 border-top py-3">
+            <div class="nt-flex-column-center-center">
+              <div class="text-muted">پروازه; همراه همیشگی سفرهای شما. </div>
+              <div class="nt-flex-start-center text-muted" role="contentinfo" aria-label="اطلاعات حق نشر"><span class="visually-hidden">حق نشر ©</span><i class="ti ti-copyright fs-5" aria-hidden="true"></i>۱۴۰۳
+پروازه.
+                تمامی حقوق محفوظ است.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-start" id="offcanvasProfile" tabindex="-1" aria-labelledby="offcanvasProfileLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasProfileLabel">پروفایل کاربری</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="p-2">
+          <div class="nt-flex-column-center-center mb-4">
+            <div class="border border-primary rounded-circle position-relative">
+              <span class="position-absolute top-0 start-0 translate-middle badge rounded bg-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="تایید شده"><i class="ti ti-checks fs-5" aria-hidden="true"></i><span class="visually-hidden">تایید شده</span></span>
+              <img src="./img/layouts/avatar/m1.png" alt=""/>
+            </div>
+            <div class="nt-flex-column">
+              <div class="profile-title">علی محمدی</div>
+              <div class="text-muted">09121234567</div>
+            </div>
+          </div>
+          <div class="bg-secondary text-white rounded p-3 mb-4">
+            <div class="nt-flex-between-start gap-2">
+              <div class="nt-flex-column gap-3">
+                <div class="nt-flex text-light"><i class="ti ti-wallet fs-3" aria-hidden="true"></i>موجودی حساب </div><a class="btn btn-sm btn-secondary" href="./profile-transactions.html"> <i class="ti ti-plus fs-5" aria-hidden="true"></i><span class="small">افزایش موجودی</span></a>
+              </div>
+              <div class="nt-flex">
+                <div class="badge text-bg-light">۰</div>
+                <div class="small text-light">تومان</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid mb-4"><a class="btn btn-lg justify-content-start btn-outline-primary" href="./profile-plus.html"> <i class="ti ti-sparkles fs-5" aria-hidden="true"></i>
+              <div class="text-muted fw-bold small">
+                حساب ویژه
+پروازه
+              </div></a></div>
+          <div class="text-muted fw-bold small mb-3">منو کاربری</div>
+          <nav class="profile-menu"><a class="btn btn-outline-light" href="./profile.html"> <i class="ti ti-user fs-4" aria-hidden="true"></i>حساب کاربری</a><a class="btn btn-outline-light" href="./profile-orders.html"> <i class="ti ti-luggage fs-4" aria-hidden="true"></i>سفر های من</a><a class="btn btn-outline-light" href="./profile-passengers.html"> <i class="ti ti-users-group fs-4" aria-hidden="true"></i>لیست های مسافران</a><a class="btn btn-outline-light" href="./profile-wishlist.html"> <i class="ti ti-heart fs-4" aria-hidden="true"></i>علاقه مندی ها</a><a class="btn btn-outline-light" href="./profile-ticketing.html"> <i class="ti ti-headset fs-4" aria-hidden="true"></i>درخواست پشتیبانی</a><a class="btn btn-outline-light" href="./profile-transactions.html"> <i class="ti ti-businessplan fs-4" aria-hidden="true"></i>موجودی و اعتبار من</a></nav>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="signModal" tabindex="-1" aria-labelledby="signModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <div class="fs-5 fw-bold mb-2">ورود یا ثبت‌نام </div>
+              <p class="lead">برای ادامه شماره موبایل خود را وارد کنید. </p>
+              <form action=""> 
+                <div class="form-floating mb-2">
+                  <input class="form-control form-control-lg" type="tel" name="" placeholder="شماره موبایل" id="floatingInput"/>
+                  <label for="floatingInput">شماره موبایل</label>
+                </div>
+                <div class="nt-flex-center-center gap-1 small mb-4"><i class="ti ti-info-circle fs-5 text-muted" aria-hidden="true"></i>استفاده از پروازه به معنی پذیرش<a class="link" href="">
+                     قوانین و مقررات</a>این سرویس است.</div>
+                <div class="d-grid gap-3">
+                  <button class="btn btn-primary btn-lg" type="submit">
+                     تایید و دریافت</button>
+                  <button class="btn btn-link" type="button">
+                     ورود با کلمه عبور</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="shareModalLabel">اشتراک گذاری</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+              </nav>
+              <div class="input-group">
+                <input class="form-control form-control" type="text" id="shareLink" value="https://parvaazeh.com" dir="ltr" readonly="readonly"/>
+                <button class="btn btn-primary" type="button" id="copyLinkBtn">کپی لینک</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <div class="nt-flex-start-center">
+              <div class="d-md-none">
+                <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
+              </div>
+              <a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">پروازه</h1></a>
+            </div>
+          </div>
+          <div class="col">
+            <nav class="header-nav d-none d-md-flex">
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">بلیط</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html"><i class="ti ti-plane-inflight fs-4" aria-hidden="true"></i>پرواز داخلی</a></li>
+                  <li><a class="dropdown-item" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4" aria-hidden="true"></i>پرواز خارجی</a></li>
+                  <li><a class="dropdown-item" href="booking-trains.html"><i class="ti ti-train fs-4" aria-hidden="true"></i>قطار</a></li>
+                  <li><a class="dropdown-item" href="booking-buses.html"><i class="ti ti-bus fs-4" aria-hidden="true"></i>اتوبوس</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">اقامت</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4" aria-hidden="true"></i>هتل</a></li>
+                  <li><a class="dropdown-item" href="booking-villas.html"><i class="ti ti-home-2 fs-4" aria-hidden="true"></i>ویلا و اقامتگاه</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-link link" href="booking-tours.html">تور</a>
+              <a class="btn btn-link link" href="">ویزا</a>
+            </nav>
+          </div>
+          <div class="col-auto d-none d-md-flex">
+            <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+          </div>
+          <div class="col-auto"><a class="btn btn-light header-user" type="button" data-bs-toggle="modal" data-bs-target="#signModal"> <i class="ti ti-user fs-3 text-muted" aria-hidden="true"></i>
+              <div class="fs-6">ورود یا ثبت نام</div></a></div>
+        </div>
+      </div>
+    </header>
+    <main class="main tour-landing">
+      <div class="container py-3">
+        
+        <div class="row g-4 mb-5">
+          <div class="col-12">
+            <div class="hero-tour">
+              <div class="hero-tour-content text-center wrapper-lg">
+                <div class="mb-3"><i class="ti ti-plane-tilt fs-1"></i></div>
+                <h1 class="display-4 fw-bold mb-3">ارزان ترین تورهای یونان</h1>
+                <p class="lead">سفر به مهد تمدن، جزایر رویایی و تاریخ کهن</p>
+                <p class="small">بهترین پکیج‌های ویزای شینگن با پروازهای مستقیم و هتل‌های لوکس</p>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+            
+          <div class="col-12 col-md-4 order-1 order-md-2" id="quick-contact">
+            <div class="bg-primary text-white rounded p-4">
+              <h2 class="fs-5 fw-bold mb-3"><i class="ti ti-phone-call align-middle"></i> مشاوره رایگان تور یونان</h2>
+              <p class="small mb-3">شماره خود را وارد کنید تا کارشناسان ما جهت ارائه پکیج‌های ویژه با شما تماس بگیرند.</p>
+              <form>
+                <div class="mb-3">
+                  <label for="tour-name" class="form-label visually-hidden">نام و نام خانوادگی</label>
+                  <input type="text" class="form-control" id="tour-name" placeholder="نام و نام خانوادگی" required>
+                </div>
+                <div class="mb-3">
+                  <label for="tour-phone" class="form-label visually-hidden">شماره تماس</label>
+                  <input type="tel" class="form-control" id="tour-phone" placeholder="شماره تماس (مثال: ۰۹۱۲xxxxxxx)" required>
+                </div>
+                <button type="submit" class="btn btn-warning w-100 fw-bold">درخواست مشاوره</button>
+              </form>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-8 order-2 order-md-1" id="tour-list">
+				<div class="bg-white border rounded p-4">
+					<h2 class="fs-4 fw-bold border-bottom pb-3 mb-4"><i class="ti ti-list-details fs-5 align-middle"></i> پکیج‌های منتخب تور یونان</h2>
+					
+					<div class="card mb-4 border shadow-sm">
+						<div class="d-flex flex-column flex-md-row g-0">
+							
+							<div class="tour-img-wrapper flex-shrink-0">
+								<img src="./img/pages/tours/greece-01.jfif" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="تور آتن و جزایر"/>
+							</div>
+							
+							<div class="card-body flex-grow-1 d-flex flex-column flex-md-row p-3 p-md-4">
+								
+								<div class="flex-grow-1">
+									<h3 class="card-title fs-5 fw-bold mb-1"><a href="#" class="link-dark">تور آتن و جزایر (۷ روزه)</a></h3>
+									<p class="card-text text-muted small mb-3">۶ شب اقامت | سفر به قلب تمدن و سانتورینی</p>
+									
+									<div class="nt-flex-column gap-2 mb-3 small">
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-calendar-event text-primary fs-5" aria-hidden="true"></i>
+											<span><b>تاریخ‌های حرکت:</b> ۱۰ آذر + ۱۲ و ۲۶ دی</span>
+										</div>
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-clock text-primary fs-5" aria-hidden="true"></i>
+											<span><b>مدت اقامت:</b> ۶ شب</span>
+										</div>
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-plane text-primary fs-5" aria-hidden="true"></i>
+											<span><b>حمل و نقل:</b> هواپیما</span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="flex-shrink-0 mt-3 mt-md-0 d-flex flex-column justify-content-end align-items-end text-end" style="min-width: 150px;">
+									<div class="text-muted small mb-1">شروع قیمت از (هزینه پرواز محاسبه نشده است)</div>
+									<div class="fs-3 fw-bold text-danger mb-2">
+										<b>۱,۶۵۰</b> <span class="fs-6 text-muted">یورو</span>
+									</div>
+									<a href="#" class="btn btn-primary fw-bold w-100 w-md-auto">مشاهده تور</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="card mb-4 border shadow-sm">
+						<div class="d-flex flex-column flex-md-row g-0">
+							
+							<div class="tour-img-wrapper flex-shrink-0">
+								<img src="./img/pages/tours/greece-02.jfif" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="تور یونان و ایتالیا"/>
+							</div>
+							
+							<div class="card-body flex-grow-1 d-flex flex-column flex-md-row p-3 p-md-4">
+								
+								<div class="flex-grow-1">
+									<h3 class="card-title fs-5 fw-bold mb-1"><a href="#" class="link-dark">تور ترکیبی یونان و ایتالیا (۸ روزه)</a></h3>
+									<p class="card-text text-muted small mb-3">۷ شب اقامت | آتن، رم و ونیز</p>
+									
+									<div class="nt-flex-column gap-2 mb-3 small">
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-calendar-event text-primary fs-5" aria-hidden="true"></i>
+											<span><b>تاریخ حرکت:</b> ۱۲ دی</span>
+										</div>
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-clock text-primary fs-5" aria-hidden="true"></i>
+											<span><b>مدت اقامت:</b> ۷ شب</span>
+										</div>
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-plane text-primary fs-5" aria-hidden="true"></i>
+											<span><b>حمل و نقل:</b> هواپیما</span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="flex-shrink-0 mt-3 mt-md-0 d-flex flex-column justify-content-end align-items-end text-end" style="min-width: 150px;">
+									<div class="text-muted small mb-1">شروع قیمت از (هزینه پرواز محاسبه نشده است)</div>
+									<div class="fs-3 fw-bold text-danger mb-2">
+										<b>۲,۲۰۰</b> <span class="fs-6 text-muted">یورو</span>
+									</div>
+									<a href="#" class="btn btn-primary fw-bold w-100 w-md-auto">مشاهده تور</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="card mb-4 border shadow-sm">
+						<div class="d-flex flex-column flex-md-row g-0">
+							
+							<div class="tour-img-wrapper flex-shrink-0">
+								<img src="./img/pages/tours/greece-03.jfif" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="تور جزیره سانتورینی"/>
+							</div>
+							
+							<div class="card-body flex-grow-1 d-flex flex-column flex-md-row p-3 p-md-4">
+								
+								<div class="flex-grow-1">
+									<h3 class="card-title fs-5 fw-bold mb-1"><a href="#" class="link-dark">تور جزیره سانتورینی (۵ روزه)</a></h3>
+									<p class="card-text text-muted small mb-3">۴ شب اقامت | هتل‌های لوکس با منظره دریا</p>
+									
+									<div class="nt-flex-column gap-2 mb-3 small">
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-calendar-event text-primary fs-5" aria-hidden="true"></i>
+											<span><b>تاریخ‌های حرکت:</b> ۱۰ آذر + ۱۰ بهمن</span>
+										</div>
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-clock text-primary fs-5" aria-hidden="true"></i>
+											<span><b>مدت اقامت:</b> ۴ شب</span>
+										</div>
+										<div class="nt-flex-start-center gap-2">
+											<i class="ti ti-plane text-primary fs-5" aria-hidden="true"></i>
+											<span><b>حمل و نقل:</b> هواپیما</span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="flex-shrink-0 mt-3 mt-md-0 d-flex flex-column justify-content-end align-items-end text-end" style="min-width: 150px;">
+									<div class="text-muted small mb-1">شروع قیمت از (هزینه پرواز محاسبه نشده است)</div>
+									<div class="fs-3 fw-bold text-danger mb-2">
+										<b>۱,۹۵۰</b> <span class="fs-6 text-muted">یورو</span>
+									</div>
+									<a href="#" class="btn btn-primary fw-bold w-100 w-md-auto">مشاهده تور</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
+        </div>
+      </div>
+    </main>
+    <div class="d-md-none fixed-bottom p-3" style="z-index: 1050;">
+      <a href="tel:+982191006032" class="btn btn-danger w-100 py-3 fs-5 fw-bold rounded-pill nt-flex-center-center gap-2" aria-label="تماس فوری با کارشناسان تور یونان">
+        <i class="ti ti-phone-call fs-4" aria-hidden="true"></i>
+        تماس فوری: 91006032 - 021
+      </a>
+    </div>
+    <footer class="footer">
+      <div class="container border-bottom mb-5">
+        <div class="row py-5">
+          <div class="col-12 col-md-4">
+            <div class="fs-5 fw-bold mb-3">بهترین پیشنهادها، مستقیم در ایمیل شما</div>
+            <p class="lh-lg">با ثبت‌نام در خبرنامه، از جدیدترین پیشنهادهای پروازی، تخفیفات ویژه و رویدادهای جذاب مطلع شوید.</p>
+          </div>
+          <div class="col-12 col-md-4 offset-md-4">
+            <form action=""> 
+              <div class="input-group">
+                <div class="form-floating">
+                  <input class="form-control" id="floatingInputGroup1" type="email" placeholder="ایمیل شما"/>
+                  <label for="floatingInputGroup1">ایمیل شما</label>
+                </div>
+                <button class="btn btn-white border px-4" type="submit">
+                   ثبت</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <div class="nt-flex-column-start-center align-items-md-start gap-2">
+                <div class="nt-flex-start-center gap-2 mb-3"><img src="./img/logo.png" alt="" width="40"/>
+                  <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+                </div>
+                <div class="nt-flex gap-1">تلفن‌ :‌
+                  <div dir="ltr">۰۲۱-91006032</div>
+                </div>
+                <p>
+                   آدرس :
+                  شریعتی، کوچه کامیار، پلاک ۶، واحد ۳
+                </p>
+                <div class="mb-4"></div>
+                <nav class="nt-flex"><a class="link footer-badge" href=""> <img class="lozad" src="./img/layouts/footer/badges/enamad.jpg" alt=""/></a><a class="link footer-badge" href=""> <img class="lozad" src="./img/layouts/footer/badges/kasbokar.jpg" alt=""/></a><a class="link footer-badge" href=""> <img class="lozad" src="./img/layouts/footer/badges/rezi.jpg" alt=""/></a></nav>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-md-none">
+              <div class="accordion accordion-flush" id="footerAccordionNav">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav1" aria-expanded="false" aria-controls="footerAccordionNav1">پروازه</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav1" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="about-us.html">
+                           درباره ما</a><a class="link" href="contact.html">
+                           تماس با ما</a><a class="link" href="">
+                           چرا پروازه</a><a class="link" href=""> پروازه پلاس</a><a class="link" href="">
+                           بیمه مسافرتی</a><a class="link" href="blog.html">
+                           مجله پروازه</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav2" aria-expanded="false" aria-controls="footerAccordionNav2">خدمات مشتریان</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav2" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="">
+                           مرکز پشتیبانی آنلاین</a><a class="link" href="">
+                           راهنمای خرید </a><a class="link" href="">
+                           راهنمای استرداد</a><a class="link" href="">
+                           قوانین و مقررات</a><a class="link" href="">
+                           پرسش و پاسخ</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav3" aria-expanded="false" aria-controls="footerAccordionNav3">اطلاعات تکمیلی</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav3" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="">
+                           فروش سازمانی</a><a class="link" href="">
+                           همکاری با آژانس ها</a><a class="link" href="">
+                           فرصت های شغلی</a><a class="link" href="">
+                           سنجش رضایتمندی</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-none d-md-block">
+              <div class="row g-3">
+                <div class="col-6 col-md-4">
+                  <h5 class="fs-5 fw-bold mb-4">پروازه</h5>
+                  <div class="d-grid gap-3"><a class="link" href="about-us.html">
+                       درباره ما</a><a class="link" href="contact.html">
+                       تماس با ما</a><a class="link" href="">
+                       چرا پروازه</a><a class="link" href=""> پروازه پلاس</a><a class="link" href="">
+                       بیمه مسافرتی</a><a class="link" href="">
+                       مجله پروازه</a></div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <h5 class="fs-5 fw-bold mb-4">خدمات مشتریان</h5>
+                  <div class="d-grid gap-3"><a class="link" href="">
+                       مرکز پشتیبانی آنلاین</a><a class="link" href="">
+                       راهنمای خرید </a><a class="link" href="">
+                       راهنمای استرداد</a><a class="link" href="">
+                       قوانین و مقررات</a><a class="link" href="">
+                       پرسش و پاسخ</a></div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <h5 class="fs-5 fw-bold mb-4">اطلاعات تکمیلی</h5>
+                  <div class="d-grid gap-3"><a class="link" href="">
+                       فروش سازمانی</a><a class="link" href="">
+                       همکاری با آژانس ها</a><a class="link" href="">
+                       فرصت های شغلی</a><a class="link" href="">
+                       سنجش رضایتمندی</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-12 col-md">
+              <p class="text-muted lh-lg small" role="contentinfo" aria-label="اطلاعات حق نشر">
+                هرگونه استفاده از این موارد بدون مجوز کتبی و صریح از شرکت
+پروازه
+                ، نقض حقوق مالکیت معنوی محسوب شده و پیگرد قانونی خواهد داشت.
+              </p>
+            </div>
+            <div class="col-12 col-md-auto">
+              <nav class="nt-flex-center-center gap-4 justify-content-md-start" aria-label="پیوند های شبکه های اجتماعی"><a class="link" href="" aria-label="در تلگرام به ما بپیوندید"><i class="ti ti-brand-telegram fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"><i class="ti ti-brand-x fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه یوتیوب ما دیدن کنید"><i class="ti ti-brand-youtube fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه اینستاگرام ما دیدن کنید"><i class="ti ti-brand-instagram fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه لینکدین ما دیدن کنید"><i class="ti ti-brand-linkedin fs-2" aria-hidden="true"></i></a></nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none">
+        <path class="path-first" d="M0 328L75 357.8C150 387.7 300 447.3 450 438.3C600 429.3 750 351.7 825 312.8L900 274L900 601L825 601C750 601 600 601 450 601C300 601 150 601 75 601L0 601Z" fill="#f7f8f9"></path>
+        <path class="path-second" d="M0 510L75 507.3C150 504.7 300 499.3 450 496.8C600 494.3 750 494.7 825 494.8L900 495L900 601L825 601C750 601 600 601 450 601C300 601 150 601 75 601L0 601Z" fill="#e0e3e8"></path>
+      </svg>
+    </footer>
+    <script src="./vendor/lib/filterizr/vanilla.filterizr.min.js"> </script>
+    <script src="./vendor/lib/lozad/lozad.min.js"></script>
+    <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./vendor/lib/swiper/swiper-bundle.min.css"/>
+    <script src="./vendor/lib/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./vendor/lib/jalaliDatePicker/jalalidatepicker.min.css"/>
+    <script src="./vendor/lib/jalaliDatePicker/jalalidatepicker.min.js"></script>
+    <link rel="stylesheet" href="./vendor/lib/tom-select/tom-select.min.css"/>
+    <script src="./vendor/lib/tom-select/tom-select.complete.min.js"></script>
+    <link rel="stylesheet" href="./vendor/lib/nouislider/nouislider.min.css"/>
+    <script src="./vendor/lib/nouislider/nouislider.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
