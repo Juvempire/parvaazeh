@@ -1,0 +1,370 @@
+<!DOCTYPE html >
+<html lang="fa" dir="rtl" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>تخت جمشید؛ میراث جهانی بشری | پاروازه</title>
+    <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  </head>
+  <body>
+    <!-- ---------------------------- Offcanvas Menu ---------------------------- -//-->
+    <!-- -------------------------- end Offcanvas Menu -------------------------- -//-->
+    <!-- --------------------------- Modal blog search -------------------------- -//-->
+    <div class="offcanvas offcanvas-top" id="searchBlogOffcanvas" tabindex="-1" aria-labelledby="searchBlogOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="searchBlogOffcanvasLabel"></h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="wrapper-md">
+          <form action="" aria-label="جستجو در سایت"> 
+            <div class="input-group border-bottom border-2">
+              <label class="visually-hidden" for="search-input">جستجو کنید</label>
+              <input class="form-control form-control-lg border-0" type="text" name="" placeholder="جستجو کنید ..." aria-label="عبارت جستجو"/>
+              <button class="btn btn-link link-dark" type="submit" aria-label="ارسال جستجو"> <i class="ti ti-search fs-4" aria-hidden="true"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------- end Modal blog search ------------------------ -//-->
+    <!-- ---------------------------- end Modal Sign ---------------------------- -//-->
+    <!-- ------------------------------ Modal share ----------------------------- -//-->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="shareModalLabel">اشتراک گذاری</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+              </nav>
+              <div class="input-group">
+                <input class="form-control form-control" type="text" id="shareLink" value="https://netthemes.ir/html/parnet" dir="ltr" readonly="readonly"/>
+                <button class="btn btn-primary" type="button" id="copyLinkBtn">کپی لینک</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- end Modal share --------------------------- -//-->
+    <!-- -------------------------------- Header -------------------------------- -//-->
+    <header class="bg-white border-bottom header">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <!-- logo & menu (mobile)-->
+          <div class="col-auto">
+            <div class="nt-flex-start-center">
+              <!-- menu (mobile)-->
+              <div class="d-md-none">
+                <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
+              </div>
+              <!-- logo--><a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">وبلاگ</h1></a>
+            </div>
+          </div>
+          <!-- nav-->
+          <div class="col">
+            <!-- nav (desktop)-->
+            <nav class="header-nav d-none d-md-flex">
+              <!-- nav link--><a class="btn btn-link link" href="">خانه</a>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ایران گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">جزیره کیش</a></li>
+                  <li><a class="dropdown-item" href="">جزیره قشم</a></li>
+                  <li><a class="dropdown-item" href="">مشهد</a></li>
+                  <li><a class="dropdown-item" href="">شیراز</a></li>
+                  <li><a class="dropdown-item" href="">تهران</a></li>
+                </ul>
+              </div>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">جهان گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">استانبول</a></li>
+                  <li><a class="dropdown-item" href="">آنتالیا</a></li>
+                  <li><a class="dropdown-item" href="">دبی</a></li>
+                  <li><a class="dropdown-item" href="">لندن</a></li>
+                  <li><a class="dropdown-item" href="">پاریس</a></li>
+                </ul>
+              </div>
+              <!-- nav link--><a class="btn btn-link link" href="">کتاب سفر</a>
+              <!-- nav link--><a class="btn btn-link link" href="">پادکست سفر</a>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">بیشتر</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">دانستنی ها</a></li>
+                  <li><a class="dropdown-item" href="">کتابک سفر</a></li>
+                  <li><a class="dropdown-item" href="">اخبار سفر</a></li>
+                  <li><a class="dropdown-item" href="">سفر نامه</a></li>
+                  <li><a class="dropdown-item" href="">داستان های سفر</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- theme switcher-->
+          <div class="col-auto d-none d-md-flex">
+            <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+          </div>
+          <!-- search-->
+          <div class="col-auto">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchBlogOffcanvas" aria-controls="searchBlogOffcanvas"> <i class="ti ti-search fs-3 text-muted" aria-hidden="true"></i>
+              <div class="fs-6">جستجو کنید ...</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ------------------------------ end Header ------------------------------ -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <!--                                   Main                                   -//-->
+    <!-- ------------------------------------------------------------------------ -//-->
+    <main class="main blog">
+      <div class="container py-4">
+        <div class="row g-4">
+          <!-- content-->
+          <div class="col-12 col-md-8">
+            <!-- row-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <!-- post image-->
+              <div class="mb-4"><img class="lozad rounded" src="./img/pages/blog/main/persepolis.jpg" alt="تخت جمشید - میراث جهانی"/></div>
+              <!-- post date&author-->
+              <div class="nt-flex-between-center text-muted mb-4">
+                <div class="nt-flex-start-center">رضا فرهنگی<i class="ti ti-point-filled" aria-hidden="true"></i>۱۵ دی ۱۴۰۳</div>
+                <button class="btn btn-sm btn-outline-dark" type="button" data-bs-toggle="modal" data-bs-target="#shareModal">اشتراک گذاری</button>
+              </div>
+              <!-- post tags-->
+              <div class="nt-flex-start-center gap-3 mb-4">
+                <a class="btn btn-sm btn-outline-dark rounded-pill" href="">میراث فرهنگی<i class="ti ti-tag" aria-hidden="true"></i></a>
+                <a class="btn btn-sm btn-outline-dark rounded-pill" href="">تاریخ ایران<i class="ti ti-tag" aria-hidden="true"></i></a>
+                <a class="btn btn-sm btn-outline-dark rounded-pill" href="">هخامنشیان<i class="ti ti-tag" aria-hidden="true"></i></a>
+              </div>
+              <!-- post title-->
+              <div class="fs-3 fw-bold mb-3">تخت جمشید؛ میراث جهانی بشری</div>
+              <!-- post text-->
+              <p>تخت جمشید، پرسپولیس یا پارسه، نام یکی از شهرهای باستانی ایران است که سالیان سال پایتخت باشکوه پادشاهی ایران در زمان امپراتوری هخامنشیان بوده است.</p>
+              
+              <div class="fs-5 fw-bold mt-4">شاهکار معماری هخامنشی</div>
+              <p>این بنای تاریخی در ۵۷ کیلومتری شمال شرقی شیراز در استان فارس قرار دارد. تخت جمشید نه تنها یک اثر تاریخی، بلکه نماد تمدن و هنر ایرانی است که پس از گذشت قرن‌ها همچون نگینی درخشان در تاریخ ایران می‌درخشد.</p>
+
+              <div class="fs-5 fw-bold mt-4">تاریخچه ساخت</div>
+              <p>ساخت تخت جمشید در سال ۵۱۸ پیش از میلاد به دستور داریوش بزرگ آغاز شد و ادامه آن توسط پادشاهان بعدی هخامنشی مانند خشایارشا و اردشیر اول پیگیری شد. ساخت این مجموعه بزرگ و زیبا حدود ۱۲۰ سال به طول انجامید.</p>
+
+              <div class="fs-5 fw-bold mt-4">ویژگی‌های معماری منحصر به فرد</div>
+              <ul>
+                <li><strong>موقعیت استراتژیک:</strong> ساخت در دامنه کوه رحمت (کوه مهر)</li>
+                <li><strong>وسعت قابل توجه:</strong> مساحت حدود ۱۲۵ هزار متر مربع</li>
+                <li><strong>مصالح با کیفیت:</strong> استفاده از سنگ‌های عظیم الجثه و مرغوب</li>
+                <li><strong>هنر حجاری:</strong> حجاری‌های دقیق و هنرمندانه که داستان‌ها را روایت می‌کنند</li>
+                <li><strong>سیستم پیشرفته:</strong> سیستم آب‌رسانی و فاضلاب مدرن برای آن زمان</li>
+              </ul>
+
+              <div class="fs-5 fw-bold mt-4">کشف و ثبت جهانی</div>
+              <p>پس از کشف این مجموعه توسط باستان‌شناسان در قرن بیستم، تخت جمشید در سال ۱۹۷۹ میلادی در فهرست میراث جهانی یونسکو به ثبت رسید. این ثبت جهانی، اهمیت بین‌المللی این اثر را به رسمیت شناخت و حفاظت از آن را تضمین کرد.</p>
+
+              <div class="fs-5 fw-bold mt-4">بخش‌های مهم تخت جمشید</div>
+              <ol>
+                <li><strong>پلکان ورودی:</strong> با نقوش برجسته سربازان جاویدان</li>
+                <li><strong>دروازه ملل:</strong> ورودی اصلی با مجسمه‌های عظیم گاوهای بالدار</li>
+                <li><strong>کاخ آپادانا:</strong> بزرگترین کاخ با ۷۲ ستون عظیم</li>
+                <li><strong>کاخ تچر:</strong> کاخ اختصاصی داریوش بزرگ</li>
+                <li><strong>خزانه شاهی:</strong> محل نگهداری ثروت امپراتوری</li>
+              </ol>
+
+              <div class="fs-5 fw-bold mt-4">نکات مهم برای بازدید</div>
+              <ul>
+                <li>بهترین زمان بازدید: فصل بهار و پاییز</li>
+                <li>ساعات کاری: ۸ صبح تا ۱۷ عصر</li>
+                <li>امکانات: راهنماهای تور، سرویس بهداشتی، بوفه</li>
+                <li>توصیه: کفش راحت و آب کافی همراه داشته باشید</li>
+              </ul>
+
+              <div class="alert alert-info mt-4">
+                <i class="ti ti-info-circle" aria-hidden="true"></i>
+                <strong>نکته:</strong> برای کسب اطلاعات بیشتر درباره ساعت کاری و بلیط‌ها، به سایت رسمی میراث فرهنگی مراجعه کنید.
+              </div>
+            </div>
+
+            <!-- author box-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <div class="nt-flex-start-center gap-3">
+                <img src="./img/layouts/avatar/m1.png" alt="رضا فرهنگی" width="60" class="rounded-circle"/>
+                <div>
+                  <div class="fs-5 fw-bold">رضا فرهنگی</div>
+                  <p class="text-muted">کارشناس ارشد باستان‌شناسی و راهنمای تورهای تاریخی با ۱۵ سال سابقه</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- related posts-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <div class="nt-flex-between-center pb-2 mb-3">
+                <div class="fs-5 fw-bold">مطالب مشابه</div>
+                <a class="btn btn-sm btn-light" href="">مشاهده بیشتر<i class="ti ti-arrow-left fs-5" aria-hidden="true"></i></a>
+              </div>
+              <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/shiraz.jpg')">
+                      <a class="nt-badge bg-dark text-primary" href="blog-shiraz.html">شیراز<i class="ti ti-tag" aria-hidden="true"></i></a>
+                    </div>
+                    <a class="link-dark" href="blog-shiraz.html">
+                      <div class="p-4">شیراز؛ شهر عشق و دلدادگی</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/isfahan.jpg')">
+                      <a class="nt-badge bg-dark text-primary" href="blog-isfahan.html">اصفهان<i class="ti ti-tag" aria-hidden="true"></i></a>
+                    </div>
+                    <a class="link-dark" href="blog-isfahan.html">
+                      <div class="p-4">اصفهان؛ موزه زنده ایران</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/pic/pasargad.jpg')">
+                      <a class="nt-badge bg-dark text-primary" href="">پاسارگاد<i class="ti ti-tag" aria-hidden="true"></i></a>
+                    </div>
+                    <a class="link-dark" href="">
+                      <div class="p-4">آرامگاه کوروش بزرگ</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- comments section-->
+            <div class="bg-white border rounded p-4 mb-4">
+              <div class="nt-flex-between-center pb-2 mb-3">
+                <div class="fs-5 fw-bold">دیدگاه‌ها</div>
+              </div>
+              
+              <form class="border-bottom pb-4 mb-4">
+                <div class="mb-3">
+                  <input class="form-control" type="text" placeholder="نام شما *" required/>
+                </div>
+                <div class="mb-3">
+                  <input class="form-control" type="email" placeholder="ایمیل شما *" required/>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="4" placeholder="متن دیدگاه شما *" required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">ارسال دیدگاه</button>
+              </form>
+
+              <div class="nt-flex-column gap-4">
+                <div class="border-bottom pb-3">
+                  <div class="nt-flex-between-center mb-2">
+                    <strong>محمد رضایی</strong>
+                    <small class="text-muted">۲ روز پیش</small>
+                  </div>
+                  <p>مقاله بسیار جامع و مفیدی بود. من پارسال از تخت جمشید بازدید کردم و واقعاً شگفت‌انگیزه.</p>
+                </div>
+                
+                <div class="border-bottom pb-3">
+                  <div class="nt-flex-between-center mb-2">
+                    <strong>فاطمه کریمی</strong>
+                    <small class="text-muted">۱ هفته پیش</small>
+                  </div>
+                  <p>ممنون از اطلاعات دقیق‌تون. آیا راهنمای صوتی هم برای بازدید موجوده؟</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- sidebar-->
+          <div class="col-12 col-md-4">
+            <div class="sticky-top bg-white border rounded p-4">
+              <div class="fs-5 fw-bold mb-3">پربازدید ترین‌ها</div>
+              
+              <div class="row mb-4">
+                <div class="col-5">
+                  <img class="lozad rounded" src="./img/pages/blog/main/shiraz-side.jpg" alt="شیراز" style="width: 100%; height: 80px; object-fit: cover;"/>
+                </div>
+                <div class="col-7">
+                  <a class="link-dark" href="blog-shiraz.html">
+                    <div class="fw-bold small">شیراز؛ شهر عشق و دلدادگی</div>
+                  </a>
+                  <div class="nt-flex-start-center gap-1 text-danger small">۱۲,۵۴۳<i class="ti ti-flame" aria-hidden="true"></i></div>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-5">
+                  <img class="lozad rounded" src="./img/pages/blog/main/isfahan-side.jpg" alt="اصفهان" style="width: 100%; height: 80px; object-fit: cover;"/>
+                </div>
+                <div class="col-7">
+                  <a class="link-dark" href="blog-isfahan.html">
+                    <div class="fw-bold small">اصفهان؛ موزه زنده ایران</div>
+                  </a>
+                  <div class="nt-flex-start-center gap-1 text-danger small">۱۰,۸۷۶<i class="ti ti-flame" aria-hidden="true"></i></div>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <div class="col-5">
+                  <img class="lozad rounded" src="./img/pages/blog/main/kish.jpg" alt="کیش" style="width: 100%; height: 80px; object-fit: cover;"/>
+                </div>
+                <div class="col-7">
+                  <a class="link-dark" href="">
+                    <div class="fw-bold small">جزیره کیش؛ بهشت گردشگری</div>
+                  </a>
+                  <div class="nt-flex-start-center gap-1 text-danger small">۹,۴۳۲<i class="ti ti-flame" aria-hidden="true"></i></div>
+                </div>
+              </div>
+
+              <!-- newsletter subscription-->
+              <div class="bg-light rounded p-3 mt-4">
+                <div class="fw-bold mb-2">عضویت در خبرنامه</div>
+                <p class="small text-muted">از آخرین مقالات و تخفیف‌ها با خبر شوید</p>
+                <form>
+                  <input class="form-control form-control-sm mb-2" type="email" placeholder="ایمیل شما"/>
+                  <button class="btn btn-primary btn-sm w-100" type="submit">عضویت</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer-->
+    <footer class="bg-light">
+      <div class="text-center py-4">
+        <nav class="nt-flex-center-center gap-4 mb-3">
+          <a class="link-dark small" href="index.html">خانه</a>
+          <a class="link-dark small" href="about-us.html">درباره ما</a>
+          <a class="link-dark small" href="contact.html">تماس</a>
+          <a class="link-dark small" href="">قوانین</a>
+        </nav>
+        <p class="text-muted lh-lg small">
+          هرگونه استفاده از این موارد بدون مجوز کتبی و صریح از شرکت پاروازه، 
+          نقض حقوق مالکیت معنوی محسوب شده و پیگرد قانونی خواهد داشت.
+        </p>
+      </div>
+    </footer>
+
+    <!-- scripts-->
+    <script src="./vendor/lib/lozad/lozad.min.js"></script>
+    <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
