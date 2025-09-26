@@ -1,0 +1,294 @@
+<!DOCTYPE html >
+<html lang="fa" dir="rtl" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>پروازه
+      | نویسنده
+    </title>
+    <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  </head>
+  <body>
+    <div class="offcanvas offcanvas-start" id="offcanvasMenu" tabindex="-1" aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="offcanvasMenuLabel">منو کاربری</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="h-100 nt-flex-column">
+          <div class="w-100 flex-grow-1">
+            <div class="nt-flex-between-center gap-2 mb-4">
+              <a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">وبلاگ</h1></a>
+              <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"><i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+            </div>
+            <nav class="nt-flex-column gap-2 mb-3">
+              <a class="btn btn-light" href="index.html">خانه</a>
+              <a class="btn btn-light" href="">ایران گردی</a>
+              <a class="btn btn-light" href="">جهان گردی</a>
+              <a class="btn btn-light" href="">کتاب سفر</a>
+              <a class="btn btn-light" href="">پادکست سفر</a>
+              <a class="btn btn-light" href="">بیشتر</a>
+            </nav>
+            <nav class="nt-flex-column gap-2 mb-3">
+              <a class="btn btn-light" href="">اطلاعات فرودگاهی</a>
+              <a class="btn btn-light" href="">راهنمای خرید</a>
+              <a class="btn btn-light" href="">پرسش و پاسخ</a>
+              <a class="btn btn-light" href="">پشتیبانی آنلاین</a>
+            </nav>
+          </div>
+          <div class="nt-flex-between-center gap-2">
+            <a class="btn btn-light" href=""><i class="ti ti-brand-facebook fs-5" aria-hidden="true"></i></a>
+            <a class="btn btn-light" href=""><i class="ti ti-brand-x fs-5" aria-hidden="true"></i></a>
+            <a class="btn btn-light" href=""><i class="ti ti-brand-instagram fs-5" aria-hidden="true"></i></a>
+            <a class="btn btn-light" href=""><i class="ti ti-brand-whatsapp fs-5" aria-hidden="true"></i></a>
+            <a class="btn btn-light" href=""><i class="ti ti-brand-telegram fs-5" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas offcanvas-top" id="searchBlogOffcanvas" tabindex="-1" aria-labelledby="searchBlogOffcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="searchBlogOffcanvasLabel"></h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="wrapper-md">
+          <form action="" aria-label="جستجو در سایت"> 
+            <div class="input-group border-bottom border-2">
+              <label class="visually-hidden" for="search-input">جستجو کنید</label>
+              <input class="form-control form-control-lg border-0" type="text" name="" placeholder="جستجو کنید ..." aria-label="عبارت جستجو"/>
+              <button class="btn btn-link link-dark" type="submit" aria-label="ارسال جستجو"> <i class="ti ti-search fs-4" aria-hidden="true"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="shareModalLabel">اشتراک گذاری</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+              </nav>
+              <div class="input-group">
+                <input class="form-control form-control" type="text" id="shareLink" value="https://netthemes.ir/html/parnet" dir="ltr" readonly="readonly"/>
+                <button class="btn btn-primary" type="button" id="copyLinkBtn">کپی لینک</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="bg-white border-bottom header">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <div class="nt-flex-start-center">
+              <div class="d-md-none">
+                <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
+              </div>
+              <a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">وبلاگ</h1></a>
+            </div>
+          </div>
+          <div class="col">
+            <nav class="header-nav d-none d-md-flex">
+              <a class="btn btn-link link" href="">خانه</a>
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ایران گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">جزیره کیش</a></li>
+                  <li><a class="dropdown-item" href="">جزیره قشم</a></li>
+                  <li><a class="dropdown-item" href="">مشهد</a></li>
+                  <li><a class="dropdown-item" href="">شیراز</a></li>
+                  <li><a class="dropdown-item" href="">تهران</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">جهان گردی</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">استانبول</a></li>
+                  <li><a class="dropdown-item" href="">آنتالیا</a></li>
+                  <li><a class="dropdown-item" href="">دبی</a></li>
+                  <li><a class="dropdown-item" href="">لندن</a></li>
+                  <li><a class="dropdown-item" href="">پاریس</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-link link" href="">کتاب سفر</a>
+              <a class="btn btn-link link" href="">پادکست سفر</a>
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">بیشتر</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">دانستنی ها</a></li>
+                  <li><a class="dropdown-item" href="">کتابک سفر</a></li>
+                  <li><a class="dropdown-item" href="">اخبار سفر</a></li>
+                  <li><a class="dropdown-item" href="">سفر نامه</a></li>
+                  <li><a class="dropdown-item" href="">داستان های سفر</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="col-auto d-none d-md-flex">
+            <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchBlogOffcanvas" aria-controls="searchBlogOffcanvas"> <i class="ti ti-search fs-3 text-muted" aria-hidden="true"></i>
+              <div class="fs-6">جستجو کنید ...</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main blog">
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-12">
+            <div class="nt-flex-start-center border-bottom pb-3 mb-3">
+              <div class="nt-flex-start-center fs-4 fw-bold"><i class="ti ti-circle-dotted fs-5" aria-hidden="true"></i>مطالب نویسنده: علی محمدی</div>
+            </div>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="h-100 bg-white border rounded p-4">
+              <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/main/car.jpg')"></div><a class="link-dark" href="">
+                      <div class="p-4">راهنمای اجاره خودرو</div></a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/main/kish.jpg')"></div><a class="link-dark" href="">
+                      <div class="p-4">افزایش پرواز ها به جزیره کیش</div></a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/main/gilan.jpg')"></div><a class="link-dark" href="">
+                      <div class="p-4">بهترین روستا های گیلان</div></a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/main/japan.jpg')"></div><a class="link-dark" href="">
+                      <div class="p-4">ژاپن گردشگری آزمایشی را آغاز می‌کند</div></a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/main/passport.jpg')"></div><a class="link-dark" href="">
+                      <div class="p-4">بهترین پاسپورت های جهان</div></a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="blog-card-item">
+                    <div class="blog-card-image sm" style="background-image: url('./img/pages/blog/main/olympic.jpg')"></div><a class="link-dark" href="">
+                      <div class="p-4">المپیک پاریس ۲۰۲۴</div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-5 nt-flex-center-center">
+                <nav aria-label="صفحه بندی">
+                  <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">قبلی</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">بعدی</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="h-100 bg-white border rounded p-4">
+              <div class="fs-5 fw-bold mb-3">پربازدید ترین ها</div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/passport.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">بهترین پاسپورت های جهان</div></a>
+                  <p class="text-truncate">پاسپورت، گذرنامه‌ای است به سوی جهان. قدرت یک پاسپورت به این معناست که دارنده‌ی آن می‌تواند بدون نیاز به ویزا یا با اخذ ویزای آسان به تعداد بیشتری از کشورها سفر کند. هر ساله، شاخص‌هایی برای سنجش قدرت پاسپورت‌ها منتشر می‌شود که به مسافران کمک می‌کند تا بهترین مقاصد سفر را انتخاب کنند.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/olympic.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">المپیک پاریس ۲۰۲۴</div></a>
+                  <p class="text-truncate">با عرض سلام و احترام خدمت همکاران محترم. امروز می‌خواهم شما را به سفری هیجان‌انگیز به پاریس، میزبان بازی‌های المپیک 2024 ببرم. در این ارائه، به بررسی تاریخچه المپیک در پاریس، لوگو و نمادهای بازی‌ها، ورزشکاران برجسته و همچنین تأثیرات اقتصادی و اجتماعی این رویداد عظیم خواهیم پرداخت.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/milad.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">بازدید رایگان از برج میلاد</div></a>
+                  <p class="text-truncate">خبر خوب برای علاقه‌مندان به بازدید از برج میلاد! به طور دوره‌ای و در مناسبت‌های مختلف، امکان بازدید رایگان از این برج بلند و دیدنی فراهم می‌شود.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3"><img class="lozad rounded" src="./img/pages/blog/main/passport.jpg" alt=""/></div>
+                </div>
+                <div class="col-6">
+                  <div class="nt-flex-between-center text-muted small mb-2">
+                    <div class="nt-flex-start-center">علی محمدی<i class="ti ti-point-filled" aria-hidden="true"></i>۰۱ مرداد ۱۴۰۳</div>
+                  </div>
+                  <a class="link-dark" href=""> 
+                    <div class="text-truncate fs-5 fw-bold mb-3">بهترین پاسپورت های جهان</div></a>
+                  <p class="text-truncate">پاسپورت، گذرنامه‌ای است به سوی جهان. قدرت یک پاسپورت به این معناست که دارنده‌ی آن می‌تواند بدون نیاز به ویزا یا با اخذ ویزای آسان به تعداد بیشتری از کشورها سفر کند. هر ساله، شاخص‌هایی برای سنجش قدرت پاسپورت‌ها منتشر می‌شود که به مسافران کمک می‌کند تا بهترین مقاصد سفر را انتخاب کنند.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-light">
+      <div class="text-center py-4">
+        <nav class="nt-flex-center-center gap-4 mb-3"><a class="link-dark small" href="">اطلاعات فرودگاهی</a><a class="link-dark small" href="">راهنمای خرید</a><a class="link-dark small" href="">پرسش و پاسخ</a><a class="link-dark small" href="">پشتیبانی آنلاین</a></nav>
+        <p class="text-muted lh-lg small">
+          هرگونه استفاده از این موارد بدون مجوز کتبی و صریح از شرکت
+پروازه
+          ، نقض حقوق مالکیت معنوی محسوب شده و پیگرد قانونی خواهد داشت.
+        </p>
+      </div>
+    </footer>
+    <script src="./vendor/lib/filterizr/vanilla.filterizr.min.js"> </script>
+    <script src="./vendor/lib/lozad/lozad.min.js"></script>
+    <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./vendor/lib/swiper/swiper-bundle.min.css"/>
+    <script src="./vendor/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
