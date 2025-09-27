@@ -31,7 +31,16 @@ echo '<!DOCTYPE html>
         tr:nth-child(even) { background-color: #f9f9f9; }
         .export-link { display: inline-block; padding: 10px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 20px; }
     </style>
-</head>
+<!-- Event snippet for Page view conversion page -->
+  	<script>
+		gtag('event', 'conversion', {
+			'send_to': 'AW-17603536866/HliqCL_X4KIbEOLPgspB',
+			'value': 1.0,
+			'currency': 'USD'
+		});
+	</script>
+
+  </head>
 <body>
 <div class="container">';
 
