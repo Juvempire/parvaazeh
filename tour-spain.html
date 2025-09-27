@@ -318,15 +318,16 @@
             <div class="bg-primary text-white rounded p-4">
               <h2 class="fs-5 fw-bold mb-3"><i class="ti ti-phone-call align-middle"></i> مشاوره رایگان تور اسپانیا</h2>
               <p class="small mb-3">شماره خود را وارد کنید تا کارشناسان ما جهت ارائه پکیج‌های ویژه با شما تماس بگیرند.</p>
-              <form>
+              <form action="save_lead.php" method="POST">
                 <div class="mb-3">
                   <label for="tour-name" class="form-label visually-hidden">نام و نام خانوادگی</label>
-                  <input type="text" class="form-control" id="tour-name" placeholder="نام و نام خانوادگی" required>
+                  <input type="text" class="form-control" id="tour-name" name="name" placeholder="نام و نام خانوادگی" required/>
                 </div>
                 <div class="mb-3">
                   <label for="tour-phone" class="form-label visually-hidden">شماره تماس</label>
-                  <input type="tel" class="form-control" id="tour-phone" placeholder="شماره تماس (مثال: ۰۹۱۲xxxxxxx)" required>
+                  <input type="tel" class="form-control" id="tour-phone" name="phone" placeholder="شماره تماس (مثال: ۰۹۱۲xxxxxxx)" required/>
                 </div>
+                <input type="hidden" name="source" value="تور اسپانیا"/>
                 <button type="submit" class="btn btn-warning w-100 fw-bold">درخواست مشاوره</button>
               </form>
             </div>

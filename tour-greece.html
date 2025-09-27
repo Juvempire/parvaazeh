@@ -292,15 +292,16 @@
             <div class="bg-primary text-white rounded p-4">
               <h2 class="fs-5 fw-bold mb-3"><i class="ti ti-phone-call align-middle"></i> مشاوره رایگان تور یونان</h2>
               <p class="small mb-3">شماره خود را وارد کنید تا کارشناسان ما جهت ارائه پکیج‌های ویژه با شما تماس بگیرند.</p>
-              <form>
+              <form action="save_lead.php" method="POST">
                 <div class="mb-3">
                   <label for="tour-name" class="form-label visually-hidden">نام و نام خانوادگی</label>
-                  <input type="text" class="form-control" id="tour-name" placeholder="نام و نام خانوادگی" required>
+                  <input type="text" class="form-control" id="tour-name" name="name" placeholder="نام و نام خانوادگی" required/>
                 </div>
                 <div class="mb-3">
                   <label for="tour-phone" class="form-label visually-hidden">شماره تماس</label>
-                  <input type="tel" class="form-control" id="tour-phone" placeholder="شماره تماس (مثال: ۰۹۱۲xxxxxxx)" required>
+                  <input type="tel" class="form-control" id="tour-phone" name="phone" placeholder="شماره تماس (مثال: ۰۹۱۲xxxxxxx)" required/>
                 </div>
+                <input type="hidden" name="source" value="تور یونان"/>
                 <button type="submit" class="btn btn-warning w-100 fw-bold">درخواست مشاوره</button>
               </form>
             </div>
@@ -320,8 +321,8 @@
 							<div class="card-body flex-grow-1 d-flex flex-column flex-md-row p-3 p-md-4">
 								
 								<div class="flex-grow-1">
-									<h3 class="card-title fs-5 fw-bold mb-1">تور آتن و جزایر (۷ روزه)</h3>
-									<p class="card-text text-muted small mb-3">۶ شب اقامت | سفر به قلب تمدن و سانتورینی</p>
+									<h3 class="card-title fs-5 fw-bold mb-1">تور آتن (5 روزه)</h3>
+									<p class="card-text text-muted small mb-3">4 شب اقامت | سفر به قلب تمدن</p>
 									
 									<div class="nt-flex-column gap-2 mb-3 small">
 										<div class="nt-flex-start-center gap-2">
@@ -330,7 +331,7 @@
 										</div>
 										<div class="nt-flex-start-center gap-2">
 											<i class="ti ti-clock text-primary fs-5" aria-hidden="true"></i>
-											<span><b>مدت اقامت:</b> ۶ شب</span>
+											<span><b>مدت اقامت:</b> 4 شب</span>
 										</div>
 										<div class="nt-flex-start-center gap-2">
 											<i class="ti ti-plane text-primary fs-5" aria-hidden="true"></i>
@@ -342,7 +343,7 @@
 								<div class="flex-shrink-0 mt-3 mt-md-0 d-flex flex-column justify-content-end align-items-end text-end" style="min-width: 150px;">
 									<div class="text-muted small mb-1">شروع قیمت از (هزینه پرواز محاسبه نشده است)</div>
 									<div class="fs-3 fw-bold text-danger mb-2">
-										<b>۱,۶۵۰</b> <span class="fs-6 text-muted">یورو</span>
+										<b>550</b> <span class="fs-6 text-muted">یورو</span>
 									</div>
 									<!-- <a href="#" class="btn btn-primary fw-bold w-100 w-md-auto">مشاهده تور</a> -->
 								</div>
@@ -361,8 +362,8 @@
 							<div class="card-body flex-grow-1 d-flex flex-column flex-md-row p-3 p-md-4">
 								
 								<div class="flex-grow-1">
-									<h3 class="card-title fs-5 fw-bold mb-1">تور ترکیبی یونان و ایتالیا (۸ روزه)</h3>
-									<p class="card-text text-muted small mb-3">۷ شب اقامت | آتن، رم و ونیز</p>
+									<h3 class="card-title fs-5 fw-bold mb-1">تور آتن و جزایر (۸ روزه)</h3>
+									<p class="card-text text-muted small mb-3">۷ شب اقامت | آتن و سانتورینی</p>
 									
 									<div class="nt-flex-column gap-2 mb-3 small">
 										<div class="nt-flex-start-center gap-2">
@@ -383,7 +384,7 @@
 								<div class="flex-shrink-0 mt-3 mt-md-0 d-flex flex-column justify-content-end align-items-end text-end" style="min-width: 150px;">
 									<div class="text-muted small mb-1">شروع قیمت از (هزینه پرواز محاسبه نشده است)</div>
 									<div class="fs-3 fw-bold text-danger mb-2">
-										<b>۲,۲۰۰</b> <span class="fs-6 text-muted">یورو</span>
+										<b>890</b> <span class="fs-6 text-muted">یورو</span>
 									</div>
 									<!-- <a href="#" class="btn btn-primary fw-bold w-100 w-md-auto">مشاهده تور</a> -->
 								</div>
@@ -402,8 +403,8 @@
 							<div class="card-body flex-grow-1 d-flex flex-column flex-md-row p-3 p-md-4">
 								
 								<div class="flex-grow-1">
-									<h3 class="card-title fs-5 fw-bold mb-1">تور جزیره سانتورینی (۵ روزه)</h3>
-									<p class="card-text text-muted small mb-3">۴ شب اقامت | هتل‌های لوکس با منظره دریا</p>
+									<h3 class="card-title fs-5 fw-bold mb-1">تور یونان و ایتالیا (8 روزه)</h3>
+									<p class="card-text text-muted small mb-3">7 شب اقامت | هتل‌های لوکس با منظره دریا</p>
 									
 									<div class="nt-flex-column gap-2 mb-3 small">
 										<div class="nt-flex-start-center gap-2">
@@ -412,7 +413,7 @@
 										</div>
 										<div class="nt-flex-start-center gap-2">
 											<i class="ti ti-clock text-primary fs-5" aria-hidden="true"></i>
-											<span><b>مدت اقامت:</b> ۴ شب</span>
+											<span><b>مدت اقامت:</b> 7 شب</span>
 										</div>
 										<div class="nt-flex-start-center gap-2">
 											<i class="ti ti-plane text-primary fs-5" aria-hidden="true"></i>
@@ -424,7 +425,7 @@
 								<div class="flex-shrink-0 mt-3 mt-md-0 d-flex flex-column justify-content-end align-items-end text-end" style="min-width: 150px;">
 									<div class="text-muted small mb-1">شروع قیمت از (هزینه پرواز محاسبه نشده است)</div>
 									<div class="fs-3 fw-bold text-danger mb-2">
-										<b>۱,۹۵۰</b> <span class="fs-6 text-muted">یورو</span>
+										<b>990</b> <span class="fs-6 text-muted">یورو</span>
 									</div>
 									<!-- <a href="#" class="btn btn-primary fw-bold w-100 w-md-auto">مشاهده تور</a> -->
 								</div>
