@@ -54,8 +54,40 @@
 
         </div>
     </main>
+<!-- Cookie banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
+  <div>
+    <strong>ما از کوکی‌ها استفاده می‌کنیم</strong>
+    <div class="small text-muted">
+      برای بهبود تجربه و ارائه تبلیغات مرتبط. با ادامه استفاده، شما با استفاده از کوکی‌ها موافقت می‌کنید (قابل تغییر).
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn btn-secondary" id="manageCookiesBtn">مدیریت کوکی‌ها</button>
+    <button class="btn btn-primary" id="acceptAllCookies">پذیرفتن همه</button>
+  </div>
+</div>
+
     
     <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+  <script>
+      var banner = document.getElementById('cookieBanner');
+      if (localStorage.getItem('parvaazeh_cookie_consent') === 'accepted') {
+        banner.style.display = 'none';
+      }
+      document.getElementById('acceptAllCookies').addEventListener('click', function(){
+        localStorage.setItem('parvaazeh_cookie_consent','accepted');
+        banner.style.display='none';
+        // اعلام رضایت به گوگل (مثال - باید با CMP واقعی جایگزین شود)
+        gtag('consent','update', { 
+          'ad_storage':'granted',
+          'analytics_storage':'granted'
+        });
+      });
+      document.getElementById('manageCookiesBtn').addEventListener('click', function(){
+        alert('برای پیکربندی کوکی‌ها به بخش تنظیمات کوکی‌ها مراجعه کنید. (قابل توسعه است)');
+      });
+    </script>
   </body>
 </html>

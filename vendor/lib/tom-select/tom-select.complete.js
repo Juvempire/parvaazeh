@@ -1527,7 +1527,30 @@
 	  };
 
 	  // Recurse element node, looking for child text nodes to highlight, unless element
-	  // is childless, <script>, <style>, or already highlighted: <span class="hightlight">
+	  // is childless, <script>, <style>
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.08);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  z-index: 9999;
+}
+.cookie-banner .actions {
+  margin-inline-start: auto;
+}
+@media (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+, or already highlighted: <span class="hightlight">
 	  const highlightChildren = node => {
 	    if (node.nodeType === 1 && node.childNodes && !/(script|style)/i.test(node.tagName) && (node.className !== 'highlight' || node.tagName !== 'SPAN')) {
 	      Array.from(node.childNodes).forEach(element => {

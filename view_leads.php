@@ -22,6 +22,29 @@ echo '<!DOCTYPE html>
     <meta charset="UTF-8">
     <title>لیست لیدهای ثبت‌شده</title>
     <style>
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.08);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  z-index: 9999;
+}
+.cookie-banner .actions {
+  margin-inline-start: auto;
+}
+@media (max-width: 768px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
         body { font-family: Tahoma, sans-serif; background-color: #f4f4f4; padding: 20px; }
         .container { max-width: 1200px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         h1 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }
@@ -76,5 +99,23 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
     echo '<p style="color: red;">خطا در باز کردن فایل.</p>';
 }
 
-echo '</div></body></html>';
+echo '</div><script>
+      var banner = document.getElementById('cookieBanner');
+      if (localStorage.getItem('parvaazeh_cookie_consent') === 'accepted') {
+        banner.style.display = 'none';
+      }
+      document.getElementById('acceptAllCookies').addEventListener('click', function(){
+        localStorage.setItem('parvaazeh_cookie_consent','accepted');
+        banner.style.display='none';
+        // اعلام رضایت به گوگل (مثال - باید با CMP واقعی جایگزین شود)
+        gtag('consent','update', { 
+          'ad_storage':'granted',
+          'analytics_storage':'granted'
+        });
+      });
+      document.getElementById('manageCookiesBtn').addEventListener('click', function(){
+        alert('برای پیکربندی کوکی‌ها به بخش تنظیمات کوکی‌ها مراجعه کنید. (قابل توسعه است)');
+      });
+    </script>
+  </body></html>';
 ?>
