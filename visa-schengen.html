@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ویزای شینگن | اخذ ویزای ۲۶ کشور اروپایی | پروازه</title>
+    <meta name="description" content="ویزای شینگن برای سفر به ۲۶ کشور اروپایی - مدارک مورد نیاز، شرایط اخذ ویزای شینگن، هزینه و زمان processing">
+    <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
+    <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <style>
+        .schengen-hero {
+            background: 
+                linear-gradient(135deg, rgba(18, 116, 116, 0.85) 0%, rgba(18, 116, 116, 0.7) 100%),
+                url('./img/pages/visa/schengen-hero-bg.webp') center/cover;
+            color: white;
+            padding: 4rem 0;
+            border-radius: 20px;
+            width: 90%;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .schengen-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(18, 116, 116, 0.1);
+            z-index: 1;
+        }
+        .schengen-hero > .container {
+            position: relative;
+            z-index: 2;
+        }
+        .country-card {
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .country-card:hover {
+            border-color: #127474;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(18, 116, 116, 0.15);
+        }
+        .country-flag {
+            width: 80px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 2px solid #dee2e6;
+        }
+        .easy-badge {
+            background: #28a745;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            margin-right: 0.5rem;
+        }
+        .medium-badge {
+            background: #ffc107;
+            color: black;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            margin-right: 0.5rem;
+        }
+        .hard-badge {
+            background: #dc3545;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            margin-right: 0.5rem;
+        }
+        .schengen-map {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .time-badge {
+            background: #127474;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+		h5.fw-bold {
+			color: var(--bs-primary);
+		}
+        .mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #127474;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-cta {
+                display: block;
+            }
+            .main {
+                padding-bottom: 80px;
+            }
+        }
+        .country-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-value {
+            font-weight: bold;
+            color: #127474;
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <!-- ---------------------------- Offcanvas Menu ---------------------------- -//-->
+    <div class="offcanvas offcanvas-start" id="offcanvasMenu" tabindex="-1" aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-muted" id="offcanvasMenuLabel">منو کاربری</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="h-100 nt-flex-column">
+          <div class="w-100 flex-grow-1">
+            <!-- logo & dark theme-->
+            <div class="nt-flex-between-center gap-2 mb-4">
+              <!-- logo-->
+              <div class="nt-flex-start-center"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+              </div>
+              <!-- dark theme-->
+              <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+            </div>
+            <div class="accordion accordion-flush" id="accordionOffcanvasMenu">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu1" aria-expanded="false" aria-controls="accordionOffcanvasMenu1">بلیط</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu1" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="index.html"><i class="ti ti-plane-inflight fs-4" aria-hidden="true"></i>پرواز داخلی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4" aria-hidden="true"></i>پرواز خارجی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-trains.html"><i class="ti ti-train fs-4" aria-hidden="true"></i>قطار</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-buses.html"><i class="ti ti-bus fs-4" aria-hidden="true"></i>اتوبوس</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu2" aria-expanded="false" aria-controls="accordionOffcanvasMenu2">اقامت</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu2" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4" aria-hidden="true"></i>هتل</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-villas.html"><i class="ti ti-home-2 fs-4" aria-hidden="true"></i>ویلا و اقامتگاه</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav class="nt-flex-column">
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">تور</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="tour-spain.html">تور اسپانیا</a></li>
+                  <li><a class="dropdown-item" href="tour-france.html">تور فرانسه</a></li>
+                  <li><a class="dropdown-item" href="tour-greece.html">تور یونان</a></li>
+                </ul>
+              </div>
+              <a class="btn btn-link link-dark fs-5" href="">ویزا</a>
+            </nav>
+          </div>
+          <div class="w-100 border-top py-3">
+            <div class="nt-flex-column-center-center">
+              <div class="text-muted">پروازه; همراه همیشگی سفرهای شما. </div>
+              <div class="nt-flex-start-center text-muted" role="contentinfo" aria-label="اطلاعات حق نشر"><span class="visually-hidden">حق نشر ©</span><i class="ti ti-copyright fs-5" aria-hidden="true"></i>۱۴۰۳
+پروازه.
+                تمامی حقوق محفوظ است.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------- end Offcanvas Menu -------------------------- -//-->
+    <!-- --------------------------- Offcanvas Profile -------------------------- -//-->
+    <div class="offcanvas offcanvas-start" id="offcanvasProfile" tabindex="-1" aria-labelledby="offcanvasProfileLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasProfileLabel">پروفایل کاربری</h5>
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="p-2">
+          <div class="nt-flex-column-center-center mb-4">
+            <div class="border border-primary rounded-circle position-relative">
+              <!-- badge--><span class="position-absolute top-0 start-0 translate-middle badge rounded bg-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="تایید شده"><i class="ti ti-checks fs-5" aria-hidden="true"></i><span class="visually-hidden">تایید شده</span></span>
+              <!-- avatar--><img src="./img/layouts/avatar/m1.png" alt=""/>
+            </div>
+            <!-- name & phone-->
+            <div class="nt-flex-column">
+              <!-- name-->
+              <div class="profile-title">علی محمدی</div>
+              <!-- phone-->
+              <div class="text-muted">09121234567</div>
+            </div>
+          </div>
+          <!-- wallet wrapper-->
+          <div class="bg-secondary text-white rounded p-3 mb-4">
+            <div class="nt-flex-between-start gap-2">
+              <!-- wallet-->
+              <div class="nt-flex-column gap-3">
+                <div class="nt-flex text-light"><i class="ti ti-wallet fs-3" aria-hidden="true"></i>موجودی حساب </div><a class="btn btn-sm btn-secondary" href="./profile-transactions.html"> <i class="ti ti-plus fs-5" aria-hidden="true"></i><span class="small">افزایش موجودی</span></a>
+              </div>
+              <!-- money-->
+              <div class="nt-flex">
+                <div class="badge text-bg-light">۰</div>
+                <div class="small text-light">تومان</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid mb-4"><a class="btn btn-lg justify-content-start btn-outline-primary" href="./profile-plus.html"> <i class="ti ti-sparkles fs-5" aria-hidden="true"></i>
+              <div class="text-muted fw-bold small">
+                حساب ویژه
+پروازه
+              </div></a></div>
+          <div class="text-muted fw-bold small mb-3">منو کاربری</div>
+          <nav class="profile-menu"><a class="btn btn-outline-light" href="./profile.html"> <i class="ti ti-user fs-4" aria-hidden="true"></i>حساب کاربری</a><a class="btn btn-outline-light" href="./profile-orders.html"> <i class="ti ti-luggage fs-4" aria-hidden="true"></i>سفر های من</a><a class="btn btn-outline-light" href="./profile-passengers.html"> <i class="ti ti-users-group fs-4" aria-hidden="true"></i>لیست های مسافران</a><a class="btn btn-outline-light" href="./profile-wishlist.html"> <i class="ti ti-heart fs-4" aria-hidden="true"></i>علاقه مندی ها</a><a class="btn btn-outline-light" href="./profile-ticketing.html"> <i class="ti ti-headset fs-4" aria-hidden="true"></i>درخواست پشتیبانی</a><a class="btn btn-outline-light" href="./profile-transactions.html"> <i class="ti ti-businessplan fs-4" aria-hidden="true"></i>موجودی و اعتبار من</a></nav>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------- end Offcanvas Profile ------------------------ -//-->
+    <!-- ------------------------------ Modal Sign ------------------------------ -//-->
+    <div class="modal fade" id="signModal" tabindex="-1" aria-labelledby="signModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <div class="fs-5 fw-bold mb-2">ورود یا ثبت‌نام </div>
+              <p class="lead">برای ادامه شماره موبایل خود را وارد کنید. </p>
+              <form action=""> 
+                <div class="form-floating mb-2">
+                  <input class="form-control form-control-lg" type="tel" name="" placeholder="شماره موبایل" id="floatingInput"/>
+                  <label for="floatingInput">شماره موبایل</label>
+                </div>
+                <div class="nt-flex-center-center gap-1 small mb-4"><i class="ti ti-info-circle fs-5 text-muted" aria-hidden="true"></i>استفاده از پروازه به معنی پذیرش<a class="link" href="">
+                     قوانین و مقررات</a>این سرویس است.</div>
+                <div class="d-grid gap-3">
+                  <button class="btn btn-primary btn-lg" type="submit">
+                     تایید و دریافت</button>
+                  <button class="btn btn-link" type="button">
+                     ورود با کلمه عبور</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- end Modal Sign ---------------------------- -//-->
+    <!-- ------------------------------ Modal share ----------------------------- -//-->
+    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="shareModalLabel">اشتراک گذاری</h1>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="wrapper-xs py-5 text-center"> 
+              <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+              </nav>
+              <div class="input-group">
+                <input class="form-control form-control" type="text" id="shareLink" value="https://parvaazeh.com" dir="ltr" readonly="readonly"/>
+                <button class="btn btn-primary" type="button" id="copyLinkBtn">کپی لینک</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- end Modal share --------------------------- -//-->
+    <!-- -------------------------------- Header -------------------------------- -//-->
+    <header class="header">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <!-- logo & menu (mobile)-->
+          <div class="col-auto">
+            <div class="nt-flex-start-center">
+              <!-- menu (mobile)-->
+              <div class="d-md-none">
+                <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
+              </div>
+              <!-- logo--><a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold">پروازه</h1></a>
+            </div>
+          </div>
+          <!-- nav-->
+          <div class="col">
+            <!-- nav (desktop)-->
+            <nav class="header-nav d-none d-md-flex">
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">بلیط</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html"><i class="ti ti-plane-inflight fs-4" aria-hidden="true"></i>پرواز داخلی</a></li>
+                  <li><a class="dropdown-item" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4" aria-hidden="true"></i>پرواز خارجی</a></li>
+                  <li><a class="dropdown-item" href="booking-trains.html"><i class="ti ti-train fs-4" aria-hidden="true"></i>قطار</a></li>
+                  <li><a class="dropdown-item" href="booking-buses.html"><i class="ti ti-bus fs-4" aria-hidden="true"></i>اتوبوس</a></li>
+                </ul>
+              </div>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">اقامت</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4" aria-hidden="true"></i>هتل</a></li>
+                  <li><a class="dropdown-item" href="booking-villas.html"><i class="ti ti-home-2 fs-4" aria-hidden="true"></i>ویلا و اقامتگاه</a></li>
+                </ul>
+              </div>
+              <!-- nav link-->
+              <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">تور</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="tour-spain.html">تور اسپانیا</a></li>
+                  <li><a class="dropdown-item" href="tour-france.html">تور فرانسه</a></li>
+                  <li><a class="dropdown-item" href="tour-greece.html">تور یونان</a></li>
+                </ul>
+              </div>
+              <!-- nav link--><a class="btn btn-link link" href="">ویزا</a>
+            </nav>
+          </div>
+          <!-- theme switcher-->
+          <div class="col-auto d-none d-md-flex">
+            <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+          </div>
+          <!-- user-->
+          <div class="col-auto"><a class="btn btn-light header-user" type="button" data-bs-toggle="modal" data-bs-target="#signModal"> <i class="ti ti-user fs-3 text-muted" aria-hidden="true"></i>
+              <div class="fs-6">ورود یا ثبت نام</div></a></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="schengen-hero mb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+						<div class="nt-flex-start-center mb-3">
+                            <div class="urgent-badge">ویزای فوری</div>
+                            <img src="./img/pages/visa/flags/schengen.webp" alt="پرچم اتحادیه اروپا" class="country-flag">
+                        </div>
+                        <h1 class="display-5 fw-bold mb-3">ویزای <span class="text-warning">شینگن</span></h1>
+                        <p class="lead mb-4">سفر به ۲۶ کشور اروپایی با یک ویزا - انتخاب بهترین کشور برای اخذ ویزا</p>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="ti ti-world fs-2 text-warning"></i>
+                                    <div>۲۶ کشور اروپایی</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="ti ti-calendar fs-2 text-warning"></i>
+                                    <div>تا ۵ سال اعتبار</div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="ti ti-shield-check fs-2 text-warning"></i>
+                                    <div>تضمین اخذ ویزا</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <!-- فرم درخواست ویزا -->
+                        <div class="bg-white rounded p-4 shadow-lg">
+                            <h3 class="text-center text-dark mb-4">مشاوره رایگان ویزای شینگن</h3>
+                            <form id="schengenForm">
+                                <div class="mb-3">
+                                    <select class="form-select" required>
+                                        <option value="">کشور مورد نظر را انتخاب کنید</option>
+                                        <option value="france">فرانسه</option>
+                                        <option value="italy">ایتالیا</option>
+                                        <option value="spain">اسپانیا</option>
+                                        <option value="germany">آلمان</option>
+                                        <option value="netherlands">هلند</option>
+                                        <option value="not-sure">مطمئن نیستم</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="شماره تماس" required>
+                                </div>
+                                <button type="submit" class="btn btn-warning w-100">
+                                    <i class="ti ti-phone"></i>
+                                    دریافت مشاوره رایگان
+                                </button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <small class="text-muted">کارشناسان ما بهترین کشور را به شما پیشنهاد می‌دهند</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container py-4">
+            <!-- معرفی منطقه شینگن -->
+            <div class="schengen-map mb-5">
+                <h2 class="fw-bold text-primary mb-3">منطقه شینگن چیست؟</h2>
+                <p class="mb-4">منطقه شینگن شامل ۲۶ کشور اروپایی است که با یک ویزا می‌توانید به تمام این کشورها سفر کنید. اولین کشوری که به آن وارد می‌شوید باید همان کشوری باشد که ویزا از آن گرفته‌اید.</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="ti ti-passport fs-1 text-primary"></i>
+                            <h5>یک ویزا</h5>
+                            <p>برای ۲۶ کشور</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="ti ti-calendar fs-1 text-success"></i>
+                            <h5>۹۰ روز</h5>
+                            <p>در هر ۱۸۰ روز</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <i class="ti ti-plane fs-1 text-warning"></i>
+                            <h5>آزادی تردد</h5>
+                            <p>بین مرزها</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- کشورهای شینگن -->
+            <div class="row mb-5">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold text-primary">کشورهای منطقه شینگن</h2>
+                    <p class="text-muted">ویزای هر یک از این کشورها به شما اجازه سفر به تمام کشورهای زیر را می‌دهد</p>
+                </div>
+
+                <!-- کشورهای با درصد قبولی بالا -->
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <a href="visa-france.html" class="text-decoration-none">
+                        <div class="country-card">
+                            <span class="easy-badge">آسان</span>
+                            <img src="./img/pages/visa/flags/france.webp" alt="پرچم فرانسه" class="country-flag">
+                            <h5 class="fw-bold">فرانسه</h5>
+                            <p class="small text-muted">پاریس - ایفل</p>
+                            <div class="country-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">۹۲٪</div>
+                                    <div class="stat-label">موفقیت</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">۱۰-۱۵</div>
+                                    <div class="stat-label">روز</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <a href="visa-italy.html" class="text-decoration-none">
+                        <div class="country-card">
+                            <span class="easy-badge">آسان</span>
+                            <img src="./img/pages/visa/flags/italy.png" alt="پرچم ایتالیا" class="country-flag">
+                            <h5 class="fw-bold">ایتالیا</h5>
+                            <p class="small text-muted">رم - ونیز</p>
+                            <div class="country-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">95٪</div>
+                                    <div class="stat-label">موفقیت</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">۱۲-۱۶</div>
+                                    <div class="stat-label">روز</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <a href="visa-spain.html" class="text-decoration-none">
+                        <div class="country-card">
+                            <span class="easy-badge">آسان</span>
+                            <img src="./img/pages/visa/flags/spain.png" alt="پرچم اسپانیا" class="country-flag">
+                            <h5 class="fw-bold">اسپانیا</h5>
+                            <p class="small text-muted">بارسلون - مادرید</p>
+                            <div class="country-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">88٪</div>
+                                    <div class="stat-label">موفقیت</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">۱۰-۱۴</div>
+                                    <div class="stat-label">روز</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <a href="visa-greece.html" class="text-decoration-none">
+                        <div class="country-card">
+                            <span class="easy-badge">آسان</span>
+                            <img src="./img/pages/visa/flags/greece.png" alt="پرچم یونان" class="country-flag">
+                            <h5 class="fw-bold">یونان</h5>
+                            <p class="small text-muted">آتن - سانتورینی</p>
+                            <div class="country-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">87٪</div>
+                                    <div class="stat-label">موفقیت</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">۸-۱۲</div>
+                                    <div class="stat-label">روز</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- کشورهای با درصد قبولی متوسط -->
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="country-card">
+                        <span class="medium-badge">متوسط</span>
+                        <img src="./img/pages/visa/flags/germany.png" alt="پرچم آلمان" class="country-flag">
+                        <h5 class="fw-bold">آلمان</h5>
+                        <p class="small text-muted">برلین - مونیخ</p>
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">۷۸٪</div>
+                                <div class="stat-label">موفقیت</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">۱۵-۲۰</div>
+                                <div class="stat-label">روز</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="country-card">
+                        <span class="medium-badge">متوسط</span>
+                        <img src="./img/pages/visa/flags/netherlands.png" alt="پرچم هلند" class="country-flag">
+                        <h5 class="fw-bold">هلند</h5>
+                        <p class="small text-muted">آمستردام</p>
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">۷۵٪</div>
+                                <div class="stat-label">موفقیت</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">۱۴-۱۸</div>
+                                <div class="stat-label">روز</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="country-card">
+                        <span class="medium-badge">متوسط</span>
+                        <img src="./img/pages/visa/flags/austria.png" alt="پرچم اتریش" class="country-flag">
+                        <h5 class="fw-bold">اتریش</h5>
+                        <p class="small text-muted">وین - سالزبورگ</p>
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">۸۰٪</div>
+                                <div class="stat-label">موفقیت</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">۱۲-۱۶</div>
+                                <div class="stat-label">روز</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="country-card">
+                        <span class="medium-badge">متوسط</span>
+                        <img src="./img/pages/visa/flags/portugal.png" alt="پرچم پرتغال" class="country-flag">
+                        <h5 class="fw-bold">پرتغال</h5>
+                        <p class="small text-muted">لیسبون - پورتو</p>
+                        <div class="country-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">۸۲٪</div>
+                                <div class="stat-label">موفقیت</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">۱۱-۱۵</div>
+                                <div class="stat-label">روز</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سایر کشورها -->
+                <div class="col-12 text-center mt-4">
+                    <h4 class="fw-bold text-muted">سایر کشورهای شینگن</h4>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                        <span class="badge bg-light text-dark border">بلژیک</span>
+                        <span class="badge bg-light text-dark border">سوئیس</span>
+                        <span class="badge bg-light text-dark border">سوئد</span>
+                        <span class="badge bg-light text-dark border">نروژ</span>
+                        <span class="badge bg-light text-dark border">دانمارک</span>
+                        <span class="badge bg-light text-dark border">فنلاند</span>
+                        <span class="badge bg-light text-dark border">ایسلند</span>
+                        <span class="badge bg-light text-dark border">جمهوری چک</span>
+                        <span class="badge bg-light text-dark border">لهستان</span>
+                        <span class="badge bg-light text-dark border">مجارستان</span>
+                        <span class="badge bg-light text-dark border">اسلوونی</span>
+                        <span class="badge bg-light text-dark border">اسلواکی</span>
+                        <span class="badge bg-light text-dark border">لیتوانی</span>
+                        <span class="badge bg-light text-dark border">لتونی</span>
+                        <span class="badge bg-light text-dark border">استونی</span>
+                        <span class="badge bg-light text-dark border">لوکزامبورگ</span>
+                        <span class="badge bg-light text-dark border">لیختن اشتاین</span>
+                        <span class="badge bg-light text-dark border">مالتا</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- راهنمای انتخاب کشور -->
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="bg-light rounded p-4">
+                        <h3 class="text-center fw-bold text-primary mb-4">چگونه بهترین کشور برای ویزای شینگن را انتخاب کنیم؟</h3>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="bg-white rounded p-3 border">
+                                    <h5 class="text-success">✅ برای بار اول</h5>
+                                    <p class="small mb-0">فرانسه، ایتالیا یا یونان را انتخاب کنید - درصد قبولی بالاتر</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-white rounded p-3 border">
+                                    <h5 class="text-primary">🎯 هدف سفر</h5>
+                                    <p class="small mb-0">کشوری را انتخاب کنید که بیشترین زمان را در آن می‌گذرانید</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-white rounded p-3 border">
+                                    <h5 class="text-warning">✈️ ورود اول</h5>
+                                    <p class="small mb-0">اولین کشوری که وارد می‌شوید باید صادرکننده ویزا باشد</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-white rounded p-3 border">
+                                    <h5 class="text-info">📅 زمان processing</h5>
+                                    <p class="small mb-0">یونان و اسپانیا معمولاً سریع‌تر جواب می‌دهند</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مدارک مشترک شینگن -->
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="bg-white border rounded p-4">
+                        <h3 class="fw-bold text-primary text-center mb-4">مدارک مشترک ویزای شینگن</h3>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-success">📄 مدارک اصلی</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">✅ پاسپورت با ۶ ماه اعتبار</li>
+                                    <li class="mb-2">✅ ۲ قطعه عکس ۳.۵×۴.۵</li>
+                                    <li class="mb-2">✅ فرم درخواست ویزا</li>
+                                    <li class="mb-2">✅ بیمه مسافرتی شینگن</li>
+                                    <li class="mb-2">✅ بلیط رفت و برگشت</li>
+                                    <li class="mb-2">✅ رزرو هتل</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-success">💵 مدارک مالی</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">✅ پرینت حساب بانکی</li>
+                                    <li class="mb-2">✅ گواهی اشتغال به کار</li>
+                                    <li class="mb-2">✅ فیش حقوقی</li>
+                                    <li class="mb-2">✅ سند ملکی</li>
+                                    <li class="mb-2">✅ گردش حساب ۶ ماهه</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info mt-4">
+                            <i class="ti ti-info-circle"></i>
+                            <strong>توجه:</strong> مدارک هر کشور ممکن است تفاوت‌های جزئی داشته باشد. کارشناسان ما دقیق‌ترین لیست را در اختیار شما قرار می‌دهند.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA موبایل -->
+    <div class="mobile-cta">
+        <a href="tel:02191006032" class="btn btn-warning w-100 py-3 fw-bold">
+            <i class="ti ti-phone me-2"></i>
+            مشاوره رایگان ویزای شینگن
+        </a>
+    </div>
+
+    <footer class="footer">
+      <!-- top-->
+      <div class="container border-bottom mb-5">
+        <div class="row py-5">
+          <div class="col-12 col-md-4">
+            <div class="fs-5 fw-bold mb-3">بهترین پیشنهادها، مستقیم در ایمیل شما</div>
+            <p class="lh-lg">با ثبت‌نام در خبرنامه، از جدیدترین پیشنهادهای پروازی، تخفیفات ویژه و رویدادهای جذاب مطلع شوید.</p>
+          </div>
+          <div class="col-12 col-md-4 offset-md-4">
+            <form action=""> 
+              <div class="input-group">
+                <div class="form-floating">
+                  <input class="form-control" id="floatingInputGroup1" type="email" placeholder="ایمیل شما"/>
+                  <label for="floatingInputGroup1">ایمیل شما</label>
+                </div>
+                <button class="btn btn-white border px-4" type="submit">
+                   ثبت</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- content-->
+      <div class="footer-content">
+        <div class="container">
+          <div class="row g-4">
+            <!-- logo & badges-->
+            <div class="col-12 col-md-6">
+              <div class="nt-flex-column-start-center align-items-md-start gap-2">
+                <div class="nt-flex-start-center gap-2 mb-3"><img src="./img/logo.png" alt="" width="40"/>
+                  <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+                </div>
+                <div class="nt-flex gap-1">تلفن‌ :‌
+                  <div dir="ltr">021-91006032</div>
+                </div>
+                <p>
+                   آدرس :
+                  شریعتی، کوچه کامیار، پلاک ۶، واحد ۳
+                </p>
+                <div class="mb-4"></div>
+                <nav class="nt-flex">
+                  <a class="link footer-badge" href="">
+                    <img class="lozad" src="./img/layouts/footer/badges/enamad.png" alt=""/>
+                  </a>
+                  <a class="link footer-badge" href="">
+                    <img class="lozad" src="./img/layouts/footer/badges/kasbokar.png" alt=""/>
+                  </a>
+                  <a class="link footer-badge" href="">
+                    <img class="lozad" src="./img/layouts/footer/badges/samandehi.webp" alt=""/>
+                  </a>
+                  <a class="link footer-badge" href="">
+                    <img class="lozad" src="./img/layouts/footer/badges/aira.webp" alt=""/>
+                  </a>
+                  <a class="link footer-badge" href="">
+                    <img class="lozad" src="./img/layouts/footer/badges/iata.png" alt=""/>
+                  </a>
+                </nav>
+              </div>
+            </div>
+            <!-- nav (mobile)-->
+            <div class="col-12 col-md-6 d-md-none">
+              <div class="accordion accordion-flush" id="footerAccordionNav">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav1" aria-expanded="false" aria-controls="footerAccordionNav1">پروازه</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav1" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="about-us.html">
+                           درباره ما</a><a class="link" href="contact.html">
+                           تماس با ما</a><a class="link" href="">
+                           چرا پروازه</a><a class="link" href=""> پروازه پلاس</a><a class="link" href="">
+                           بیمه مسافرتی</a><a class="link" href="blog.html">
+                           مجله پروازه</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav2" aria-expanded="false" aria-controls="footerAccordionNav2">خدمات مشتریان</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav2" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="">
+                           مرکز پشتیبانی آنلاین</a><a class="link" href="">
+                           راهنمای خرید </a><a class="link" href="">
+                           راهنمای استرداد</a><a class="link" href="">
+                           قوانین و مقررات</a><a class="link" href="">
+                           پرسش و پاسخ</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#footerAccordionNav3" aria-expanded="false" aria-controls="footerAccordionNav3">اطلاعات تکمیلی</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="footerAccordionNav3" data-bs-parent="#footerAccordionNav">
+                    <div class="accordion-body">
+                      <div class="d-grid gap-3"><a class="link" href="">
+                           فروش سازمانی</a><a class="link" href="">
+                           همکاری با آژانس ها</a><a class="link" href="">
+                           فرصت های شغلی</a><a class="link" href="">
+                           سنجش رضایتمندی</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- nav (desktop)-->
+            <div class="col-12 col-md-6 d-none d-md-block">
+              <div class="row g-3">
+    <div class="col-6 col-md-4">
+        <h5 class="fs-5 fw-bold mb-4">پروازه</h5>
+        <div class="d-grid gap-3">
+            <a class="link" href="about-us.html">درباره ما</a>
+            <a class="link" href="contact.html">تماس با ما</a>
+            <a class="link" href="faq.html#why-parvaazeh">چرا پروازه</a>
+            <a class="link" href="tour-spain.html">تورهای اروپا</a>
+            <a class="link" href="faq.html#insurance">بیمه مسافرتی</a>
+            <a class="link" href="blog.html">مجله پروازه</a>
+        </div>
+    </div>
+    <div class="col-6 col-md-4">
+        <h5 class="fs-5 fw-bold mb-4">خدمات مشتریان</h5>
+        <div class="d-grid gap-3">
+            <a class="link" href="contact.html">مرکز پشتیبانی آنلاین</a>
+            <a class="link" href="faq.html">راهنمای خرید</a>
+            <a class="link" href="terms.html#cancellation">راهنمای استرداد</a>
+            <a class="link" href="terms.html">قوانین و مقررات</a>
+            <a class="link" href="faq.html">پرسش و پاسخ</a>
+            <a class="link" href="privacy.html">حریم خصوصی</a>
+        </div>
+    </div>
+    <div class="col-6 col-md-4">
+        <h5 class="fs-5 fw-bold mb-4">اطلاعات تکمیلی</h5>
+        <div class="d-grid gap-3">
+            <a class="link" href="contact.html#corporate">فروش سازمانی</a>
+            <a class="link" href="contact.html#partnership">همکاری با آژانس‌ها</a>
+            <a class="link" href="contact.html#careers">فرصت‌های شغلی</a>
+            <a class="link" href="contact.html#feedback">سنجش رضایتمندی</a>
+            <a class="link" href="blog-persepolis.html">تورهای داخلی</a>
+            <a class="link" href="tour-spain.html">تورهای خارجی</a>
+        </div>
+    </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- copyright-->
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-12 col-md">
+              <p class="text-muted lh-lg small" role="contentinfo" aria-label="اطلاعات حق نشر">
+                هرگونه استفاده از این موارد بدون مجوز کتبی و صریح از شرکت
+پروازه
+                ، نقض حقوق مالکیت معنوی محسوب شده و پیگرد قانونی خواهد داشت.
+              </p>
+            </div>
+            <div class="col-12 col-md-auto">
+              <nav class="nt-flex-center-center gap-4 justify-content-md-start" aria-label="پیوند های شبکه های اجتماعی"><a class="link" href="" aria-label="در تلگرام به ما بپیوندید"><i class="ti ti-brand-telegram fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"><i class="ti ti-brand-x fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه یوتیوب ما دیدن کنید"><i class="ti ti-brand-youtube fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه اینستاگرام ما دیدن کنید"><i class="ti ti-brand-instagram fs-2" aria-hidden="true"></i></a><a class="link" href="" aria-label="از صفحه لینکدین ما دیدن کنید"><i class="ti ti-brand-linkedin fs-2" aria-hidden="true"></i></a></nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none">
+        <path class="path-first" d="M0 328L75 357.8C150 387.7 300 447.3 450 438.3C600 429.3 750 351.7 825 312.8L900 274L900 601L825 601C750 601 600 601 450 601C300 601 150 601 75 601L0 601Z" fill="#f7f8f9"></path>
+        <path class="path-second" d="M0 510L75 507.3C150 504.7 300 499.3 450 496.8C600 494.3 750 494.7 825 494.8L900 495L900 601L825 601C750 601 600 601 450 601C300 601 150 601 75 601L0 601Z" fill="#e0e3e8"></path>
+      </svg>
+    </footer>
+    <!-- ------------------------------ end Footer ------------------------------ -//-->
+    <!-- -------------------------------- scripts ------------------------------- -//-->
+    <!-- filterizr-->
+    <script src="./vendor/lib/filterizr/vanilla.filterizr.min.js"> </script>
+    <!-- lozad-->
+    <script src="./vendor/lib/lozad/lozad.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="./vendor/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper-->
+    <link rel="stylesheet" href="./vendor/lib/swiper/swiper-bundle.min.css"/>
+    <script src="./vendor/lib/swiper/swiper-bundle.min.js"></script>
+    <!-- jalaliDatePicker-->
+    <link rel="stylesheet" href="./vendor/lib/jalaliDatePicker/jalalidatepicker.min.css"/>
+    <script src="./vendor/lib/jalaliDatePicker/jalalidatepicker.min.js"></script>
+    <!-- tom select-->
+    <link rel="stylesheet" href="./vendor/lib/tom-select/tom-select.min.css"/>
+    <script src="./vendor/lib/tom-select/tom-select.complete.min.js"></script>
+    <!-- nouislider-->
+    <link rel="stylesheet" href="./vendor/lib/nouislider/nouislider.min.css"/>
+    <script src="./vendor/lib/nouislider/nouislider.min.js"></script>
+    <!-- script-->
+    <script src="./js/script.js"></script>
+    <script>
+        document.getElementById('schengenForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('درخواست شما ثبت شد. کارشناسان ما به زودی با شما تماس خواهند گرفت.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
