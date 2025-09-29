@@ -72,71 +72,106 @@
         <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <div class="h-100 nt-flex-column">
-          <div class="w-100 flex-grow-1">
-            <!-- logo & dark theme-->
-            <div class="nt-flex-between-center gap-2 mb-4">
-              <!-- logo-->
-              <div class="nt-flex-start-center"><img src="./img/logo.png" alt="" width="40"/>
-                <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
-              </div>
-              <!-- dark theme-->
-              <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت"> <i class="ti ti-sun fs-5" aria-hidden="true"></i></button>
+  <div class="h-100 nt-flex-column">
+    <div class="w-100 flex-grow-1">
+      <!-- logo & dark theme-->
+      <div class="nt-flex-between-center gap-2 mb-4">
+        <div class="nt-flex-start-center">
+          <img src="./img/logo.png" alt="" width="40"/>
+          <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+        </div>
+        <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت">
+          <i class="ti ti-sun fs-5" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="accordion accordion-flush" id="accordionOffcanvasMenu">
+        <!-- بلیط -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu1" aria-expanded="false" aria-controls="accordionOffcanvasMenu1">
+              بلیط
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu1" data-bs-parent="#accordionOffcanvasMenu">
+            <div class="accordion-body">
+              <ul class="list-unstyled nt-flex-column">
+                <li><a class="btn btn-link link-dark fs-5" href="index.html"><i class="ti ti-plane-inflight fs-4"></i> پرواز داخلی</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4"></i> پرواز خارجی</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="booking-trains.html"><i class="ti ti-train fs-4"></i> قطار</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="booking-buses.html"><i class="ti ti-bus fs-4"></i> اتوبوس</a></li>
+              </ul>
             </div>
-            <div class="accordion accordion-flush" id="accordionOffcanvasMenu">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu1" aria-expanded="false" aria-controls="accordionOffcanvasMenu1">بلیط</button>
-                </h2>
-                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu1" data-bs-parent="#accordionOffcanvasMenu">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled nt-flex-column">
-                      <li><a class="btn btn-link link-dark fs-5" href="index.html"><i class="ti ti-plane-inflight fs-4" aria-hidden="true"></i>پرواز داخلی</a></li>
-                      <li><a class="btn btn-link link-dark fs-5" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4" aria-hidden="true"></i>پرواز خارجی</a></li>
-                      <li><a class="btn btn-link link-dark fs-5" href="booking-trains.html"><i class="ti ti-train fs-4" aria-hidden="true"></i>قطار</a></li>
-                      <li><a class="btn btn-link link-dark fs-5" href="booking-buses.html"><i class="ti ti-bus fs-4" aria-hidden="true"></i>اتوبوس</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu2" aria-expanded="false" aria-controls="accordionOffcanvasMenu2">اقامت</button>
-                </h2>
-                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu2" data-bs-parent="#accordionOffcanvasMenu">
-                  <div class="accordion-body">
-                    <ul class="list-unstyled nt-flex-column">
-                      <li><a class="btn btn-link link-dark fs-5" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4" aria-hidden="true"></i>هتل</a></li>
-                      <li><a class="btn btn-link link-dark fs-5" href="booking-villas.html"><i class="ti ti-home-2 fs-4" aria-hidden="true"></i>ویلا و اقامتگاه</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <nav class="nt-flex-column">
-              <!-- nav link--><!-- nav link-->
-              <div class="dropdown">
-                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">تور</button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="tour-spain.html">تور اسپانیا</a></li>
-                  <li><a class="dropdown-item" href="tour-france.html">تور فرانسه</a></li>
-                  <li><a class="dropdown-item" href="tour-greece.html">تور یونان</a></li>
-                </ul>
-              </div>
-              <!-- nav link--><a class="btn btn-link link-dark fs-5" href="">ویزا</a>
-            </nav>
           </div>
-          <div class="w-100 border-top py-3">
-            <div class="nt-flex-column-center-center">
-              <div class="text-muted">پروازه; همراه همیشگی سفرهای شما. </div>
-              <div class="nt-flex-start-center text-muted" role="contentinfo" aria-label="اطلاعات حق نشر"><span class="visually-hidden">حق نشر ©</span><i class="ti ti-copyright fs-5" aria-hidden="true"></i>۱۴۰۳
-پروازه.
-                تمامی حقوق محفوظ است.
-              </div>
+        </div>
+
+        <!-- اقامت -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu2" aria-expanded="false" aria-controls="accordionOffcanvasMenu2">
+              اقامت
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu2" data-bs-parent="#accordionOffcanvasMenu">
+            <div class="accordion-body">
+              <ul class="list-unstyled nt-flex-column">
+                <li><a class="btn btn-link link-dark fs-5" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4"></i> هتل</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="booking-villas.html"><i class="ti ti-home-2 fs-4"></i> ویلا و اقامتگاه</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- تور -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu3" aria-expanded="false" aria-controls="accordionOffcanvasMenu3">
+              تور
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu3" data-bs-parent="#accordionOffcanvasMenu">
+            <div class="accordion-body">
+              <ul class="list-unstyled nt-flex-column">
+                <li><a class="btn btn-link link-dark fs-5" href="tour-spain.html">تور اسپانیا</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="tour-france.html">تور فرانسه</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="tour-greece.html">تور یونان</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- ویزا -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu4" aria-expanded="false" aria-controls="accordionOffcanvasMenu4">
+              ویزا
+            </button>
+          </h2>
+          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu4" data-bs-parent="#accordionOffcanvasMenu">
+            <div class="accordion-body">
+              <ul class="list-unstyled nt-flex-column">
+                <li><a class="btn btn-link link-dark fs-5" href="visa-schengen.html">ویزا شینگن</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="visa-spain.html">ویزا اسپانیا</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="visa-france.html">ویزا فرانسه</a></li>
+                <li><a class="btn btn-link link-dark fs-5" href="visa-italy.html">ویزا ایتالیا</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="w-100 border-top py-3">
+        <div class="nt-flex-column-center-center">
+          <div class="text-muted">پروازه؛ همراه همیشگی سفرهای شما.</div>
+          <div class="nt-flex-start-center text-muted" role="contentinfo" aria-label="اطلاعات حق نشر">
+            <i class="ti ti-copyright fs-5"></i> 1404 پروازه. تمامی حقوق محفوظ است.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
     <!-- -------------------------- end Offcanvas Menu -------------------------- -//-->
     <!-- --------------------------- Offcanvas Profile -------------------------- -//-->
@@ -289,7 +324,16 @@
                   <li><a class="dropdown-item" href="tour-greece.html">تور یونان</a></li>
                 </ul>
               </div>
-              <!-- nav link--><a class="btn btn-link link" href="">ویزا</a>
+              <!-- nav link-->
+			  <div class="dropdown">
+                <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ویزا</button>
+                <ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="visa-schengen.html">ویزا شینگن</a></li>
+                  <li><a class="dropdown-item" href="visa-spain.html">ویزا اسپانیا</a></li>
+                  <li><a class="dropdown-item" href="visa-france.html">ویزا فرانسه</a></li>
+				  <li><a class="dropdown-item" href="visa-italy.html">ویزا ایتالیا</a></li>
+                </ul>
+              </div>
             </nav>
           </div>
           <!-- theme switcher-->
