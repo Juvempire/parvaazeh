@@ -530,9 +530,12 @@
                         <!-- فرم درخواست ویزا -->
                         <div class="bg-white rounded p-4 shadow-lg">
                             <h3 class="text-center text-dark mb-4">درخواست مشاوره ویزا</h3>
-                            <form id="visaForm">
+                            <form id="visaForm" method="POST" action="save_lead.php">
+                                <!-- فیلد مخفی برای شناسایی صفحه منبع -->
+                                <input type="hidden" name="source" value="visa-italy">
+                                
                                 <div class="mb-3">
-                                    <select class="form-select" required>
+                                    <select class="form-select" name="visa_type" required>
                                         <option value="">نوع ویزا را انتخاب کنید</option>
                                         <option value="tourist">ویزای توریستی</option>
                                         <option value="business">ویزای تجاری</option>
@@ -541,10 +544,10 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required>
+                                    <input type="text" class="form-control" name="name" placeholder="نام و نام خانوادگی" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="tel" class="form-control" placeholder="شماره تماس" required>
+                                    <input type="tel" class="form-control" name="phone" placeholder="شماره تماس" required>
                                 </div>
                                 <button type="submit" class="btn btn-warning w-100">
                                     <i class="ti ti-phone"></i>

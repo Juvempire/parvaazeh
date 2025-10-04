@@ -6,9 +6,9 @@
 
 // تنظیمات: نام فایل CSV و هدرهای آن
 $csv_file = 'leads.csv';
-$csv_headers = ['تاریخ', 'ساعت', 'صفحه منبع', 'نام و نام خانوادگی', 'شماره تماس']; 
+$csv_headers = ['تاریخ', 'ساعت', 'صفحه منبع', 'نوع ویزا', 'نام و نام خانوادگی', 'شماره تماس']; 
 
-// **** خط جدید: تعریف آدرس صفحه تشکر ****
+// آدرس صفحه تشکر
 $thank_you_url = 'thank-you.html'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -16,13 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // ۱. جمع‌آوری و تمیز کردن داده‌ها
     $name = isset($_POST['name']) ? trim(strip_tags($_POST['name'])) : 'N/A';
     $phone = isset($_POST['phone']) ? trim(strip_tags($_POST['phone'])) : 'N/A';
-    // دریافت نام صفحه از فیلد مخفی source
+    $visa_type = isset($_POST['visa_type']) ? trim(strip_tags($_POST['visa_type'])) : 'N/A';
     $source = isset($_POST['source']) ? trim(strip_tags($_POST['source'])) : 'Unknown';
     
     // ۲. آماده‌سازی داده برای CSV
     $date = date('Y/m/d');
     $time = date('H:i:s');
-    $lead_data = [$date, $time, $source, $name, $phone];
+    $lead_data = [$date, $time, $source, $visa_type, $name, $phone];
     
     // ۳. باز کردن فایل و ذخیره‌سازی
     $file_handle = fopen($csv_file, 'a');
@@ -39,14 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         fclose($file_handle);
         
-        // ************************************************
-        // ********** تغییر کلیدی: هدایت به صفحه تشکر **********
-        // ************************************************
+        // هدایت به صفحه تشکر
         header("Location: $thank_you_url");
         exit;
         
     } else {
-        // خطای دسترسی (در این حالت کاربر به صفحه اصلی بازگردانده می‌شود)
+        // خطای دسترسی
         header("Location: /?status=error");
         exit;
     }
