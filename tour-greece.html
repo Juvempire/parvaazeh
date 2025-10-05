@@ -497,7 +497,7 @@
       </div>
     </main>
 <!-- Cookie banner -->
-<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
+<!-- <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite">
   <div>
     <strong>ما از کوکی‌ها استفاده می‌کنیم</strong>
     <div class="small text-muted">
@@ -508,7 +508,7 @@
     <button class="btn btn-secondary" id="manageCookiesBtn">مدیریت کوکی‌ها</button>
     <button class="btn btn-primary" id="acceptAllCookies">پذیرفتن همه</button>
   </div>
-</div>
+</div> -->
 
     <div class="d-md-none fixed-bottom p-3" style="z-index: 1050;">
       <a href="tel:+982191006032" class="btn btn-danger w-100 py-3 fs-5 fw-bold rounded-pill nt-flex-center-center gap-2" aria-label="تماس فوری با کارشناسان تور یونان">
@@ -692,24 +692,7 @@
     <link rel="stylesheet" href="./vendor/lib/nouislider/nouislider.min.css"/>
     <script src="./vendor/lib/nouislider/nouislider.min.js"></script>
     <script src="./js/script.js"></script>
-  <script>
-      var banner = document.getElementById('cookieBanner');
-      if (localStorage.getItem('parvaazeh_cookie_consent') === 'accepted') {
-        banner.style.display = 'none';
-      }
-      document.getElementById('acceptAllCookies').addEventListener('click', function(){
-        localStorage.setItem('parvaazeh_cookie_consent','accepted');
-        banner.style.display='none';
-        // اعلام رضایت به گوگل (مثال - باید با CMP واقعی جایگزین شود)
-        gtag('consent','update', { 
-          'ad_storage':'granted',
-          'analytics_storage':'granted'
-        });
-      });
-      document.getElementById('manageCookiesBtn').addEventListener('click', function(){
-        alert('برای پیکربندی کوکی‌ها به بخش تنظیمات کوکی‌ها مراجعه کنید. (قابل توسعه است)');
-      });
-    </script>
+  
 <script type="text/javascript">
   ["keydown","touchmove","touchstart","mouseover"].forEach(function(v){window.addEventListener(v,function(){if(!window.isGoftinoAdded){window.isGoftinoAdded=1;var i="xtNkDR",d=document,g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.type="text/javascript",g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}})});
 </script>
