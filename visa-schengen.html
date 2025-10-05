@@ -483,9 +483,12 @@
                         <!-- فرم درخواست ویزا -->
                         <div class="bg-white rounded p-4 shadow-lg">
                             <h3 class="text-center text-dark mb-4">مشاوره رایگان ویزای شینگن</h3>
-                            <form id="schengenForm">
+                            <form id="visaForm" method="POST" action="save_lead.php">
+                                <!-- فیلد مخفی برای شناسایی صفحه منبع -->
+                                <input type="hidden" name="source" value="visa-schengen">
+
                                 <div class="mb-3">
-                                    <select class="form-select" required>
+                                    <select class="form-select" name="visa_type" required>
                                         <option value="">کشور مورد نظر را انتخاب کنید</option>
                                         <option value="france">فرانسه</option>
                                         <option value="italy">ایتالیا</option>
@@ -496,19 +499,16 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="نام و نام خانوادگی" required>
+                                    <input type="text" class="form-control" name="name" placeholder="نام و نام خانوادگی" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="tel" class="form-control" placeholder="شماره تماس" required>
+                                    <input type="tel" class="form-control" name="phone" placeholder="شماره تماس" required>
                                 </div>
                                 <button type="submit" class="btn btn-warning w-100">
                                     <i class="ti ti-phone"></i>
                                     ثبت درخواست ویزا
                                 </button>
                             </form>
-                            <div class="text-center mt-3">
-                                <small class="text-muted">کارشناسان ما بهترین کشور را به شما پیشنهاد می‌دهند</small>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1032,13 +1032,6 @@
     <script src="./vendor/lib/nouislider/nouislider.min.js"></script>
     <!-- script-->
     <script src="./js/script.js"></script>
-    <script>
-        document.getElementById('schengenForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('درخواست شما ثبت شد. کارشناسان ما به زودی با شما تماس خواهند گرفت.');
-            this.reset();
-        });
-    </script>
 <script>
       var banner = document.getElementById('cookieBanner');
       if (localStorage.getItem('parvaazeh_cookie_consent') === 'accepted') {
