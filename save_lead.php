@@ -14,10 +14,10 @@ $thank_you_url = 'thank-you.html';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // ۱. جمع‌آوری و تمیز کردن داده‌ها
-    $name = isset($_POST['name']) ? trim(strip_tags($_POST['name'])) : 'N/A';
-    $phone = isset($_POST['phone']) ? trim(strip_tags($_POST['phone'])) : 'N/A';
-    $visa_type = isset($_POST['visa_type']) ? trim(strip_tags($_POST['visa_type'])) : 'N/A';
-    $source = isset($_POST['source']) ? trim(strip_tags($_POST['source'])) : 'Unknown';
+    $name = isset($_POST['name']) ? trim(strip_tags($_POST['name'])) : 'بدون نام';
+    $phone = isset($_POST['phone']) ? trim(strip_tags($_POST['phone'])) : 'بدون شماره';
+    $visa_type = isset($_POST['visa_type']) ? trim(strip_tags($_POST['visa_type'])) : 'بدون نوع';
+    $source = isset($_POST['source']) ? trim(strip_tags($_POST['source'])) : 'نامشخص';
     
     // ۲. آماده‌سازی داده برای CSV
     $date = date('Y/m/d');
