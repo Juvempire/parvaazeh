@@ -32,8 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // ترکیب تاریخ میلادی و شمسی در یک سلول
     $date_combined = $date_miladi . ' (' . $date_shamsi_formatted . ')';
-
-    $lead_data = [$date, $time, $source, $visa_type, $name, $phone];
+    
+    $lead_data = [$date_combined, $time, $source, $visa_type, $name, $phone];
     
     // ۳. باز کردن فایل و ذخیره‌سازی
     $file_handle = fopen($csv_file, 'a');
