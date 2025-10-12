@@ -4,6 +4,9 @@
 // وظیفه: نمایش محتوای فایل leads.csv در قالب جدول HTML (جدیدترین ها در بالا)
 // =========================================================================
 
+// تنظیم منطقه زمانی به تهران
+date_default_timezone_set('Asia/Tehran');
+
 // تنظیمات: نام فایل CSV
 $csv_file = 'leads.csv';
 $delimiter = ';'; // جداکننده مورد استفاده در fputcsv ما
@@ -43,13 +46,72 @@ echo '<!DOCTYPE html>
 <body>
 <div class="container">';
 
-echo '<h1><span class="count-badge" id="totalCount">0</span>لیست لیدهای ثبت‌شده</h1>';
+// باز کردن فایل برای خواندن و شمارش لیدها
+$total_leads = 0;
+$today_leads = 0;
+$today_date = date('Y/m/d'); // تاریخ امروز به فرمت میلادی
+$today_shamsi = ''; // تاریخ شمسی امروز
+
+// محاسبه تاریخ شمسی امروز
+function gregorian_to_jalali($gy, $gm, $gd) {
+    $g_d_m = array(0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334);
+    $gy2 = ($gm > 2) ? ($gy + 1) : $gy;
+    $days = 355666 + (365 * $gy) + ((int)(($gy2 + 3) / 4)) - ((int)(($gy2 + 99) / 100)) + ((int)(($gy2 + 399) / 400)) + $gd + $g_d_m[$gm - 1];
+    $jy = -1595 + (33 * ((int)($days / 12053)));
+    $days %= 12053;
+    $jy += 4 * ((int)($days / 1461));
+    $days %= 1461;
+    if ($days > 365) {
+        $jy += (int)(($days - 1) / 365);
+        $days = ($days - 1) % 365;
+    }
+    if ($days < 186) {
+        $jm = 1 + (int)($days / 31);
+        $jd = 1 + ($days % 31);
+    } else {
+        $jm = 7 + (int)(($days - 186) / 30);
+        $jd = 1 + (($days - 186) % 30);
+    }
+    return array($jy, $jm, $jd);
+}
+
+// محاسبه تاریخ شمسی امروز
+$shamsi_today = gregorian_to_jalali(date('Y'), date('m'), date('d'));
+$today_shamsi = $shamsi_today[0] . '/' . $shamsi_today[1] . '/' . $shamsi_today[2];
+
+if (($handle = fopen($csv_file, "r")) !== FALSE) {
+    $row_count = 0;
+    while (($data = fgetcsv($handle, 1000, $delimiter)) !== FALSE) {
+        if ($row_count > 0) { // رد کردن سطر هدر
+            $total_leads++;
+            
+            // بررسی آیا لید مربوط به امروز است
+            if (isset($data[0])) {
+                $date_cell = $data[0];
+                // بررسی تاریخ میلادی (قسمت اول قبل از پرانتز)
+                if (strpos($date_cell, '(') !== false) {
+                    $date_parts = explode('(', $date_cell);
+                    $miladi_date = trim($date_parts[0]);
+                    
+                    // اگر تاریخ میلادی با امروز مطابقت دارد
+                    if ($miladi_date === $today_date) {
+                        $today_leads++;
+                    }
+                }
+            }
+        }
+        $row_count++;
+    }
+    fclose($handle);
+}
+
+echo '<h1><span class="count-badge">' . $total_leads . '</span>لیست لیدهای ثبت‌شده</h1>';
 
 // لینک‌های اکشن
 echo '<a href="view_leads.php" class="refresh-link">🔄 بروزرسانی</a>';
 echo '<a href="' . $csv_file . '" download="' . $csv_file . '" class="export-link">📥 دانلود فایل CSV</a>';
 
-// باز کردن فایل برای خواندن
+// باز کردن فایل برای خواندن و نمایش داده‌ها
 if (($handle = fopen($csv_file, "r")) !== FALSE) {
     $all_rows = [];
     $header = [];
@@ -64,8 +126,23 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
             // ذخیره داده‌ها به همراه شماره سطر اصلی
             $all_rows[] = [
                 'data' => $data,
-                'original_index' => $row_count
+                'original_index' => $row_count,
+                'is_today' => false
             ];
+            
+            // بررسی آیا لید مربوط به امروز است
+            if (isset($data[0])) {
+                $date_cell = $data[0];
+                if (strpos($date_cell, '(') !== false) {
+                    $date_parts = explode('(', $date_cell);
+                    $miladi_date = trim($date_parts[0]);
+                    
+                    // اگر تاریخ میلادی با امروز مطابقت دارد
+                    if ($miladi_date === $today_date) {
+                        $all_rows[count($all_rows) - 1]['is_today'] = true;
+                    }
+                }
+            }
         }
         $row_count++;
     }
@@ -73,7 +150,6 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
     
     // معکوس کردن آرایه برای نمایش جدیدترین موارد در بالا
     $reversed_rows = array_reverse($all_rows);
-    $total_data_count = count($all_rows);
     
     // نمایش جدول
     echo '<table>';
@@ -93,11 +169,11 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
         
         echo '<tr>';
         
-        // ستون شماره با نشانگر جدید برای موارد اخیر
+        // ستون شماره با نشانگر جدید برای لیدهای امروز
         echo '<td style="text-align: center;">';
         echo '<span class="row-number">' . $display_index . '</span>';
-        if ($display_index <= 5) {
-            echo '<span class="new-badge">جدید</span>';
+        if ($row['is_today']) {
+            echo '<span class="new-badge">امروز</span>';
         }
         echo '</td>';
         
@@ -127,9 +203,9 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
     
     // نمایش اطلاعات آماری
     echo '<div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; text-align: center;">';
-    echo '<strong>تعداد کل رکوردها: ' . $total_data_count . '</strong>';
-    if ($total_data_count > 0) {
-        echo ' | <span style="color: #dc3545;">' . min(5, $total_data_count) . ' مورد جدید</span>';
+    echo '<strong>تعداد کل رکوردها: ' . $total_leads . '</strong>';
+    if ($today_leads > 0) {
+        echo ' | <span style="color: #dc3545;">' . $today_leads . ' مورد امروز (' . $today_shamsi . ')</span>';
     }
     echo '</div>';
     
@@ -138,7 +214,7 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
 }
 
 // اگر هیچ داده‌ای وجود ندارد
-if ($total_data_count == 0 && $row_count > 0) {
+if ($total_leads == 0) {
     echo '<p style="text-align: center; color: #666; padding: 20px; background: #f9f9f9; border-radius: 5px;">';
     echo 'هنوز هیچ داده‌ای ثبت نشده است.';
     echo '</p>';
