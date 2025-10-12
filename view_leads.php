@@ -32,13 +32,13 @@ echo '<!DOCTYPE html>
         th, td { border: 1px solid #ddd; padding: 12px; text-align: right; }
         th { background-color: #007bff; color: white; position: sticky; top: 0; }
         tr:nth-child(even) { background-color: #f9f9f9; }
-        .export-link { display: inline-block; padding: 10px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 20px; margin-left: 10px; }
+        .export-link { display: inline-block; padding: 10px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 20px; margin-right: 10px; }
         .refresh-link { display: inline-block; padding: 10px 15px; background-color: #17a2b8; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 20px; }
         .date-cell { font-family: "Segoe UI", Tahoma, sans-serif; direction: ltr; text-align: center; }
         .shamsi-date { color: #d63384; font-weight: bold; }
         .miladi-date { color: #6c757d; font-size: 0.9em; }
-        .count-badge { background: #17a2b8; color: white; padding: 5px 10px; border-radius: 15px; margin-right: 10px; }
-        .new-badge { background: #dc3545; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-left: 5px; }
+        .count-badge { background: #17a2b8; color: white; padding: 5px 10px; border-radius: 15px; margin-left: 10px; }
+        .new-badge { background: #dc3545; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 5px; }
         .row-number { background: #6c757d; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-left: 5px; }
         tr:hover { background-color: #e9f7fe !important; }
     </style>
@@ -108,7 +108,7 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
 echo '<h1><span class="count-badge">' . $total_leads . '</span>لیست لیدهای ثبت‌شده</h1>';
 
 // لینک‌های اکشن
-echo '<a href="view_leads.php" class="refresh-link">🔄 بروزرسانی</a>';
+echo '<a href="view_leads.php" class="refresh-link"><span style="color:#fff !important">🔄</span> بروزرسانی</a>';
 echo '<a href="' . $csv_file . '" download="' . $csv_file . '" class="export-link">📥 دانلود فایل CSV</a>';
 
 // باز کردن فایل برای خواندن و نمایش داده‌ها
