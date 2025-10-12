@@ -41,6 +41,7 @@ echo '<!DOCTYPE html>
         .new-badge { background: #dc3545; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-right: 5px; }
         .row-number { background: #6c757d; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin-left: 5px; }
         tr:hover { background-color: #e9f7fe !important; }
+        .update-icon, .download-icon { color: #fff !important;}
     </style>
 </head>
 <body>
@@ -108,8 +109,8 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
 echo '<h1><span class="count-badge">' . $total_leads . '</span>لیست لیدهای ثبت‌شده</h1>';
 
 // لینک‌های اکشن
-echo '<a href="view_leads.php" class="refresh-link"><span style="color:#fff !important">🔄</span> بروزرسانی</a>';
-echo '<a href="' . $csv_file . '" download="' . $csv_file . '" class="export-link">📥 دانلود فایل CSV</a>';
+echo '<a href="view_leads.php" class="refresh-link"><span class="update-icon">🔄</span> بروزرسانی</a>';
+echo '<a href="' . $csv_file . '" download="' . $csv_file . '" class="export-link"><span class="download-icon">📥</span> دانلود فایل CSV</a>';
 
 // باز کردن فایل برای خواندن و نمایش داده‌ها
 if (($handle = fopen($csv_file, "r")) !== FALSE) {
