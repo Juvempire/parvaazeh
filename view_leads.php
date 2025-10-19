@@ -102,6 +102,9 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
 $from_record = $offset + 1;
 $to_record = min($offset + $records_per_page, $total_leads);
 
+$start_page = max(1, $current_page - 3);
+$end_page = min($total_pages, $current_page + 3);
+
 // تولید کد HTML
 echo '<!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -142,9 +145,9 @@ echo '<!DOCTYPE html>
 
         /* استایل برای دکمه کپی */
         .copy-btn { 
+            font-family: \'Vazirmatn\', sans-serif;
             background: #28a745; color: white; border: none; padding: 6px 12px; 
             border-radius: 4px; cursor: pointer; font-size: 0.9em; 
-            font-family: \'Vazirmatn\', sans-serif; 
         }
         .copy-btn:hover { background: #218838; }
 
@@ -232,8 +235,6 @@ echo '<!DOCTYPE html>
         ' . ($total_pages > 1 ? '<div class="pagination">' .
             ($current_page > 1 ? '<a href="?page=1">«« اول</a>' : '<span class="disabled">«« اول</span>') .
             ($current_page > 1 ? '<a href="?page=' . ($current_page - 1) . '">« قبلی</a>' : '<span class="disabled">« قبلی</span>') .
-            ($start_page = max(1, $current_page - 3)) .  // بهبود: نمایش 7 صفحه اطراف ( -3 تا +3)
-            ($end_page = min($total_pages, $current_page + 3)) .
             ($start_page > 1 ? '<a href="?page=1">1</a>' . ($start_page > 2 ? '<span>...</span>' : '') : '') .
             implode('', array_map(function($i) use ($current_page) {
                 return $i == $current_page ? '<span class="current">' . $i . '</span>' : '<a href="?page=' . $i . '">' . $i . '</a>';
