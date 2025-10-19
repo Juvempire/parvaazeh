@@ -4,6 +4,19 @@
 // وظیفه: نمایش محتوای فایل leads.csv در قالب جدول HTML با Pagination (20 رکورد در صفحه)
 // =========================================================================
 
+// شروع session برای احراز هویت
+session_start();
+
+// تنظیمات لاگین (یوزر و پسورد هش‌شده برای امنیت)
+$valid_username = 'admin';
+$valid_password_hash = password_hash('password123', PASSWORD_DEFAULT);  // پسورد دلخواه (تغییر بدید)
+
+// چک کردن session
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header('Location: login.php');
+    exit;
+}
+
 // تنظیم منطقه زمانی به تهران
 date_default_timezone_set('Asia/Tehran');
 
@@ -145,9 +158,9 @@ echo '<!DOCTYPE html>
 
         /* استایل برای دکمه کپی */
         .copy-btn { 
-            font-family: \'Vazirmatn\', sans-serif;
             background: #28a745; color: white; border: none; padding: 6px 12px; 
             border-radius: 4px; cursor: pointer; font-size: 0.9em; 
+            font-family: \'Vazirmatn\', sans-serif;
         }
         .copy-btn:hover { background: #218838; }
 
@@ -169,6 +182,9 @@ echo '<!DOCTYPE html>
 <body>
     <div class="container">
         <h1>لیست لیدهای ثبت‌شده (جدیدترین اول)</h1>
+        
+        <!-- لینک خروج (لاگ اوت) -->
+        <a href="logout.php" style="display: inline-block; padding: 10px 15px; background: #dc3545; color: white; text-decoration: none; border-radius: 5px; margin: 10px 5px;">خروج</a>
         
         <a href="?page=' . $current_page . '" class="refresh-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" style="margin-left: 5px; vertical-align: middle;">
