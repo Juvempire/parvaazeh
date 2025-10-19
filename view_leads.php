@@ -144,6 +144,7 @@ echo '<!DOCTYPE html>
         .copy-btn { 
             background: #28a745; color: white; border: none; padding: 6px 12px; 
             border-radius: 4px; cursor: pointer; font-size: 0.9em; 
+            font-family: \'Vazirmatn\', sans-serif; 
         }
         .copy-btn:hover { background: #218838; }
 
@@ -181,7 +182,7 @@ echo '<!DOCTYPE html>
         </a>
 
         <div class="page-info">
-            نمایش ' . $from_record . ' تا ' . $to_record . ' از ' . $total_leads . ' رکورد
+            نمایش ' . $from_record . ' تا ' . $to_record . ' از ' . $total_leads . ' رکورد (صفحه ' . $current_page . ' از ' . $total_pages . ')
         </div>
 
         ' . (!empty($paginated_rows) ? '<table>
@@ -229,15 +230,17 @@ echo '<!DOCTYPE html>
         ' . (!empty($paginated_rows) ? '</tbody></table>' : '') . '
         
         ' . ($total_pages > 1 ? '<div class="pagination">' .
+            ($current_page > 1 ? '<a href="?page=1">«« اول</a>' : '<span class="disabled">«« اول</span>') .
             ($current_page > 1 ? '<a href="?page=' . ($current_page - 1) . '">« قبلی</a>' : '<span class="disabled">« قبلی</span>') .
-            ($start_page = max(1, $current_page - 2)) .
-            ($end_page = min($total_pages, $current_page + 2)) .
+            ($start_page = max(1, $current_page - 3)) .  // بهبود: نمایش 7 صفحه اطراف ( -3 تا +3)
+            ($end_page = min($total_pages, $current_page + 3)) .
             ($start_page > 1 ? '<a href="?page=1">1</a>' . ($start_page > 2 ? '<span>...</span>' : '') : '') .
             implode('', array_map(function($i) use ($current_page) {
                 return $i == $current_page ? '<span class="current">' . $i . '</span>' : '<a href="?page=' . $i . '">' . $i . '</a>';
             }, range($start_page, $end_page))) .
             ($end_page < $total_pages ? ($end_page < $total_pages - 1 ? '<span>...</span>' : '') . '<a href="?page=' . $total_pages . '">' . $total_pages . '</a>' : '') .
             ($current_page < $total_pages ? '<a href="?page=' . ($current_page + 1) . '">بعدی »</a>' : '<span class="disabled">بعدی »</span>') .
+            ($current_page < $total_pages ? '<a href="?page=' . $total_pages . '">آخر »»</a>' : '<span class="disabled">آخر »»</span>') .
         '</div>' : '') . '
         
         <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; text-align: center;">
