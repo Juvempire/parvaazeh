@@ -54,6 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin: 10px 0; 
             border: 1px solid #ddd; 
             border-radius: 4px; 
+			font-family: inherit;
+			box-sizing: border-box;
         }
         button { 
             background: #007bff; 
@@ -63,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             width: 100%; 
             border-radius: 4px; 
             cursor: pointer; 
+			font-family: inherit;
         }
         button:hover { background: #0056b3; }
         .error { color: #dc3545; margin-bottom: 10px; }
