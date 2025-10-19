@@ -99,13 +99,23 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
     die('خطا در باز کردن فایل.');
 }
 
+$from_record = $offset + 1;
+$to_record = min($offset + $records_per_page, $total_leads);
+
+// تولید کد HTML
 echo '<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>لیست لیدهای ثبت‌شده - صفحه ' . $current_page . '</title>
+    <!-- لینک فونت Vazirmatn از Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Tahoma, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        body { 
+            font-family: \'Vazirmatn\', sans-serif; 
+            background-color: #f4f4f4; 
+            padding: 20px; 
+        }
         .container { max-width: 1200px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         h1 { color: #333; border-bottom: 2px solid #eee; padding-bottom: 10px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
@@ -130,17 +140,25 @@ echo '<!DOCTYPE html>
         }
         .refresh-link:hover, .export-link:hover { background: #0056b3; }
 
-        /* === استایل جدید برای دکمه کپی === */
+        /* استایل برای دکمه کپی */
         .copy-btn { 
             background: #28a745; color: white; border: none; padding: 6px 12px; 
             border-radius: 4px; cursor: pointer; font-size: 0.9em; 
         }
         .copy-btn:hover { background: #218838; }
 
-        /* === استایل برای پیام موفقیت (اختیاری) === */
+        /* استایل برای پیام موفقیت */
         .copy-message { 
             position: fixed; top: 20px; right: 20px; background: #28a745; color: white; 
             padding: 10px 20px; border-radius: 5px; display: none; z-index: 1000; 
+        }
+
+        /* استایل برای sticky header */
+        thead th {
+            position: sticky;
+            top: 0;
+            background: #f2f2f2;
+            z-index: 1;
         }
     </style>
 </head>
@@ -148,36 +166,34 @@ echo '<!DOCTYPE html>
     <div class="container">
         <h1>لیست لیدهای ثبت‌شده (جدیدترین اول)</h1>
         
-        <!-- لینک‌های بروزرسانی و دانلود (بدون تغییر) -->
         <a href="?page=' . $current_page . '" class="refresh-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" style="margin-left: 5px; vertical-align: middle;">
                 <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
             </svg>
             بروزرسانی
         </a>
+
         <a href="' . $csv_file . '" download="' . $csv_file . '" class="export-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" style="margin-left: 5px; vertical-align: middle;">
                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
             </svg>
             دانلود فایل CSV
         </a>
-        
-        <!-- اطلاعات صفحه (بدون تغییر) -->
+
         <div class="page-info">
             نمایش ' . $from_record . ' تا ' . $to_record . ' از ' . $total_leads . ' رکورد
         </div>
-        
-        <!-- جدول با ستون جدید برای دکمه کپی -->
+
         ' . (!empty($paginated_rows) ? '<table>
             <thead>
                 <tr>
                     <th>#</th>
                     ' . implode('', array_map(function($col) { return '<th>' . htmlspecialchars($col) . '</th>'; }, $header)) . '
-                    <th>عملیات</th>  <!-- === ستون جدید برای دکمه کپی === -->
+                    <th>عملیات</th>
                 </tr>
             </thead>
             <tbody>' : '<p style="text-align: center; color: #666; padding: 40px;">هیچ داده‌ای یافت نشد.</p>') . '
-        
+
         ' . (!empty($paginated_rows) ? implode('', array_map(function($row, $display_index) {
             $safe_data = array_map('htmlspecialchars', $row['data']);
             $output = '<tr>';
@@ -205,47 +221,54 @@ echo '<!DOCTYPE html>
                 $col_index++;
             }
             
-            // === اضافه کردن دکمه کپی در انتها ===
             $output .= '<td><button class="copy-btn" onclick="copyRow(this)">کپی</button></td>';
-            
             $output .= '</tr>';
             return $output;
         }, $paginated_rows, range($from_record, $to_record))) : '') . '
         
         ' . (!empty($paginated_rows) ? '</tbody></table>' : '') . '
         
-        <!-- لینک‌های Pagination (بدون تغییر) -->
-        ' . ($total_pages > 1 ? '<div class="pagination">' . /* کد pagination بدون تغییر */ '</div>' : '') . '
+        ' . ($total_pages > 1 ? '<div class="pagination">' .
+            ($current_page > 1 ? '<a href="?page=' . ($current_page - 1) . '">« قبلی</a>' : '<span class="disabled">« قبلی</span>') .
+            ($start_page = max(1, $current_page - 2)) .
+            ($end_page = min($total_pages, $current_page + 2)) .
+            ($start_page > 1 ? '<a href="?page=1">1</a>' . ($start_page > 2 ? '<span>...</span>' : '') : '') .
+            implode('', array_map(function($i) use ($current_page) {
+                return $i == $current_page ? '<span class="current">' . $i . '</span>' : '<a href="?page=' . $i . '">' . $i . '</a>';
+            }, range($start_page, $end_page))) .
+            ($end_page < $total_pages ? ($end_page < $total_pages - 1 ? '<span>...</span>' : '') . '<a href="?page=' . $total_pages . '">' . $total_pages . '</a>' : '') .
+            ($current_page < $total_pages ? '<a href="?page=' . ($current_page + 1) . '">بعدی »</a>' : '<span class="disabled">بعدی »</span>') .
+        '</div>' : '') . '
         
-        <!-- اطلاعات آماری (بدون تغییر) -->
         <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; text-align: center;">
             <strong>تعداد کل رکوردها: ' . $total_leads . '</strong>' . 
             ($today_leads > 0 ? ' | <span style="color: #dc3545;">' . $today_leads . ' مورد امروز (' . $today_shamsi . ')</span>' : '') . 
         '</div>
         
-        <!-- === پیام موفقیت کپی (اختیاری) === -->
         <div id="copyMessage" class="copy-message">ردیف با موفقیت کپی شد!</div>
     </div>
     
-    <!-- === اسکریپت JavaScript برای کپی === -->
     <script>
         function copyRow(button) {
-            const row = button.closest(\'tr\');  // سطر فعلی را پیدا کن
-            const cells = row.querySelectorAll(\'td:not(:last-child)\');  // تمام سلول‌ها به جز آخرین (دکمه)
+            const row = button.closest(\'tr\');
+            const cells = row.querySelectorAll(\'td:not(:last-child)\');  // همه سلول‌ها جز عملیات
             
             let rowText = \'\';
-            cells.forEach((cell, index) => {
-                let text = cell.innerText.trim();  // محتوای سلول (شامل دو خط برای تاریخ)
-                text = text.replace(/\\n/g, \' \');  // جایگزین خط جدید با فاصله برای خوانایی
-                rowText += text + (index < cells.length - 1 ? \'\\t\' : \'\');  // جدا کردن با تب
-            });
+            for (let i = 1; i < cells.length; i++) {  // از i=1 برای رد # (سلول 0)
+                let cell = cells[i];
+                let text;
+                if (i === 1) {  // سلول تاریخ (فقط شمسی)
+                    text = cell.querySelector(\'.shamsi-date\')?.innerText.trim() || cell.innerText.trim();
+                } else {
+                    text = cell.innerText.trim();
+                }
+                rowText += text + (i < cells.length - 1 ? \' | \' : \'\');
+            }
             
-            // کپی به کلیپبورد
             navigator.clipboard.writeText(rowText).then(() => {
-                // نمایش پیام موفقیت
                 const message = document.getElementById(\'copyMessage\');
                 message.style.display = \'block\';
-                setTimeout(() => { message.style.display = \'none\'; }, 2000);  // مخفی پس از 2 ثانیه
+                setTimeout(() => { message.style.display = \'none\'; }, 2000);
             }).catch(err => {
                 console.error(\'خطا در کپی: \', err);
             });
