@@ -13,8 +13,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ویزای کانادا | مدارک و شرایط ویزای کانادا | پروازه</title>
-    <meta name="description" content="ویزای کانادا با تضمین بالا - مدارک مورد نیاز، مراحل دریافت، هزینه و زمان پردازش ویزای کانادا">
+    <title>ویزای مجارستان | مدارک و شرایط اخذ ویزای شینگن مجارستان | پروازه</title>
+    <meta name="description" content="اخذ ویزای توریستی مجارستان با تضمین بالا - مدارک مورد نیاز، مراحل دریافت، هزینه و زمان processing ویزای شینگن مجارستان">
     <link rel="stylesheet" href="./css/bootstrap-custom.css"/>
     <link rel="stylesheet" href="./vendor/fonts/tabler/tabler-icons.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
@@ -45,8 +45,8 @@
 
         .visa-hero {
             background: 
-                linear-gradient(135deg, rgba(18, 116, 116, 0.85) 0%, rgba(18, 116, 116, 0.7) 100%),
-                url('./img/pages/visa/canada-hero-bg.jpg') center/cover;
+                linear-gradient(135deg, rgba(67, 111, 62, 0.85) 0%, rgba(67, 111, 62, 0.7) 100%),
+                url('./img/pages/visa/hungary-hero-bg.jpg') center/cover;
             color: white;
             padding: 4rem 0;
             border-radius: 20px;
@@ -62,7 +62,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: rgba(18, 116, 116, 0.1);
+            background: rgba(67, 111, 62, 0.1);
             z-index: 1;
         }
         .visa-hero > .container {
@@ -77,7 +77,7 @@
             transition: all 0.3s ease;
         }
         .requirement-card:hover {
-            border-color: #127474;
+            border-color: #436f3e;
             transform: translateY(-3px);
         }
         .process-timeline {
@@ -96,7 +96,7 @@
             top: 0;
             bottom: -2rem;
             width: 2px;
-            background: #127474;
+            background: #436f3e;
         }
         .process-step:last-child::before {
             display: none;
@@ -107,7 +107,7 @@
             top: 0;
             width: 3rem;
             height: 3rem;
-            background: #127474;
+            background: #436f3e;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -138,11 +138,11 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         .fee-table th {
-            background: #127474;
+            background: #436f3e;
             color: white;
         }
         .success-rate {
-            background: linear-gradient(135deg, #127474, #1a9a9a);
+            background: linear-gradient(135deg, #436f3e, #558c4e);
             color: white;
             padding: 2rem;
             border-radius: 15px;
@@ -158,7 +158,7 @@
             margin-right: 0.5rem;
         }
         .visa-type-card {
-            border-left: 4px solid #127474;
+            border-left: 4px solid #436f3e;
             transition: all 0.3s ease;
         }
         .visa-type-card:hover {
@@ -496,22 +496,22 @@
 
     <main class="main">
         <!-- Hero Section -->
-        <section class="visa-hero mb-5" style="background:linear-gradient(135deg, rgba(200,0,0,0.85) 0%, rgba(200,0,0,0.7) 100%), url('./img/pages/visa/canada-hero-bg.jpg') center/cover;">
+        <section class="visa-hero mb-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
                         <div class="nt-flex-start-center mb-3">
                             <div class="urgent-badge">ویزای فوری</div>
-                            <img src="./img/pages/visa/flags/canada.png" alt="پرچم کانادا" class="country-flag">
+                            <img src="./img/pages/visa/flags/hungary.png" alt="پرچم مجارستان" class="country-flag">
                         </div>
-                        <h1 class="display-5 fw-bold mb-3">ویزای <span class="text-warning">کانادا</span></h1>
-                        <p class="lead mb-4">ویزای کانادا با بالاترین درصد قبولی و کمترین زمان</p>
+                        <h1 class="display-5 fw-bold mb-3">ویزای <span class="text-warning">مجارستان</span></h1>
+                        <p class="lead mb-4">ویزای شینگن مجارستان با بالاترین درصد قبولی و کمترین زمان</p>
                         
                         <div class="row mb-4">
                             <div class="col-md-4">
                                 <div class="text-center">
                                     <i class="ti ti-clock fs-2 text-warning"></i>
-                                    <div>۳۰-۶۰ روز کاری</div>
+                                    <div>۱۰-۱۵ روز کاری</div>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -533,14 +533,15 @@
                         <div class="bg-white rounded p-4 shadow-lg">
                             <h3 class="text-center text-dark mb-4">درخواست مشاوره ویزا</h3>
                             <form id="visaForm" method="POST" action="save_lead.php">
-                                <input type="hidden" name="source" value="ویزای کانادا">
+                                <input type="hidden" name="source" value="ویزای مجارستان">
                                 <div class="mb-3">
                                     <select class="form-select" name="visa_type" required>
                                         <option value="">نوع ویزا را انتخاب کنید</option>
                                         <option value="توریستی">ویزای توریستی</option>
-                                        <option value="تحصیلی">ویزای تحصیلی</option>
-                                        <option value="کاری">ویزای کاری</option>
+                                        <option value="تجاری">ویزای تجاری</option>
+                                        <option value="درمانی">ویزای درمانی</option>
                                         <option value="دیدار خانواده">ویزای دیدار خانواده</option>
+                                        <option value="بورسیه تحصیلی">🎓 ویزای تحصیلی + بورسیه Stipendium Hungaricum</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
@@ -554,6 +555,12 @@
                                     ثبت درخواست ویزا
                                 </button>
                             </form>
+                            <div class="text-center mt-3">
+                                <small class="text-muted">
+                                    <i class="ti ti-info-circle"></i>
+                                    برای <strong>بورسیه تحصیلی فول فاند</strong> گزینه "ویزای تحصیلی + بورسیه" را انتخاب کنید
+                                </small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -568,18 +575,16 @@
                     <div class="embassy-info">
                         <h4 class="fw-bold text-primary mb-3">
                             <i class="ti ti-building-embassy me-2"></i>
-                            اطلاعات سفارت کانادا
+                            اطلاعات سفارت مجارستان
                         </h4>
                         <div class="row">
                             <div class="col-md-6">
-                                <p><strong>آدرس:</strong> سفارت کانادا در ترکیه - آنکارا، Cinnah Caddesi No:58, Çankaya, Ankara, Turkey</p>
-                                <strong>تلفن:</strong><p style="direction: ltr;">+90 312 409 27 00</p>
-                                <p><strong>آدرس:</strong> کنسولگری کل کانادا در دبی - طبقه ۱۹، برج تجاری امارات جمیرا (Jumeirah Emirates Towers – Business Tower) خیابان شیخ زاید، دبی، امارات متحده عربی</p>
-                                <strong>تلفن:</strong><p style="direction: ltr;">+971 (4) 404-8444</p>
+                                <p><strong>آدرس:</strong> تهران، خیابان نوفل لوشاتو، شماره ۵</p>
+                                <p><strong>تلفن:</strong> ۰۲۱۶۶۷۰۴۰۵۵</p>
                             </div>
                             <div class="col-md-6">
-                                <p><strong>ساعات کاری:</strong> دوشنبه تا جمعه 08:30 - 12:00 و 13:00 - 16:30</p>
-                                <p><strong>نوع ویزا:</strong> ویزای توریستی، تحصیلی، کاری، اقامت دائم</p>
+                                <p><strong>ساعات کاری:</strong> یکشنبه تا چهارشنبه 9:00-16:00</p>
+                                <p><strong>نوع ویزا:</strong> شینگن (Schengen)</p>
                             </div>
                         </div>
                     </div>
@@ -588,123 +593,337 @@
                     <div class="bg-white border rounded p-4 mb-4">
                         <h2 class="h4 fw-bold text-primary mb-4">
                             <i class="ti ti-passport me-2"></i>
-                            انواع ویزای کانادا
+                            انواع ویزای مجارستان
                         </h2>
                         
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="requirement-card visa-type-card">
-                                    <h5 class="text-success">ویزای توریستی</h5>
-                                    <p class="small">مناسب برای گردشگری و بازدید خانواده</p>
+                                    <h5 class="text-success">ویزای توریستی (Type C)</h5>
+                                    <p class="small">مناسب برای گردشگری و بازدید از بوداپست</p>
                                     <ul class="small">
-                                        <li>اعتبار: متغیر (سینگل) یا (مالتی)</li>
-                                        <li>اقامت: هر بار حداکثر ۶ ماه</li>
-                                        <li>قیمت: از 250 دلار کانادا</li>
+                                        <li>اعتبار: تا ۵ سال</li>
+                                        <li>اقامت: حداکثر ۹۰ روز</li>
+                                        <li>قیمت: از ۲,۸۰۰,۰۰۰ تومان</li>
+                                        <li>ویزای شینگن چندبار ورود</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="requirement-card visa-type-card">
-                                    <h5 class="text-warning">ویزای تحصیلی</h5>
-                                    <p class="small">مخصوص دانشجویان با پذیرش دانشگاه‌های کانادا</p>
+                                    <h5 class="text-primary">ویزای تجاری (Business)</h5>
+                                    <p class="small">برای مأموریت‌های کاری و جلسات تجاری</p>
                                     <ul class="small">
-                                        <li>اعتبار: طول دوره تحصیل</li>
-                                        <li>اقامت: کل زمان تحصیل</li>
-                                        <li>قیمت: از 350 دلار کانادا</li>
+                                        <li>اعتبار: تا ۱۰ سال</li>
+                                        <li>اقامت: حداکثر ۹۰ روز</li>
+                                        <li>قیمت: از ۳,۸۰۰,۰۰۰ تومان</li>
+                                        <li>نیاز به دعوتنامه شرکت مجاری</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="requirement-card visa-type-card">
-                                    <h5 class="text-primary">ویزای کاری</h5>
-                                    <p class="small">برای کار در شرکت‌ها و موسسات کانادایی</p>
+                                    <h5 class="text-warning">ویزای درمانی (Medical)</h5>
+                                    <p class="small">برای درمان در مراکز پزشکی مجارستان</p>
                                     <ul class="small">
-                                        <li>اعتبار: یک تا سه سال</li>
-                                        <li>قیمت: از 360 دلار کانادا</li>
-                                        <li>نیاز به جاب آفر معتبر</li>
+                                        <li>اعتبار: مدت درمان</li>
+                                        <li>اقامت: تا پایان دوره درمان</li>
+                                        <li>قیمت: از ۳,۵۰۰,۰۰۰ تومان</li>
+                                        <li>نیاز به تأیید پزشک معالج</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="requirement-card visa-type-card">
                                     <h5 class="text-info">ویزای دیدار خانواده</h5>
-                                    <p class="small">برای دیدار اقوام درجه یک</p>
+                                    <p class="small">برای دیدار با اقوام درجه یک مقیم مجارستان</p>
                                     <ul class="small">
-                                        <li>اعتبار: متغیر (مالتی)</li>
-                                        <li>قیمت: از 500 دلار کانادا</li>
+                                        <li>اعتبار: متغیر</li>
+                                        <li>اقامت: حداکثر ۹۰ روز</li>
+                                        <li>قیمت: از ۳,۲۰۰,۰۰۰ تومان</li>
                                         <li>نیاز به دعوتنامه معتبر</li>
                                     </ul>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                              <div class="requirement-card visa-type-card" style="border-left: 4px solid #d4af37;">
+                                  <h5 class="text-warning">🎓 ویزای تحصیلی + بورسیه فول فاند</h5>
+                                  <p class="small">برنامه Stipendium Hungaricum - تحصیل رایگان در مجارستان</p>
+                                  <ul class="small">
+                                      <li>💰 شهریه کامل: رایگان</li>
+                                      <li>💵 کمک هزینه ماهیانه: ۴۳,۷۰۰ فورینت</li>
+                                      <li>🏠 اسکان: خوابگاه رایگان یا کمک هزینه</li>
+                                      <li>🩺 بیمه درمانی: رایگان</li>
+                                      <li>⏰ ددلاین: ۲۵ دی ماه هر سال</li>
+                                      <li>🎯 مقطع: کارشناسی، ارشد، دکتری</li>
+                                  </ul>
+                              </div>
+                          </div>
                         </div>
                     </div>
 
-                    <!-- مدارک -->
+                    <!-- مدارک مورد نیاز -->
                     <div class="bg-white border rounded p-4 mb-4">
                         <h2 class="h4 fw-bold text-primary mb-4">
                             <i class="ti ti-checklist me-2"></i>
-                            مدارک مورد نیاز ویزای کانادا
+                            مدارک مورد نیاز ویزای توریستی مجارستان
                         </h2>
-                        <ul class="document-list">
-                            <li>پاسپورت با حداقل ۶ ماه اعتبار</li>
-                            <li>۲ قطعه عکس بیومتریک</li>
-                            <li>فرم درخواست آنلاین (IMM)</li>
-                            <li>پرداخت هزینه سفارت</li>
-                            <li>پرینت حساب بانکی و نامه تمکن مالی</li>
-                            <li>پرینت گردش حساب 3 ماهه</li>
-                            <li>سند ملکی یا گواهی اشتغال به کار</li>
-                            <li>پرینت بیمه تامین اجتماعی</li>
-                            <li>نامه پذیرش دانشگاه (برای تحصیلی)</li>
-                            <li>جاب آفر یا LMIA (برای کاری)</li>
-                            <li>دعوتنامه معتبر (برای دیدار خانواده)</li>
-                            <li>گواهی سلامت پزشکی (برای اقامت بیش از 6 ماه)</li>
-                            <li>ترجمه رسمی مدارک به انگلیسی یا فرانسوی</li>
-                            <li>فرم خانوادگی IMM5645</li>
-                            <li>Travel History (سوابق سفر)</li>
-                        </ul>
+
+                        <div class="alert alert-info mb-4">
+                            <i class="ti ti-info-circle"></i>
+                            <strong>توجه:</strong> کلیه مدارک باید به زبان انگلیسی ترجمه رسمی شوند.
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5 class="text-success">📋 مدارک اصلی</h5>
+                                <ul class="document-list">
+                                    <li>پاسپورت با حداقل ۶ ماه اعتبار + کپی صفحات</li>
+                                    <li>۲ قطعه عکس رنگی ۳.۵×۴.۵ زمینه سفید</li>
+                                    <li>فرم تکمیل شده درخواست ویزا</li>
+                                    <li>بیمه مسافرتی معتبر شینگن (۳۰,۰۰۰ یورو)</li>
+                                    <li>بلیط رفت و برگشت (رزرو شده)</li>
+                                    <li>رزرو هتل برای تمام مدت اقامت</li>
+                                    <li>برنامه سفر دقیق (Travel Itinerary)</li>
+                                </ul>
+
+                                <h5 class="text-success mt-4">💼 مدارک شغلی</h5>
+                                <ul class="document-list">
+                                    <li>گواهی اشتغال به کار به انگلیسی</li>
+                                    <li>فیش حقوقی ۳ ماه آخر</li>
+                                    <li>روزنامه رسمی شرکت (برای مدیران)</li>
+                                    <li>گواهی بازنشستگی (برای بازنشستگان)</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-success">💳 مدارک مالی</h5>
+                                <ul class="document-list">
+                                    <li>پرینت حساب بانکی ۳ ماه آخر</li>
+                                    <li>گردش حساب ۶ ماهه</li>
+                                    <li>نامه تمکن مالی از بانک</li>
+                                    <li>سند ملکی یا اجاره نامه</li>
+                                    <li>کارت اعتباری بین‌المللی</li>
+                                </ul>
+
+                                <h5 class="text-success mt-4">👨‍👩‍👧‍👦 مدارک شخصی</h5>
+                                <ul class="document-list">
+                                    <li>کپی شناسنامه و کارت ملی</li>
+                                    <li>کپی از ویزاهای قبلی شینگن</li>
+                                    <li>مدارک مربوط به همسر و فرزندان</li>
+                                    <li>برای افراد زیر ۱۸ سال: رضایت نامه والدین</li>
+                                    <li>برای زنان متأهل: اجازه نامه همسر</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-12">
+                                <h5 class="text-success mt-4">🎓 مدارک بورسیه Stipendium Hungaricum</h5>
+                                <ul class="document-list">
+                                    <li>مدرک دیپلم و پیش دانشگاهی (برای کارشناسی)</li>
+                                    <li>مدرک کارشناسی (برای ارشد) و کارشناسی ارشد (برای دکتری)</li>
+                                    <li>ریز نمرات تمام مقاطع تحصیلی</li>
+                                    <li>انگیزه نامه (Motivation Letter)</li>
+                                    <li>طرح تحقیقاتی (Research Proposal - برای دکتری)</li>
+                                    <li>مدرک زبان انگلیسی (آیلتس ۵.۵ یا معادل)</li>
+                                    <li>رزومه تحصیلی (CV)</li>
+                                    <li>توصیه نامه از اساتید (۲ عدد)</li>
+                                    <li>فرم درخواست آنلاین بورسیه</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- مراحل -->
+                    <!-- مراحل اخذ ویزا -->
                     <div class="bg-white border rounded p-4 mb-4">
                         <h2 class="h4 fw-bold text-primary mb-4">
                             <i class="ti ti-road-sign me-2"></i>
-                            مراحل ویزای کانادا
+                            مراحل اخذ ویزای مجارستان
                         </h2>
+
                         <div class="process-timeline">
-                            <div class="process-step"><div class="step-number">۱</div><h5>ثبت‌نام آنلاین در سایت IRCC</h5></div>
-                            <div class="process-step"><div class="step-number">۲</div><h5>آپلود مدارک و پرداخت هزینه</h5></div>
-                            <div class="process-step"><div class="step-number">۳</div><h5>دریافت نامه انگشت‌نگاری (Biometric)</h5></div>
-                            <div class="process-step"><div class="step-number">۴</div><h5>مراجعه به مرکز VAC (VFS Global)</h5></div>
-                            <div class="process-step"><div class="step-number">۵</div><h5>پیگیری وضعیت درخواست</h5></div>
-                            <div class="process-step"><div class="step-number">۶</div><h5>دریافت ویزا و پاسپورت</h5></div>
+                            <div class="process-step">
+                                <div class="step-number">۱</div>
+                                <h5>مشاوره اولیه و تعیین نوع ویزا</h5>
+                                <p class="small">بررسی شرایط متقاضی و تعیین مناسب‌ترین نوع ویزا</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">۲</div>
+                                <h5>تهیه و ترجمه مدارک</h5>
+                                <p class="small">گردآوری کلیه مدارک و ترجمه رسمی به زبان انگلیسی</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">۳</div>
+                                <h5>تکمیل فرم‌ها و رزرو وقت</h5>
+                                <p class="small">تکمیل فرم درخواست ویزا و رزرو وقت سفارت مجارستان</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">۴</div>
+                                <h5>ثبت‌نام در پورتال ویزا</h5>
+                                <p class="small">ثبت‌نام آنلاین در پورتال ویزای مجارستان</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">۵</div>
+                                <h5>ارسال مدارک به VFS Global</h5>
+                                <p class="small">ارسال مدارک به مرکز VFS Global و انگشت‌نگاری</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">۶</div>
+                                <h5>پیگیری و دریافت ویزا</h5>
+                                <p class="small">پیگیری پرونده و دریافت پاسپورت و ویزای تأیید شده</p>
+                            </div>
                         </div>
+                    </div>
+
+                    <!-- بورسیه Stipendium Hungaricum -->
+                    <div class="bg-success bg-opacity-10 border border-success rounded p-4 mb-4">
+                        <h4 class="fw-bold text-success mb-3">
+                            <i class="ti ti-school me-2"></i>
+                            بورسیه فول فاند دولت مجارستان - Stipendium Hungaricum
+                        </h4>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="text-success">✅ مزایای بورسیه:</h6>
+                                <ul class="document-list">
+                                    <li>شهریه کامل دانشگاه: رایگان</li>
+                                    <li>کمک هزینه ماهیانه: ۴۳,۷۰۰ فورینت (حدود ۱۲۰ یورو)</li>
+                                    <li>اسکان رایگان در خوابگاه‌های دانشجویی</li>
+                                    <li>بیمه درمانی کامل: رایگان</li>
+                                    <li>امکان کار پاره‌وقت alongside تحصیل</li>
+                                    <li>تحصیل به زبان انگلیسی در دانشگاه‌های معتبر</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-success">🎯 رشته‌های پرطرفدار:</h6>
+                                <ul class="document-list">
+                                    <li>مهندسی (کامپیوتر، برق، مکانیک)</li>
+                                    <li>پزشکی و دندانپزشکی</li>
+                                    <li>علوم کامپیوتر و IT</li>
+                                    <li>مدیریت بازرگانی و MBA</li>
+                                    <li>روانشناسی و علوم اجتماعی</li>
+                                    <li>هنر و معماری</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-warning mt-3">
+                            <i class="ti ti-alert-triangle"></i>
+                            <strong>ددلاین مهم:</strong> مهلت ثبت‌نام در بورسیه Stipendium Hungaricum 
+                            <strong>۲۵ دی ماه هر سال</strong> می‌باشد. برای سال تحصیلی ۲۰۲۵-۲۰۲۶، 
+                            ددلاین: <strong>۱۵ ژانویه ۲۰۲۵ (۲۵ دی ۱۴۰۳)</strong>
+                        </div>
+                    </div>
+
+                    <!-- نکات مهم -->
+                    <div class="bg-warning bg-opacity-10 border border-warning rounded p-4 mb-4">
+                        <h4 class="fw-bold text-warning mb-3">
+                            <i class="ti ti-alert-triangle me-2"></i>
+                            نکات مهم ویزای مجارستان
+                        </h4>
+                        <ul class="document-list">
+                            <li>حداقل زمان برای اخذ ویزا: ۱۰-۱۵ روز کاری</li>
+                            <li>ویزای مجارستان از نوع شینگن است</li>
+                            <li>اولین ورود باید به کشور مجارستان باشد</li>
+                            <li>حداقل موجودی حساب: ۶۰ یورو به ازای هر روز اقامت</li>
+                            <li>مدارک جعلی منجر به محرومیت از دریافت ویزا می‌شود</li>
+                            <li>برای افراد زیر ۱۸ سال، رضایتنامه محضری والدین الزامی است</li>
+                        </ul>
                     </div>
                 </div>
 
                 <!-- سایدبار -->
                 <div class="col-lg-4">
+                    <!-- نرخ موفقیت -->
                     <div class="success-rate mb-4">
                         <h3 class="fw-bold">نرخ موفقیت</h3>
-                        <div class="display-4 fw-bold">۹۰٪</div>
-                        <p>درصد قبولی ویزای کانادا (برای ایرانیان)</p>
+                        <div class="display-4 fw-bold">۹۴٪</div>
+                        <p>درصد قبولی ویزای مجارستان</p>
                     </div>
 
+                    <!-- هزینه‌ها -->
                     <div class="fee-table mb-4">
                         <table class="table table-bordered mb-0">
                             <thead>
-                                <tr><th colspan="2" class="text-center">💰 هزینه‌های ویزای کانادا</th></tr>
+                                <tr>
+                                    <th colspan="2" class="text-center">💰 هزینه‌های ویزای مجارستان</th>
+                                </tr>
                             </thead>
                             <tbody>
-                                <tr><td>هزینه ویزای توریستی</td><td>150 دلار کانادا</td></tr>
-                                <tr><td>هزینه انگشت‌نگاری</td><td>85 دلار کانادا</td></tr>
-                                <tr><td>هزینه خدمات پروازه</td><td>40,000,000 تومان</td></tr>
-                                <tr><td>بیمه مسافرتی</td><td>1,800,000 تومان</td></tr>
+                                <tr>
+                                    <td>هزینه سفارت (Visa Fee)</td>
+                                    <td>80 یورو</td>
+                                </tr>
+                                <tr>
+                                    <td>هزینه خدمات VFS Global</td>
+                                    <td>25 یورو</td>
+                                </tr>
+                                <tr>
+                                    <td>هزینه خدمات پروازه</td>
+                                    <td>16,000,000 تومان</td>
+                                </tr>
+                                <tr>
+                                    <td>بیمه مسافرتی شینگن</td>
+                                    <td>750,000 تومان</td>
+                                </tr>
+                                <tr>
+                                    <td>هزینه وقت فوری</td>
+                                    <td>5,500,000 تومان</td>
+                                </tr>
                                 <tr class="table-warning">
                                     <td><strong>💰 جمع کل (تقریبی)</strong></td>
-                                    <td><strong>41,800,000 تومان + 235 دلار کانادا</strong></td>
+                                    <td><strong>22,250,000 تومان + 105 یورو</strong></td>
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+
+                    <!-- انواع وقت سفارت -->
+                    <div class="bg-white border rounded p-4 mb-4">
+                        <h4 class="fw-bold mb-3">⏰ انواع وقت سفارت</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="ti ti-clock text-primary me-2"></i>
+                                <strong>عادی:</strong> 20-30 روز کاری
+                            </li>
+                            <li class="mb-2">
+                                <i class="ti ti-zodiac-capricorn text-warning me-2"></i>
+                                <strong>فوری:</strong> 10-15 روز کاری
+                            </li>
+                            <li>
+                                <i class="ti ti-rocket text-danger me-2"></i>
+                                <strong>خیلی فوری:</strong> 5-7 روز کاری
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- اطلاعات VFS Global -->
+                    <div class="bg-info bg-opacity-10 border border-info rounded p-4 mb-4">
+                        <h5 class="fw-bold text-info">🏢 مرکز VFS Global تهران</h5>
+                        <p class="small mb-2">آدرس: تهران، خیابان مطهری، خیابان فجر، شماره ۵۱</p>
+                        <p class="small mb-0">ساعات کاری: شنبه تا چهارشنبه ۸:۰۰-۱۵:۰۰</p>
+                    </div>
+
+                    <div class="bg-warning bg-opacity-10 border border-warning rounded p-4 mb-4">
+                        <h5 class="fw-bold text-warning">🎓 بورسیه تحصیلی مجارستان</h5>
+                        <p class="small mb-2">Stipendium Hungaricum</p>
+                        <ul class="small">
+                            <li>✅ شهریه رایگان</li>
+                            <li>✅ کمک هزینه ماهیانه</li>
+                            <li>✅ خوابگاه رایگان</li>
+                            <li>✅ بیمه درمانی</li>
+                        </ul>
+                        <div class="mt-2">
+                            <small class="text-danger">⏰ ددلاین: ۲۵ دی ماه</small>
+                        </div>
+                    </div>
+
+                    <!-- CTA سایدبار -->
+                    <div class="bg-primary text-white rounded p-4 d-none d-lg-block" style="background: #436f3e !important;">
+                        <h4 class="fw-bold mb-3">🚀 شروع فرآیند ویزا/بورسیه</h4>
+                        <p class="small mb-3">مشاوره رایگان ویزا و بورسیه تحصیلی</p>
+                        <a href="tel:02191006032" class="btn btn-warning w-100">
+                            <i class="ti ti-phone"></i>
+                            تماس با کارشناس ویزا و تحصیل
+                        </a>
                     </div>
                 </div>
             </div>
