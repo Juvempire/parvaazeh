@@ -63,106 +63,107 @@
         <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-  <div class="h-100 nt-flex-column">
-    <div class="w-100 flex-grow-1">
-      <!-- logo & dark theme-->
-      <div class="nt-flex-between-center gap-2 mb-4">
-        <div class="nt-flex-start-center">
-          <img src="./img/logo.png" alt="" width="40"/>
-          <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+        <div class="h-100 nt-flex-column">
+          <div class="w-100 flex-grow-1">
+            <!-- logo & dark theme-->
+            <div class="nt-flex-between-center gap-2 mb-4">
+              <div class="nt-flex-start-center">
+                <img src="./img/logo.png" alt="" width="40"/>
+                <h1 class="fs-2 fw-bold mb-0">پروازه</h1>
+              </div>
+              <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت">
+                <i class="ti ti-sun fs-5" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="accordion accordion-flush" id="accordionOffcanvasMenu">
+              <!-- بلیط -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu1" aria-expanded="false" aria-controls="accordionOffcanvasMenu1">
+                    بلیط
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu1" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="index.html"><i class="ti ti-plane-inflight fs-4"></i> پرواز داخلی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4"></i> پرواز خارجی</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-trains.html"><i class="ti ti-train fs-4"></i> قطار</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-buses.html"><i class="ti ti-bus fs-4"></i> اتوبوس</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- اقامت -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu2" aria-expanded="false" aria-controls="accordionOffcanvasMenu2">
+                    اقامت
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu2" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4"></i> هتل</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="booking-villas.html"><i class="ti ti-home-2 fs-4"></i> ویلا و اقامتگاه</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- تور -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu3" aria-expanded="false" aria-controls="accordionOffcanvasMenu3">
+                    تور
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu3" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="tour-spain.html">تور اسپانیا</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="tour-france.html">تور فرانسه</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="tour-greece.html">تور یونان</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ویزا -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu4" aria-expanded="false" aria-controls="accordionOffcanvasMenu4">
+                    ویزا
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="accordionOffcanvasMenu4" data-bs-parent="#accordionOffcanvasMenu">
+                  <div class="accordion-body">
+                    <ul class="list-unstyled nt-flex-column">
+                      <li><a class="btn btn-link link-dark fs-5" href="visa-schengen.html">ویزا شینگن</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="visa-spain.html">ویزا اسپانیا</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="visa-france.html">ویزا فرانسه</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="visa-italy.html">ویزا ایتالیا</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="visa-canada.html">ویزا کانادا</a></li>
+                      <li><a class="btn btn-link link-dark fs-5" href="visa-hungray.html">ویزا مجارستان</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-100 border-top py-3">
+              <div class="nt-flex-column-center-center">
+                <div class="text-muted">پروازه؛ همراه همیشگی سفرهای شما.</div>
+                <div class="nt-flex-start-center text-muted" role="contentinfo" aria-label="اطلاعات حق نشر">
+                  <i class="ti ti-copyright fs-5"></i> 1404 پروازه. تمامی حقوق محفوظ است.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="btnSwitch btn btn-lg btn-light" type="button" aria-label="تغییر حالت روشن و تاریک سایت">
-          <i class="ti ti-sun fs-5" aria-hidden="true"></i>
-        </button>
       </div>
-
-      <div class="accordion accordion-flush" id="accordionOffcanvasMenu">
-        <!-- بلیط -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu1" aria-expanded="false" aria-controls="accordionOffcanvasMenu1">
-              بلیط
-            </button>
-          </h2>
-          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu1" data-bs-parent="#accordionOffcanvasMenu">
-            <div class="accordion-body">
-              <ul class="list-unstyled nt-flex-column">
-                <li><a class="btn btn-link link-dark fs-5" href="index.html"><i class="ti ti-plane-inflight fs-4"></i> پرواز داخلی</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="booking-international-flights.html"><i class="ti ti-plane-departure fs-4"></i> پرواز خارجی</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="booking-trains.html"><i class="ti ti-train fs-4"></i> قطار</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="booking-buses.html"><i class="ti ti-bus fs-4"></i> اتوبوس</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- اقامت -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu2" aria-expanded="false" aria-controls="accordionOffcanvasMenu2">
-              اقامت
-            </button>
-          </h2>
-          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu2" data-bs-parent="#accordionOffcanvasMenu">
-            <div class="accordion-body">
-              <ul class="list-unstyled nt-flex-column">
-                <li><a class="btn btn-link link-dark fs-5" href="booking-hotels.html"><i class="ti ti-building-skyscraper fs-4"></i> هتل</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="booking-villas.html"><i class="ti ti-home-2 fs-4"></i> ویلا و اقامتگاه</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- تور -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu3" aria-expanded="false" aria-controls="accordionOffcanvasMenu3">
-              تور
-            </button>
-          </h2>
-          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu3" data-bs-parent="#accordionOffcanvasMenu">
-            <div class="accordion-body">
-              <ul class="list-unstyled nt-flex-column">
-                <li><a class="btn btn-link link-dark fs-5" href="tour-spain.html">تور اسپانیا</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="tour-france.html">تور فرانسه</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="tour-greece.html">تور یونان</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- ویزا -->
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#accordionOffcanvasMenu4" aria-expanded="false" aria-controls="accordionOffcanvasMenu4">
-              ویزا
-            </button>
-          </h2>
-          <div class="accordion-collapse collapse" id="accordionOffcanvasMenu4" data-bs-parent="#accordionOffcanvasMenu">
-            <div class="accordion-body">
-              <ul class="list-unstyled nt-flex-column">
-                <li><a class="btn btn-link link-dark fs-5" href="visa-schengen.html">ویزا شینگن</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="visa-spain.html">ویزا اسپانیا</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="visa-france.html">ویزا فرانسه</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="visa-italy.html">ویزا ایتالیا</a></li>
-                <li><a class="btn btn-link link-dark fs-5" href="visa-canada.html">ویزا کانادا</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-100 border-top py-3">
-        <div class="nt-flex-column-center-center">
-          <div class="text-muted">پروازه؛ همراه همیشگی سفرهای شما.</div>
-          <div class="nt-flex-start-center text-muted" role="contentinfo" aria-label="اطلاعات حق نشر">
-            <i class="ti ti-copyright fs-5"></i> 1404 پروازه. تمامی حقوق محفوظ است.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     </div>
     <!-- -------------------------- end Offcanvas Menu -------------------------- -//-->
     <!-- --------------------------- Offcanvas Profile -------------------------- -//-->
@@ -175,8 +176,13 @@
         <div class="p-2">
           <div class="nt-flex-column-center-center mb-4">
             <div class="border border-primary rounded-circle position-relative">
-              <!-- badge--><span class="position-absolute top-0 start-0 translate-middle badge rounded bg-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="تایید شده"><i class="ti ti-checks fs-5" aria-hidden="true"></i><span class="visually-hidden">تایید شده</span></span>
-              <!-- avatar--><img src="./img/layouts/avatar/m1.png" alt=""/>
+              <!-- badge-->
+              <span class="position-absolute top-0 start-0 translate-middle badge rounded bg-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="تایید شده">
+                <i class="ti ti-checks fs-5" aria-hidden="true"></i>
+                <span class="visually-hidden">تایید شده</span>
+              </span>
+              <!-- avatar-->
+              <img src="./img/layouts/avatar/m1.png" alt=""/>
             </div>
             <!-- name & phone-->
             <div class="nt-flex-column">
@@ -191,7 +197,14 @@
             <div class="nt-flex-between-start gap-2">
               <!-- wallet-->
               <div class="nt-flex-column gap-3">
-                <div class="nt-flex text-light"><i class="ti ti-wallet fs-3" aria-hidden="true"></i>موجودی حساب </div><a class="btn btn-sm btn-secondary" href="./profile-transactions.html"> <i class="ti ti-plus fs-5" aria-hidden="true"></i><span class="small">افزایش موجودی</span></a>
+                <div class="nt-flex text-light">
+                  <i class="ti ti-wallet fs-3" aria-hidden="true"></i>
+                  موجودی حساب 
+                </div>
+                <a class="btn btn-sm btn-secondary" href="./profile-transactions.html">
+                  <i class="ti ti-plus fs-5" aria-hidden="true"></i>
+                  <span class="small">افزایش موجودی</span>
+                </a>
               </div>
               <!-- money-->
               <div class="nt-flex">
@@ -200,13 +213,41 @@
               </div>
             </div>
           </div>
-          <div class="d-grid mb-4"><a class="btn btn-lg justify-content-start btn-outline-primary" href="./profile-plus.html"> <i class="ti ti-sparkles fs-5" aria-hidden="true"></i>
+          <div class="d-grid mb-4">
+            <a class="btn btn-lg justify-content-start btn-outline-primary" href="./profile-plus.html">
+              <i class="ti ti-sparkles fs-5" aria-hidden="true"></i>
               <div class="text-muted fw-bold small">
-                حساب ویژه
-پروازه
-              </div></a></div>
+                حساب ویژه پروازه
+              </div>
+            </a>
+          </div>
           <div class="text-muted fw-bold small mb-3">منو کاربری</div>
-          <nav class="profile-menu"><a class="btn btn-outline-light" href="./profile.html"> <i class="ti ti-user fs-4" aria-hidden="true"></i>حساب کاربری</a><a class="btn btn-outline-light" href="./profile-orders.html"> <i class="ti ti-luggage fs-4" aria-hidden="true"></i>سفر های من</a><a class="btn btn-outline-light" href="./profile-passengers.html"> <i class="ti ti-users-group fs-4" aria-hidden="true"></i>لیست های مسافران</a><a class="btn btn-outline-light" href="./profile-wishlist.html"> <i class="ti ti-heart fs-4" aria-hidden="true"></i>علاقه مندی ها</a><a class="btn btn-outline-light" href="./profile-ticketing.html"> <i class="ti ti-headset fs-4" aria-hidden="true"></i>درخواست پشتیبانی</a><a class="btn btn-outline-light" href="./profile-transactions.html"> <i class="ti ti-businessplan fs-4" aria-hidden="true"></i>موجودی و اعتبار من</a></nav>
+          <nav class="profile-menu">
+            <a class="btn btn-outline-light" href="./profile.html">
+              <i class="ti ti-user fs-4" aria-hidden="true"></i>
+              حساب کاربری
+            </a>
+            <a class="btn btn-outline-light" href="./profile-orders.html">
+              <i class="ti ti-luggage fs-4" aria-hidden="true"></i>
+              سفر های من
+            </a>
+            <a class="btn btn-outline-light" href="./profile-passengers.html">
+              <i class="ti ti-users-group fs-4" aria-hidden="true"></i>
+              لیست های مسافران
+            </a>
+            <a class="btn btn-outline-light" href="./profile-wishlist.html">
+              <i class="ti ti-heart fs-4" aria-hidden="true"></i>
+              علاقه مندی ها
+            </a>
+            <a class="btn btn-outline-light" href="./profile-ticketing.html">
+              <i class="ti ti-headset fs-4" aria-hidden="true"></i>
+              درخواست پشتیبانی
+            </a>
+            <a class="btn btn-outline-light" href="./profile-transactions.html">
+              <i class="ti ti-businessplan fs-4" aria-hidden="true"></i>
+              موجودی و اعتبار من
+            </a>
+          </nav>
         </div>
       </div>
     </div>
@@ -227,8 +268,14 @@
                   <input class="form-control form-control-lg" type="tel" name="" placeholder="شماره موبایل" id="floatingInput"/>
                   <label for="floatingInput">شماره موبایل</label>
                 </div>
-                <div class="nt-flex-center-center gap-1 small mb-4"><i class="ti ti-info-circle fs-5 text-muted" aria-hidden="true"></i>استفاده از پروازه به معنی پذیرش<a class="link" href="">
-                     قوانین و مقررات</a>این سرویس است.</div>
+                <div class="nt-flex-center-center gap-1 small mb-4">
+                  <i class="ti ti-info-circle fs-5 text-muted" aria-hidden="true"></i>
+                  استفاده از پروازه به معنی پذیرش
+                  <a class="link" href="">
+                     قوانین و مقررات
+                  </a>
+                  این سرویس است.
+                </div>
                 <div class="d-grid gap-3">
                   <button class="btn btn-primary btn-lg" type="submit">
                      تایید و دریافت</button>
@@ -253,11 +300,21 @@
           <div class="modal-body">
             <div class="wrapper-xs py-5 text-center"> 
               <nav class="nt-flex-around-center gap-4 mb-5" aria-label="پیوند های شبکه های اجتماعی">
-                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید"> <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i></button>
-                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید"> <i class="ti ti-brand-x fs-3" aria-hidden="true"></i></button>
-                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید"> <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i></button>
-                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید"> <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i></button>
-                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید"> <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i></button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه فیس بوک ما دیدن کنید">
+                  <i class="ti ti-brand-facebook fs-3" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="از صفحه X (که قبلاً توییتر بود) ما بازدید کنید">
+                  <i class="ti ti-brand-x fs-3" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="به صفحه اینستاگرام ما مراجعه کنید">
+                  <i class="ti ti-brand-instagram fs-3" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="با ما در WhatsApp گپ بزنید">
+                  <i class="ti ti-brand-whatsapp fs-3" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-lg btn-outline-dark py-3 rounded-circle" type="button" aria-label="در تلگرام به ما بپیوندید">
+                  <i class="ti ti-brand-telegram fs-3" aria-hidden="true"></i>
+                </button>
               </nav>
               <div class="input-group">
                 <input class="form-control form-control" type="text" id="shareLink" value="https://parvaazeh.com" dir="ltr" readonly="readonly"/>
@@ -270,7 +327,7 @@
     </div>
     <!-- ---------------------------- end Modal share --------------------------- -//-->
     <!-- -------------------------------- Header -------------------------------- -//-->
-    <header class="header dynamic">
+    <header class="header">
       <div class="container py-3">
         <div class="row align-items-center">
           <!-- logo & menu (mobile)-->
@@ -280,7 +337,8 @@
               <div class="d-md-none">
                 <button class="btn btn-link link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="باز کردن منو"><i class="ti ti-menu-2 fs-1" aria-hidden="true"></i></button>
               </div>
-              <!-- logo--><a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
+              <!-- logo-->
+              <a class="header-logo link" href="./index.html"><img src="./img/logo.png" alt="" width="40"/>
                 <h1 class="fs-2 fw-bold">پروازه</h1></a>
             </div>
           </div>
@@ -316,14 +374,15 @@
                 </ul>
               </div>
               <!-- nav link-->
-			  <div class="dropdown">
+			        <div class="dropdown">
                 <button class="btn btn-link link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ویزا</button>
                 <ul class="dropdown-menu">
-				  <li><a class="dropdown-item" href="visa-schengen.html">ویزا شینگن</a></li>
+				          <li><a class="dropdown-item" href="visa-schengen.html">ویزا شینگن</a></li>
                   <li><a class="dropdown-item" href="visa-spain.html">ویزا اسپانیا</a></li>
                   <li><a class="dropdown-item" href="visa-france.html">ویزا فرانسه</a></li>
-				  <li><a class="dropdown-item" href="visa-italy.html">ویزا ایتالیا</a></li>
-          <li><a class="dropdown-item" href="visa-canada.html">ویزا کانادا</a></li>
+				          <li><a class="dropdown-item" href="visa-italy.html">ویزا ایتالیا</a></li>
+                  <li><a class="dropdown-item" href="visa-canada.html">ویزا کانادا</a></li>
+                  <li><a class="dropdown-item" href="visa-hungray.html">ویزا مجارستان</a></li>
                 </ul>
               </div>
             </nav>
